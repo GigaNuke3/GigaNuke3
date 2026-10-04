@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1037" height="493" viewBox="0 0 1037 493" font-family="Consolas, 'Courier New', monospace">
+<style>text{white-space:pre}</style>
+<rect width="1037" height="493" rx="15" fill="#161b22"/>
+<g fill="#c9d1d9" font-size="9">
+<text x="28" y="35">GigaNuke3 // README.md</text>
+<text x="28" y="52">────────────────────────────────────────────────────────────────────────────────────────</text>
+</g>
+<g fill="#c9d1d9" font-size="10">
+<text x="38" y="82">                  .-=========-.</text>
+<text x="30" y="94">              .-''               ''-.</text>
+<text x="24" y="106">            .'       .-------.       '.</text>
+<text x="20" y="118">           /       .'  .---.  '.       \</text>
+<text x="18" y="130">          /       /   /  @  \   \       \</text>
+<text x="18" y="142">         |       |    \  _  /    |       |</text>
+<text x="18" y="154">         |       |     '---'     |       |</text>
+<text x="18" y="166">         |       |   .---|---.   |       |</text>
+<text x="18" y="178">         |       |  /    |    \  |       |</text>
+<text x="18" y="190">          \       \  .-^-.  /       /</text>
+<text x="24" y="202">           '.       '-----'       .'</text>
+<text x="31" y="214">             '-.             .-'</text>
+<text x="40" y="226">                '-----------'</text>
+<text x="58" y="248">              ECO // CORE</text>
+</g>
+<rect x="480" y="58" width="1" height="400" fill="#30363d"/>
+<g font-size="14">
+<text x="500" y="82" fill="#c9d1d9">eco@giganuke3</text>
+<text x="500" y="106" fill="#ffa657">OS:</text><text x="620" y="106" fill="#a5d6ff">Fedora KDE / Windows</text>
+<text x="500" y="128" fill="#ffa657">Role:</text><text x="620" y="128" fill="#a5d6ff">AI Engineer / Software Developer</text>
+<text x="500" y="150" fill="#ffa657">Focus:</text><text x="620" y="150" fill="#a5d6ff">AI Engineering / Local AI / Desktop</text>
+<text x="500" y="172" fill="#ffa657">Lang:</text><text x="620" y="172" fill="#a5d6ff">Python / Kotlin / PHP / JS / SQL</text>
+<text x="500" y="194" fill="#ffa657">Tools:</text><text x="620" y="194" fill="#a5d6ff">Ollama / Electron / Git / Linux</text>
+<text x="500" y="236" fill="#ffa657">Projects:</text>
+<text x="500" y="258" fill="#c9d1d9">Axie Flash  — AI + Gamified Learning</text>
+<text x="500" y="280" fill="#c9d1d9">Callama     — Local AI Desktop</text>
+<text x="500" y="302" fill="#c9d1d9">LMIS        — Information System</text>
+<text x="500" y="344" fill="#ffa657">Status:</text><text x="620" y="344" fill="#a5d6ff">LEARNING // BUILDING</text>
+<text x="500" y="366" fill="#ffa657">Principle:</text><text x="620" y="366" fill="#a5d6ff">Build. Break. Rebuild.</text>
+<text x="500" y="410" fill="#616e7f">github.com/GigaNuke3</text>
+<text x="500" y="432" fill="#616e7f">gorospeedilcon@gmail.com</text>
+</g>
+</svg>
