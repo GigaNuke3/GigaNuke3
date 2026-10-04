@@ -1,0 +1,45 @@
+name: Update Profile Graphics
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/profile_card.py"
+      - ".github/workflows/profile-cards.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-graphics
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render profile SVGs
+        env:
+          GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY_OWNER: \${{ github.repository_owner }}
+        run: python scripts/profile_card.py
+
+      - name: Commit generated SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile_dark.svg profile_light.svg graph_dark.svg graph_light.svg activity_dark.svg activity_light.svg
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: update profile graphics"
+          git push
