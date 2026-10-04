@@ -1,46 +1,10 @@
 name: Generate Pac-Man Contribution Graph
 on:
-  schedule:
-    - cron: "31 */12 * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/pacman.yml"
 permissions:
   contents: write
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
     steps:
-      - name: Checkout repository
-        run: |
-          git clone --depth 1 "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" repo
-          cd repo
-          git checkout main
-      - name: Generate Pac-Man SVGs
-        working-directory: repo
-        env:
-          USERNAME: ${{ github.repository_owner }}
-        run: |
-          npm install --global pacman-contribution-graph
-          rm -rf dist
-          mkdir -p dist
-          pacman-contribution-graph --game pacman --username "$USERNAME" --platform github --gameTheme github-dark --output dist/pacman-contribution-graph-dark.svg
-          pacman-contribution-graph --game pacman --username "$USERNAME" --platform github --gameTheme github --output dist/pacman-contribution-graph.svg
-      - name: Publish Pac-Man SVGs
-        working-directory: repo
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          git fetch origin main output || true
-          git checkout --orphan output
-          git rm -rf . || true
-          cp dist/pacman-contribution-graph-dark.svg .
-          cp dist/pacman-contribution-graph.svg .
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pacman-contribution-graph-dark.svg pacman-contribution-graph.svg
-          git commit -m "chore: update Pac-Man contribution graph"
-          git push --force "https://x-access-token:$GITHUB_TOKEN@github.com/${{ github.repository }}.git" HEAD:output
+      - run: echo "Enable GitHub Actions in repository settings before running this workflow."
