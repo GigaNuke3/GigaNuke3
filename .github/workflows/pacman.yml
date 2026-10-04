@@ -1,5 +1,4 @@
 name: Generate Pac-Man Contribution Graph
-
 on:
   schedule:
     - cron: "31 */12 * * *"
@@ -17,14 +16,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Generate Pac-Man graph
-        uses: abozanona/pacman-contribution-graph@main
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          github_user_name: \${{ github.repository_owner }}
-          games: "pacman"
-          hide_month_labels: "false"
-
-      - name: Publish generated SVGs
+          node-version: "20"
+      - name: Install generator
+        run: npm install --global pacman-contribution-graph
+      - name: Generate graphs
+        env:
+          USERNAME: \${{ github.repository_owner }}
+        run: |
+          rm -rf dist
+          mkdir -p dist
+          pacman-contribution-graph --game pacman --username "$USERNAME" --platform github --gameTheme github-dark --output dist/pacman-contribution-graph-dark.svg
+          pacman-contribution-graph --game pacman --username "$USERNAME" --platform github --gameTheme github --output dist/pacman-contribution-graph.svg
+      - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
