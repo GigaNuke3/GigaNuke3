@@ -1,5 +1,4 @@
 name: Update Profile Graphics
-
 on:
   schedule:
     - cron: "17 */6 * * *"
@@ -21,20 +20,12 @@ jobs:
   render:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Render profile SVGs
-        env:
-          GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY_OWNER: \${{ github.repository_owner }}
+      - name: Render SVGs
         run: python scripts/profile_card.py
-
       - name: Commit generated SVGs
         run: |
           git config user.name "github-actions[bot]"
