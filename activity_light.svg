@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="310" viewBox="0 0 900 310" font-family="Consolas, 'Courier New', monospace">
+<rect width="900" height="310" rx="15" fill="#f6f8fa"/>
+<text x="28" y="39" fill="#953800" font-size="15" font-weight="bold">Contribution Activity</text>
+<text x="872" y="39" text-anchor="end" fill="#8c959f" font-size="10">last 4 months</text>
+<text x="28" y="78" fill="#24292f" font-size="24">—</text><text x="28" y="94" fill="#8c959f" font-size="10">Commits</text>
+<text x="220" y="78" fill="#24292f" font-size="24">—</text><text x="220" y="94" fill="#8c959f" font-size="10">Pull Requests</text>
+<text x="412" y="78" fill="#24292f" font-size="24">—</text><text x="412" y="94" fill="#8c959f" font-size="10">Repositories</text>
+<line x1="55" y1="260" x2="870" y2="260" stroke="#d0d7de"/>
+<rect x="100" y="172" width="88" height="88" rx="3" fill="#953800" fill-opacity=".72"/><text x="144" y="279" text-anchor="middle" fill="#8c959f" font-size="10">JUN</text><rect x="285" y="128" width="88" height="132" rx="3" fill="#953800" fill-opacity=".72"/><text x="329" y="279" text-anchor="middle" fill="#8c959f" font-size="10">JUL</text><rect x="470" y="152" width="88" height="108" rx="3" fill="#953800" fill-opacity=".72"/><text x="514" y="279" text-anchor="middle" fill="#8c959f" font-size="10">AUG</text><rect x="655" y="105" width="88" height="155" rx="3" fill="#953800" fill-opacity=".72"/><text x="699" y="279" text-anchor="middle" fill="#8c959f" font-size="10">SEP</text>
+<text x="450" y="298" text-anchor="middle" fill="#8c959f" font-size="10">Generated automatically when the profile graphics workflow is enabled.</text>
+</svg>
