@@ -8,29 +8,32 @@ on:
       - "scripts/profile_card.py"
       - ".github/workflows/profile-cards.yml"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: profile-graphics
   cancel-in-progress: false
-
 jobs:
   render:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      - name: Checkout repository
+        run: |
+          git clone --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" repo
+          cd repo
+          git checkout main
       - name: Render SVGs
-        run: python scripts/profile_card.py
+        working-directory: repo
+        run: python3 scripts/profile_card.py
       - name: Commit generated SVGs
+        working-directory: repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile_dark.svg profile_light.svg graph_dark.svg graph_light.svg activity_dark.svg activity_light.svg
-          git diff --cached --quiet && exit 0
+          if git diff --cached --quiet; then
+            echo "No graphics changed."
+            exit 0
+          fi
           git commit -m "chore: update profile graphics"
-          git push
+          git push origin main
