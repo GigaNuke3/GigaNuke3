@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1037" height="350" viewBox="0 0 1037 350" font-family="Consolas, 'Courier New', monospace">
+<rect width="1037" height="350" rx="15" fill="#ffffff"/>
+<text x="28" y="36" fill="#953800" font-size="14" font-weight="700">NEURAL ACTIVITY MAP</text>
+<text x="1008" y="36" fill="#8c959f" font-size="9" text-anchor="end">contribution-driven visualization</text>
+<line x1="28" y1="52" x2="1008" y2="52" stroke="#d0d7de"/>
+<g stroke="#7c3aed" stroke-opacity=".28" stroke-width="2" fill="none">
+<path d="M180 170 L320 110 L460 168 L600 94 L744 150 L872 88"/>
+<path d="M180 170 L330 245 L460 168 L610 246 L744 150 L870 252"/>
+<path d="M320 110 L610 246"/><path d="M600 94 L460 168"/><path d="M330 245 L872 88"/>
+</g>
+<g fill="#7c3aed">
+<circle cx="180" cy="170" r="8"/><circle cx="320" cy="110" r="6"/><circle cx="330" cy="245" r="7"/>
+<circle cx="460" cy="168" r="10"/><circle cx="600" cy="94" r="7"/><circle cx="610" cy="246" r="6"/>
+<circle cx="744" cy="150" r="9"/><circle cx="872" cy="88" r="6"/><circle cx="870" cy="252" r="8"/>
+</g>
+<g fill="#24292f" font-size="9">
+<text x="145" y="205">BEGIN</text><text x="430" y="196">BUILD</text><text x="715" y="179">LEARN</text>
+<text x="844" y="278">REPEAT</text>
+</g>
+<text x="519" y="325" fill="#8c959f" font-size="9" text-anchor="middle">A custom map for turning GitHub activity into a visual story of the work.</text>
+</svg>
