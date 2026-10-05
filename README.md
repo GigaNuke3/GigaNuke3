@@ -10,7 +10,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="graph_dark.svg">
-  <img alt="Daily GitHub contributions for the current month" src="graph_light.svg">
+  <img alt="CODE CITY: a miniature city built by this month's GitHub contributions" src="graph_light.svg">
 </picture>
 
 <picture>

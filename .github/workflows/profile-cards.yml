@@ -44,7 +44,7 @@ jobs:
           python scripts/profile_card.py
           python scripts/tetris_grid.py
           python scripts/activity.py
-          python scripts/contrib_graph.py
+          python scripts/code_city.py
 
       - name: Commit if changed
         env:
@@ -73,7 +73,7 @@ jobs:
             python scripts/profile_card.py
             python scripts/tetris_grid.py
             python scripts/activity.py
-            python scripts/contrib_graph.py
+            python scripts/code_city.py
           done
           echo "Could not push after 3 attempts."
           exit 1
