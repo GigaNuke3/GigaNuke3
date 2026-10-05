@@ -10,23 +10,23 @@
      ══════════════════════════════════════════════════════════════════ -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg">
-  <img alt="GigaNuke3 terminal profile: AI Engineer / Software Developer, Local AI, Ollama, LLMs" src="light_mode.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg?v=2">
+  <img alt="GigaNuke3 terminal profile: AI Engineer / Software Developer, Local AI, Ollama, LLMs" src="light_mode.svg?v=2" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="tetris_dark.svg">
-  <img alt="Terrain: this year's GitHub contributions as ground, with tetrominoes stacking onto it" src="tetris_light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="tetris_dark.svg?v=2">
+  <img alt="Terrain: this year's GitHub contributions as ground, with tetrominoes stacking onto it" src="tetris_light.svg?v=2" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graph_dark.svg">
-  <img alt="Code City: a miniature city built by this month's GitHub contributions" src="graph_light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="graph_dark.svg?v=2">
+  <img alt="Code City: a miniature city built by this month's GitHub contributions" src="graph_light.svg?v=2" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="payloads_dark.svg">
-  <img alt="Payload manifest: every public repository as a payload module, ordered by creation, sized by repository size, lit by recent pushes" src="payloads_light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="payloads_dark.svg?v=2">
+  <img alt="Payload manifest: every public repository as a payload module, ordered by creation, sized by repository size, lit by recent pushes" src="payloads_light.svg?v=2" width="100%">
 </picture>
 
 <!-- manifest:start -->
@@ -49,8 +49,8 @@
 <!-- manifest:end -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="activity_dark.svg">
-  <img alt="Mission Control: the last four months of contribution activity as a multi-stage rocket launch along a flight trajectory" src="activity_light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="activity_dark.svg?v=2">
+  <img alt="Mission Control: the last four months of contribution activity as a multi-stage rocket launch along a flight trajectory" src="activity_light.svg?v=2" width="100%">
 </picture>
 
 <div align="center">
