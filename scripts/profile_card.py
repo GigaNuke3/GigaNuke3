@@ -50,9 +50,9 @@ PROFILE = [
 ]
 
 THEMES = {
-    "dark": dict(bg="#161b22", text="#c9d1d9", key="#ffa657", value="#a5d6ff",
+    "dark": dict(bg="#161b22", text="#c9d1d9", key="#f0f3f6", value="#a5d6ff",
                  dim="#616e7f", ascii="#c9d1d9", invert=False),
-    "light": dict(bg="#f6f8fa", text="#24292f", key="#953800", value="#0a3069",
+    "light": dict(bg="#f6f8fa", text="#24292f", key="#1f2328", value="#0a3069",
                   dim="#9aa6b5", ascii="#24292f", invert=True),
 }
 

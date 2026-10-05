@@ -75,15 +75,15 @@ SIGNS = ["HQ", "GRID", "TECH", "DATA", "NODE", "CORE", "NET", "OPS"]
 CITY_PALETTE = {
     "dark": dict(
         bg="#0a0c10", border="#1b2128", ink="#c9d1d9", dim="#5b6470",
-        key="#ffa657", faint="#232a33", building="#11151c", outline="#39424e",
-        outline_hot="#ffa657", window_off="#202732", window_on="#d8dee7",
-        street="#0c0f14", lane="#222933", sidewalk="#1a2028", crane="#ffa657",
+        key="#f0f3f6", faint="#232a33", building="#11151c", outline="#39424e",
+        outline_hot="#f0f3f6", window_off="#202732", window_on="#d8dee7",
+        street="#0c0f14", lane="#222933", sidewalk="#1a2028", crane="#f0f3f6",
     ),
     "light": dict(
         bg="#eef1f5", border="#d4dae2", ink="#1f2933", dim="#7a8694",
-        key="#953800", faint="#d7dde4", building="#ffffff", outline="#2b3a4a",
-        outline_hot="#953800", window_off="#e2e7ec", window_on="#4b5b6b",
-        street="#e2e6eb", lane="#c3cbd4", sidewalk="#cfd6dd", crane="#953800",
+        key="#1f2328", faint="#d7dde4", building="#ffffff", outline="#2b3a4a",
+        outline_hot="#1f2328", window_off="#e2e7ec", window_on="#4b5b6b",
+        street="#e2e6eb", lane="#c3cbd4", sidewalk="#cfd6dd", crane="#1f2328",
     ),
 }
 

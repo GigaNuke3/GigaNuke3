@@ -86,7 +86,7 @@ SEP2_END_PCT = 0.68
 # --- Palette ---------------------------------------------------------------
 CITY_EXTRA = {
     "dark": dict(rocket_body="#2a313b", rocket_shade="#1c222a", block_bg="#10141a",
-                 block_stroke="#232a33", exhaust_inner="#ffe9c9"),
+                 block_stroke="#232a33", exhaust_inner="#ffffff"),
     "light": dict(rocket_body="#ffffff", rocket_shade="#dfe4ea", block_bg="#ffffff",
                   block_stroke="#c6cdd6", exhaust_inner="#ffffff"),
 }
