@@ -8,21 +8,21 @@
 <table style="width:100%; background:#0d1117; border:1px solid #30363d; border-radius:12px; border-collapse:separate; border-spacing:0;">
   <!-- Terminal title bar -->
   <tr>
-    <td colspan="2" style="padding:8px 14px; border-bottom:1px solid #21262d; color:#d29922; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace; font-size:12px;">
+    <td colspan="2" style="padding:8px 14px; border-bottom:1px solid #21262d; color:#ffa657; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace; font-size:12px;">
       <span style="color:#ffa657;">&#9679; &#9679; &#9679;</span>&nbsp;&nbsp;giganuke3@github: ~/profile
     </td>
   </tr>
 
   <!-- Profile: image (left) + readout (right) -->
   <tr>
-    <td style="padding:14px; vertical-align:middle; width:32%; border-right:1px solid #21262d;">
-      <img src="assets/profile.png" width="240" style="display:block; border-radius:8px;" alt="GigaNuke3 profile picture">
+    <td style="padding:14px; vertical-align:middle; width:36%; border-right:1px solid #21262d;">
+      <img src="assets/profile.png" width="280" style="display:block; border-radius:8px;" alt="GigaNuke3 profile picture">
     </td>
     <td style="padding:12px 16px; vertical-align:middle;">
-      <pre style="margin:0; border:none; background:transparent; color:#ffa657; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace; font-size:12px; line-height:1.45; white-space:pre;"><span style="color:#ffa657; font-weight:bold;">eco@giganuke3</span> <span style="color:#d29922;">&#9612;</span>
+      <pre style="margin:0; border:none; background:transparent; color:#ffa657; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace; font-size:12px; line-height:1.45; white-space:pre;"><span style="color:#ffa657; font-weight:bold;">eco@giganuke3</span> <span style="color:#ffa657;">&#9612;</span>
 <span style="color:#ffa657;">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span>
 <span style="color:#ffa657;">AI ENGINEER / SOFTWARE DEVELOPER</span>
-<span style="color:#d29922;">Local AI &#183; LLMs &#183; Desktop Apps &#183; Web Development</span>
+<span style="color:#ffa657;">Local AI &#183; LLMs &#183; Desktop Apps &#183; Web Development</span>
 <span style="color:#ffa657; font-weight:bold;">SYSTEMS</span>
 <span style="color:#ffa657;">Local AI / LLMs / Desktop Applications</span>
 <span style="color:#ffa657; font-weight:bold;">STACK</span>
@@ -31,13 +31,13 @@
 <span style="color:#ffa657; font-weight:bold;">LANGUAGES</span>
 <span style="color:#ffa657;">English &#183; Filipino</span>
 <span style="color:#ffa657; font-weight:bold;">PROJECTS</span>
-<span style="color:#ffa657;">Axie Flash   <span style="color:#d29922;">[AI EDUCATION]</span></span>
-<span style="color:#ffa657;">Callama      <span style="color:#d29922;">[LOCAL AI DESKTOP]</span></span>
-<span style="color:#ffa657;">LMIS         <span style="color:#d29922;">[INFORMATION SYSTEM]</span></span>
+<span style="color:#ffa657;">Axie Flash   <span style="color:#ffa657;">[AI EDUCATION]</span></span>
+<span style="color:#ffa657;">Callama      <span style="color:#ffa657;">[LOCAL AI DESKTOP]</span></span>
+<span style="color:#ffa657;">LMIS         <span style="color:#ffa657;">[INFORMATION SYSTEM]</span></span>
 <span style="color:#ffa657; font-weight:bold;">GITHUB</span>
 <span style="color:#ffa657;">Repos 9 &#183; Stars 2 &#183; Followers 1</span>
 <span style="color:#ffa657;">Commits 562</span>
-<span style="color:#d29922;">github.com/GigaNuke3</span></pre>
+<span style="color:#ffa657;">github.com/GigaNuke3</span></pre>
     </td>
   </tr>
 
@@ -71,7 +71,7 @@
   <tr>
     <td colspan="2" style="padding:10px 14px; border-top:1px solid #21262d; text-align:center; color:#ffa657; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace; font-size:12px;">
       <strong>AI ENGINEERING &#183; SOFTWARE &#183; LOCAL AI</strong><br>
-      <a href="https://github.com/GigaNuke3" style="color:#d29922;">github.com/GigaNuke3</a>
+      <a href="https://github.com/GigaNuke3" style="color:#ffa657;">github.com/GigaNuke3</a>
     </td>
   </tr>
 </table>
