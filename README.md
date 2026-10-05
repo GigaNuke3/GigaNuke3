@@ -15,7 +15,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="activity_dark.svg">
-  <img alt="Contribution activity: commits per repository and new repositories for the last few months, with a pixel nuke climbing the timeline" src="activity_light.svg">
+  <img alt="MISSION CONTROL: the last four months of contribution activity as a multi-stage rocket launch along a diagonal flight trajectory" src="activity_light.svg">
 </picture>
 
 <div align="center">
