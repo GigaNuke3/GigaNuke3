@@ -16,7 +16,7 @@ from datetime import datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from pacman_grid import TZ, Timeline, patterns, pixel_art
+from grid_common import TZ, Timeline, patterns
 from profile_card import PAD, THEMES, USER
 
 ROOT = Path(__file__).resolve().parent.parent

@@ -22,7 +22,7 @@ from datetime import date, datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from pacman_grid import TZ, fetch_public_calendar, patterns, pixel_art
+from grid_common import TZ, fetch_public_calendar, patterns, pixel_art
 from profile_card import PAD, THEMES
 
 ROOT = Path(__file__).resolve().parent.parent

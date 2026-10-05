@@ -4,8 +4,8 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="pacman_dark.svg">
-  <img alt="Contribution graph: Pac-Man eats this year's GitHub contributions in a maze" src="pacman_light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="tetris_dark.svg">
+  <img alt="Contribution landscape Tetris: tetrominoes stack onto this year's GitHub contributions" src="tetris_light.svg">
 </picture>
 
 <picture>
