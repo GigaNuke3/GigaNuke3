@@ -3,18 +3,24 @@
 The last four months of GitHub activity are rendered as a multi-stage
 launch mission: the vertical activity timeline becomes a diagonal flight
 trajectory (lower-left -> upper-right, ~15 deg), the months become mission
-checkpoints, and a Saturn V-inspired three-stage rocket rides the trajectory
-as the visual spine.
+checkpoints, and a Saturn V-inspired three-stage rocket travels the
+trajectory as a looping cinematic launch sequence.
 
-Data is unchanged: the same public activity feed the old card used
-(commit counts per repository, repositories created, pull requests). The
-contribution totals drive the telemetry tiles and the exhaust intensity.
+The loop (one shared SMIL timeline, ~13.8 s) is an explicit state machine:
 
-The launch sequence (ignition surge, stage separation, third stage
-continuing to the payload state) plays once when the card loads, then the
-card idles with subtle exhaust flicker, a trajectory pulse and a pulsing
-CURRENT MISSION marker. Everything is static-safe: renderers that ignore
-SMIL still see the full rocket on its trajectory with all data readable.
+    T-5 .. T-1  countdown (rocket on the pad, engines off)
+    IGNITION    launch flash, engines ignite
+    LIFTOFF     accelerating ascent along the trajectory
+    STAGE 1 SEPARATION   first stage drifts back, rotates and fades
+    SECOND-STAGE BURN    upper stages re-ignite and accelerate
+    STAGE 2 SEPARATION   second stage drifts back, rotates and fades
+    UPPER STAGE          third stage + payload, decelerating
+    APOGEE / HOLD        engines fade, MISSION COMPLETE
+    FADE OUT             rocket disappears quietly
+    RESET                hidden reset, then T-5 again
+
+Everything is static-safe: renderers that ignore SMIL see the rocket on
+the launch pad at T-5 with the full mission log readable.
 
 Output: activity_dark.svg + activity_light.svg.
 """
@@ -29,7 +35,7 @@ from datetime import datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from grid_common import TZ
+from grid_common import TZ, Timeline
 from profile_card import PAD, THEMES, USER
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -38,26 +44,33 @@ WIDTH = 900
 HEIGHT = 472
 
 # --- Geometry --------------------------------------------------------------
-P0 = (64, 328)                 # trajectory start (oldest month, lower-left)
-P1 = (856, 118)                # trajectory end / rocket nose (current, upper-right)
+P0 = (64, 328)                 # launch pad / trajectory start (lower-left)
+P1 = (856, 118)                # trajectory end / apogee (upper-right)
 DX, DY = P1[0] - P0[0], P1[1] - P0[1]
 ANGLE = math.degrees(math.atan2(-DY, DX))       # ~14.85 deg above horizontal
 ALPHA = 90 - ANGLE                              # rotation applied to the nose-up rocket
-COS_A, SIN_A = math.cos(math.radians(ALPHA)), math.sin(math.radians(ALPHA))
-ROCKET_LEN = 176
-TAIL = (P1[0] - ROCKET_LEN * math.cos(math.radians(ANGLE)),
-        P1[1] + ROCKET_LEN * math.sin(math.radians(ANGLE)))
+ROCKET_LEN = 142
+TRAVEL = math.hypot(DX, DY) - ROCKET_LEN        # distance the tail travels
+CHECKPOINTS = [0.20, 0.42, 0.64]                # JUL / AUG / SEP along the line
 
-CHECKPOINTS = [0.10, 0.36, 0.62]                # JUL / AUG / SEP along the line
 BLOCK_Y = 344
 BLOCK_H = 108
 BLOCK_W = 196
 BLOCK_GAP = 20
 
-# Launch sequence timings (seconds, one-shot).
-SEP1 = 1.8
-SEP2 = 2.9
-SEQ = 4.2
+# --- Mission clock (seconds, one shared loop) ------------------------------
+D = 13.8
+T5, T4, T3, T2, T1 = 0.0, 0.9, 1.8, 2.7, 3.6
+IGN = 4.5
+LIFTOFF = 5.0
+SEP1 = 7.0
+SEP1_END = 7.7
+SEP2 = 9.4
+SEP2_END = 10.1
+APOGEE = 11.4
+HOLD_END = 12.8
+FADE_END = 13.5
+RESET_END = D
 
 # --- Palette ---------------------------------------------------------------
 CITY_EXTRA = {
@@ -179,7 +192,6 @@ def trunc(s: str, n: int) -> str:
 # --------------------------------------------------------------------------
 
 def block_lines(mo: dict) -> list[tuple[str, str]]:
-    """(kind, text) lines for one month's ground station."""
     lines = []
     for it in mo["items"]:
         lines.append(("item", it["summary"]))
@@ -212,7 +224,7 @@ def month_tooltip(mo: dict) -> str:
 
 
 # --------------------------------------------------------------------------
-# Rocket drawing (local coords: nose up at -y, engine base at origin)
+# SMIL helpers (everything runs on the shared loop of `D` seconds)
 # --------------------------------------------------------------------------
 
 def _r(x, y, w, h, fill, stroke=None, sw=1, extra="") -> str:
@@ -226,43 +238,98 @@ def _poly(points, fill, stroke=None, sw=1) -> str:
     return f'<polygon points="{pts}" fill="{fill}"{s}/>'
 
 
+def opacity_anim(stops: list[tuple[float, float]]) -> str:
+    vals = ";".join(f"{v:.3f}" for _, v in stops)
+    keys = ";".join(f"{t / D:.5f}" for t, _ in stops)
+    return (f'<animate attributeName="opacity" values="{vals}" keyTimes="{keys}" '
+            f'calcMode="linear" dur="{D}s" repeatCount="indefinite"/>')
+
+
+def translate_anim(pairs: list[tuple[float, tuple[float, float]]]) -> str:
+    vals = ";".join(f"{x:.1f},{y:.1f}" for _, (x, y) in pairs)
+    keys = ";".join(f"{t / D:.5f}" for t, _ in pairs)
+    return (f'<animateTransform attributeName="transform" type="translate" values="{vals}" '
+            f'keyTimes="{keys}" calcMode="linear" dur="{D}s" repeatCount="indefinite"/>')
+
+
+def rotate_anim(stops: list[tuple[float, float]], pivot: tuple[float, float]) -> str:
+    vals = ";".join(f"{deg:.1f} {pivot[0]} {pivot[1]}" for _, deg in stops)
+    keys = ";".join(f"{t / D:.5f}" for t, _ in stops)
+    return (f'<animateTransform attributeName="transform" type="rotate" values="{vals}" '
+            f'keyTimes="{keys}" calcMode="linear" dur="{D}s" repeatCount="indefinite"/>')
+
+
+def scale_anim(stops: list[tuple[float, float]]) -> str:
+    vals = ";".join(f"{s:.2f},{s:.2f}" for _, s in stops)
+    keys = ";".join(f"{t / D:.5f}" for t, _ in stops)
+    return (f'<animateTransform attributeName="transform" type="scale" values="{vals}" '
+            f'keyTimes="{keys}" calcMode="linear" dur="{D}s" repeatCount="indefinite"/>')
+
+
+def pos_s(t: float) -> float:
+    """Position along the trajectory (0 = pad, 1 = apogee)."""
+    if t < IGN:
+        return 0.0
+    if t < LIFTOFF:
+        return 0.012 * (t - IGN) / (LIFTOFF - IGN)
+    if t < SEP1:
+        p = (t - LIFTOFF) / (SEP1 - LIFTOFF)
+        return 0.012 + (0.35 - 0.012) * p * p
+    if t < SEP1_END:
+        return 0.35 + 0.07 * (t - SEP1) / (SEP1_END - SEP1)
+    if t < SEP2:
+        p = (t - SEP1_END) / (SEP2 - SEP1_END)
+        return 0.42 + 0.28 * p * p
+    if t < SEP2_END:
+        return 0.70 + 0.06 * (t - SEP2) / (SEP2_END - SEP2)
+    if t < APOGEE:
+        p = (t - SEP2_END) / (APOGEE - SEP2_END)
+        return 0.76 + 0.24 * (1 - (1 - p) * (1 - p))
+    return 1.0
+
+
+# --------------------------------------------------------------------------
+# Rocket drawing (local coords: nose up at -y, S-IC engine base at origin)
+# --------------------------------------------------------------------------
+
 def s1_shapes(p: dict) -> str:
     body, out, shade = p["rocket_body"], p["ink"], p["rocket_shade"]
-    g = [_r(-13, -52, 26, 52, body, out),
-         _r(-19, -16, 6, 16, body, out),          # fins
-         _r(13, -16, 6, 16, body, out)]
+    g = [_r(-13, -42, 26, 42, body, out),
+         _r(-19, -13, 6, 13, body, out),          # fins
+         _r(13, -13, 6, 13, body, out)]
     for cx in (-11, -6.5, -2, 2.5, 7):            # engine cluster
         g.append(_r(cx, 0, 4.5, 5, shade, out, 0.8))
-    g.append(_r(-13, -60, 26, 8, shade, out))     # interstage 1
+    g.append(_r(-13, -49, 26, 7, shade, out))     # interstage 1
     return "".join(g)
 
 
 def s2_shapes(p: dict) -> str:
     body, out, shade = p["rocket_body"], p["ink"], p["rocket_shade"]
-    g = [_r(-11, -102, 22, 42, body, out)]
+    g = [_r(-11, -83, 22, 34, body, out)]
     for cx in (-7.5, -3, 1.5, 6):
-        g.append(_r(cx, -60, 3.4, 4, shade, out, 0.8))
-    g.append(_r(-11, -108, 22, 6, shade, out))     # interstage 2
+        g.append(_r(cx, -49, 3.4, 4, shade, out, 0.8))
+    g.append(_r(-11, -88, 22, 5, shade, out))     # interstage 2
     return "".join(g)
 
 
 def s3_payload_shapes(p: dict) -> str:
     body, out = p["rocket_body"], p["ink"]
-    g = [_r(-8, -138, 16, 30, body, out)]
+    g = [_r(-8, -112, 16, 24, body, out)]
     for cx in (-5, -1, 3):
-        g.append(_r(cx, -108, 2.6, 4, p["rocket_shade"], out, 0.8))
-    g.append(_r(-5, -156, 10, 18, body, out))      # payload section
-    g.append(_poly([(0, -176), (-5, -156), (5, -156)], body, out))  # nose cone
+        g.append(_r(cx, -88, 2.6, 4, p["rocket_shade"], out, 0.8))
+    g.append(_r(-5, -128, 10, 16, body, out))      # payload section
+    g.append(_poly([(0, -142), (-5, -128), (5, -128)], body, out))  # nose cone
     return "".join(g)
 
 
-def exhaust(p: dict, flame: float, n: int, seed: int) -> str:
+def exhaust(p: dict, flame: float, n: int, seed: int, scale_stops: list[tuple[float, float]]) -> str:
     """Flame + particles pointing down (+y) from the local engine base."""
     key, inner = p["key"], p["exhaust_inner"]
     out = [
+        f'<g>{scale_anim(scale_stops)}'
         f'<g><animate attributeName="opacity" values="0.85;1;0.85" dur="0.5s" repeatCount="indefinite"/>'
         f'{_poly([(0, 0), (-7, flame), (7, flame)], key)}'
-        f'{_poly([(0, 0), (-3, flame * 0.62), (3, flame * 0.62)], inner)}</g>',
+        f'{_poly([(0, 0), (-3, flame * 0.62), (3, flame * 0.62)], inner)}</g></g>',
     ]
     for k in range(n):
         px = ((k * 7 + seed) % 13) - 6
@@ -270,9 +337,9 @@ def exhaust(p: dict, flame: float, n: int, seed: int) -> str:
         begin = f"{0.15 * k:.2f}s"
         out.append(
             f'<rect x="{px - 1.1:.1f}" y="{py:.1f}" width="2.2" height="3" fill="{key}" opacity="0.9">'
-            f'<animateTransform attributeName="transform" type="translate" values="0,0;0,14" '
-            f'dur="1.5s" begin="{begin}" repeatCount="indefinite"/>'
-            f'<animate attributeName="opacity" values="0.9;0" dur="1.5s" begin="{begin}" repeatCount="indefinite"/>'
+            f'<animateTransform attributeName="transform" type="translate" values="0,0;0,48" '
+            f'dur="1.3s" begin="{begin}" repeatCount="indefinite"/>'
+            f'<animate attributeName="opacity" values="0.9;0" dur="1.3s" begin="{begin}" repeatCount="indefinite"/>'
             f'</rect>')
     return "".join(out)
 
@@ -287,12 +354,10 @@ def exhaust_intensity(commits: int) -> tuple[float, int]:
     return 46.0, 9
 
 
-def stage_labels(p: dict) -> str:
+def stage_labels_local(p: dict) -> str:
     out = []
-    for label, ly in (("S-IC", -26), ("S-II", -81), ("S-IVB", -123), ("PAYLOAD", -147)):
-        sx = TAIL[0] + 17 * COS_A - ly * SIN_A
-        sy = TAIL[1] + 17 * SIN_A + ly * COS_A
-        out.append(f'<text x="{sx:.1f}" y="{sy:.1f}" font-size="6.5" fill="{p["dim"]}">{label}</text>')
+    for label, ly in (("S-IC", -21), ("S-II", -66), ("S-IVB", -100), ("PAYLOAD", -120)):
+        out.append(f'<text x="17" y="{ly}" font-size="6.5" fill="{p["dim"]}">{label}</text>')
     return "".join(out)
 
 
@@ -302,6 +367,7 @@ def stage_labels(p: dict) -> str:
 
 def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, str]]) -> str:
     p = palette(theme, name)
+    tl = Timeline(D)
     out: list[str] = []
     right = WIDTH - PAD
 
@@ -310,9 +376,36 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
     out.append(f'<text x="660" y="30" text-anchor="end" font-size="9.5" fill="{p["dim"]}">CONTRIBUTION ACTIVITY &#183; LAST {MONTHS} MONTHS</text>')
     out.append(f'<circle cx="{PAD + 2}" cy="41" r="1.8" fill="{p["key"]}">'
                f'<animate attributeName="opacity" values="1;0.15;1" dur="1.4s" repeatCount="indefinite"/></circle>')
-    out.append(f'<text x="{PAD + 8}" y="44" font-size="8" fill="{p["dim"]}">MISSION STATUS: TRAJECTORY NOMINAL</text>')
     out.append(f'<text x="660" y="44" text-anchor="end" font-size="7.5" fill="{p["dim"]}">SYSTEMS ONLINE</text>')
     out.append(f'<line x1="{PAD}" y1="52" x2="{right}" y2="52" stroke="{p["block_stroke"]}"/>')
+
+    # --- Mission status line (decorative state machine) --------------------
+    statuses = [
+        ("COUNTDOWN", p["dim"], [(0, True), (IGN, False), (D, False)], 1),
+        ("IGNITION", p["key"], [(0, False), (IGN, True), (LIFTOFF, False), (D, False)], 0),
+        ("ASCENT", p["dim"], [(0, False), (LIFTOFF, True), (SEP1, False), (SEP1_END, True), (SEP2, False), (D, False)], 0),
+        ("STAGE SEPARATION", p["key"], [(0, False), (SEP1, True), (SEP1_END, False), (SEP2, True), (SEP2_END, False), (D, False)], 0),
+        ("ORBITAL INSERTION", p["dim"], [(0, False), (SEP2_END, True), (APOGEE, False), (D, False)], 0),
+        ("MISSION COMPLETE", p["key"], [(0, False), (APOGEE, True), (FADE_END, False), (D, False)], 0),
+        ("PREPARING LAUNCH", p["dim"], [(0, False), (FADE_END, True), (D, False)], 0),
+    ]
+    for text, fill, changes, base in statuses:
+        out.append(f'<g opacity="{base}">{tl.show(changes)}'
+                   f'<text x="36" y="44" font-size="8" fill="{fill}">MISSION STATUS: {text}</text></g>')
+
+    # --- Countdown (HUD corner) -------------------------------------------
+    counts = [
+        ("T-5", 12, [(0, True), (T4, False), (D, False)], 1),
+        ("T-4", 12, [(0, False), (T4, True), (T3, False), (D, False)], 0),
+        ("T-3", 12, [(0, False), (T3, True), (T2, False), (D, False)], 0),
+        ("T-2", 12, [(0, False), (T2, True), (T1, False), (D, False)], 0),
+        ("T-1", 12, [(0, False), (T1, True), (IGN, False), (D, False)], 0),
+        ("IGNITION", 10, [(0, False), (IGN, True), (LIFTOFF + 0.4, False), (D, False)], 0),
+    ]
+    for text, size, changes, base in counts:
+        out.append(f'<g opacity="{base}">{tl.show(changes)}'
+                   f'<text x="872" y="30" text-anchor="end" font-size="{size}" font-weight="bold" fill="{p["key"]}">'
+                   f'{text}<animate attributeName="opacity" values="1;0.55;1" dur="0.45s" repeatCount="indefinite"/></text></g>')
 
     # --- Telemetry tiles ---------------------------------------------------
     for i, (value, label) in enumerate(stats):
@@ -321,12 +414,17 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
         out.append(f'<text x="{x + 8:.0f}" y="78" font-size="19" font-weight="bold" fill="{p["ink"]}">{escape(value)}</text>')
         out.append(f'<text x="{x + 8:.0f}" y="92" font-size="8" fill="{p["dim"]}">{escape(label)}</text>')
 
-    # --- Launch-pad frame (top-right rocket zone) --------------------------
+    # --- Apogee frame (top-right destination) ------------------------------
     out.append(f'<rect x="664" y="56" width="208" height="132" fill="none" stroke="{p["block_stroke"]}" stroke-dasharray="3 3"/>')
-    out.append(f'<text x="670" y="66" font-size="6.5" fill="{p["dim"]}">LAUNCH PAD 01</text>')
+    out.append(f'<text x="670" y="66" font-size="6.5" fill="{p["dim"]}">APOGEE 01</text>')
+    out.append(f'<g opacity="0">{tl.show([(0, False), (APOGEE, True), (FADE_END, False)])}'
+               f'<text x="856" y="100" text-anchor="end" font-size="8" font-weight="bold" fill="{p["key"]}">MISSION COMPLETE</text></g>')
 
     # --- Flight trajectory + checkpoints -----------------------------------
     out.append(f'<line x1="{P0[0]}" y1="{P0[1]}" x2="{P1[0]}" y2="{P1[1]}" stroke="{p["key"]}" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.85"/>')
+    # Trajectory brightens once at apogee.
+    out.append(f'<line x1="{P0[0]}" y1="{P0[1]}" x2="{P1[0]}" y2="{P1[1]}" stroke="{p["key"]}" stroke-width="2.5" opacity="0">'
+               f'{opacity_anim([(0, 0), (APOGEE, 0), (APOGEE + 0.08, 0.55), (APOGEE + 0.7, 0), (D, 0)])}</line>')
     month_names = [calendar.month_name[mo["month"]][:3].upper() for mo in months]
     dots = []
     for i, t in enumerate(CHECKPOINTS):
@@ -343,62 +441,89 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
         out.append(f'<line x1="{cx:.1f}" y1="{BLOCK_Y - 2}" x2="{tx:.1f}" y2="{ty:.1f}" '
                    f'stroke="{p["key"]}" stroke-width="1" stroke-dasharray="2 3" opacity="0.45"/>')
 
+    # --- Launch pad --------------------------------------------------------
+    out.append(f'<line x1="{P0[0]}" y1="{P0[1] - 28}" x2="{P0[0]}" y2="{P0[1]}" stroke="{p["dim"]}" stroke-width="1.4"/>')
+    out.append(f'<line x1="{P0[0] - 8}" y1="{P0[1] - 22}" x2="{P0[0]}" y2="{P0[1] - 22}" stroke="{p["dim"]}" stroke-width="1.2"/>')
+    out.append(f'<line x1="{P0[0] - 12}" y1="{P0[1]}" x2="{P0[0] + 12}" y2="{P0[1]}" stroke="{p["dim"]}" stroke-width="1.2"/>')
+    out.append(f'<circle cx="{P0[0]}" cy="{P0[1] - 30}" r="1.6" fill="{p["key"]}">'
+               f'<animate attributeName="opacity" values="1;0.15;1" dur="1.1s" repeatCount="indefinite"/></circle>')
+    out.append(f'<text x="{P0[0] + 14}" y="{P0[1] + 14}" font-size="6.5" fill="{p["dim"]}">PAD 01</text>')
+
+    # --- Sampled motion ----------------------------------------------------
+    step = 0.08
+    times = [i * step for i in range(int(D / step) + 1)]
+    mover_pairs = [(t, (0.0, -pos_s(t) * TRAVEL)) for t in times]
+    follower_pairs = []
+    for t in times:
+        sf = max(0.0, pos_s(t - 0.35))
+        follower_pairs.append((t, (P0[0] + sf * DX, P0[1] + sf * DY)))
+    shake_pairs = []
+    for t in times:
+        if T2 - 0.15 <= t < IGN:
+            k = int(t / 0.06)
+            ox = 1.3 if k % 2 == 0 else -1.3
+            oy = 0.8 if (k // 2) % 2 == 0 else -0.8
+            shake_pairs.append((t, (ox, oy)))
+        else:
+            shake_pairs.append((t, (0.0, 0.0)))
+
     # --- The rocket --------------------------------------------------------
     flame, n_particles = exhaust_intensity(int(stats[0][0]))
     s1 = s1_shapes(p)
     s2 = s2_shapes(p)
     s3 = s3_payload_shapes(p)
-    k1 = SEP1 / SEQ
-    k2 = SEP2 / SEQ
+
     rocket = [
-        f'<g transform="translate({TAIL[0]:.1f},{TAIL[1]:.1f}) rotate({ALPHA:.2f})">',
-        # Ignition surge (forward = local -y), static-safe.
-        f'<g><animateTransform attributeName="transform" type="translate" '
-        f'values="0,0;0,2;0,-5;0,0" begin="0.3s" dur="1.1s" fill="freeze"/>',
-        # First stage.
-        f'<g><animate attributeName="opacity" values="1;0" begin="{SEP1}s" dur="0.3s" fill="freeze"/>{s1}</g>',
-        # First-stage exhaust: visible at t=0, cut at stage separation.
-        f'<g><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;{k1:.4f};{k1 + 0.06:.4f};1" '
-        f'begin="0s" dur="{SEQ}s" fill="freeze"/>{exhaust(p, flame, n_particles, 3)}</g>',
-        # Second stage.
-        f'<g><animate attributeName="opacity" values="1;0" begin="{SEP2}s" dur="0.3s" fill="freeze"/>{s2}</g>',
-        # Second-stage exhaust: appears after first separation.
-        f'<g opacity="0"><animate attributeName="opacity" '
-        f'values="0;0;1;1;0;0" keyTimes="0;{k1:.4f};{k1 + 0.06:.4f};{k2:.4f};{k2 + 0.06:.4f};1" '
-        f'begin="0s" dur="{SEQ}s" fill="freeze"/>{exhaust(p, max(20, flame * 0.6), 3, 5)}</g>',
-        # Third stage + payload.
+        f'<g transform="translate({P0[0]},{P0[1]}) rotate({ALPHA:.2f})">',
+        # Vehicle fade-out at the end of the mission (hidden reset).
+        f'{opacity_anim([(0, 1), (HOLD_END, 1), (FADE_END, 0), (D, 0)])}',
+        # Main motion: travels forward along the rocket axis (local -y).
+        f'<g>{translate_anim(mover_pairs)}',
+        # Camera shake during engine start-up.
+        f'<g>{translate_anim(shake_pairs)}',
+        # Stage 1 (detaches at SEP1).
+        f'<g>{opacity_anim([(0, 1), (SEP1 + 1.2, 1), (SEP1 + 2.4, 0), (D, 0)])}'
+        f'<g>{translate_anim([(0, (0, 0)), (SEP1, (0, 0)), (SEP1 + 2.4, (0, 34)), (D, (0, 34))])}'
+        f'<g>{rotate_anim([(0, 0), (SEP1, 0), (SEP1 + 2.4, 16), (D, 16)], (0, -21))}{s1}</g></g></g>',
+        # Stage 2 (detaches at SEP2).
+        f'<g>{opacity_anim([(0, 1), (SEP2 + 1.0, 1), (SEP2 + 2.2, 0), (D, 0)])}'
+        f'<g>{translate_anim([(0, (0, 0)), (SEP2, (0, 0)), (SEP2 + 2.2, (0, 28)), (D, (0, 28))])}'
+        f'<g>{rotate_anim([(0, 0), (SEP2, 0), (SEP2 + 2.2, 15), (D, 15)], (0, -66))}{s2}</g></g></g>',
+        # Third stage + payload (rides to apogee).
         f'<g>{s3}</g>',
-        # Third-stage exhaust: appears after second separation and idles.
-        f'<g opacity="0"><animate attributeName="opacity" '
-        f'values="0;0;0;1;1" keyTimes="0;{k2:.4f};{k2 + 0.06:.4f};{k2 + 0.12:.4f};1" '
-        f'begin="0s" dur="{SEQ}s" fill="freeze"/>{exhaust(p, max(14, flame * 0.4), 2, 7)}</g>',
+        # Stage exhausts (cut off / reignited per the state machine).
+        f'<g opacity="0">{opacity_anim([(0, 0), (T2, 0), (T1, 0.25), (IGN, 0.85), (SEP1 - 0.05, 0.85), (SEP1 + 0.1, 0), (D, 0)])}'
+        f'{exhaust(p, flame, n_particles, 3, [(0, 1), (LIFTOFF, 1), (LIFTOFF + 0.4, 1.4), (SEP1, 1.4), (SEP1 + 0.1, 1), (D, 1)])}</g>',
+        f'<g opacity="0" transform="translate(0,-49)">{opacity_anim([(0, 0), (SEP1 + 0.08, 0), (SEP1 + 0.25, 0.85), (SEP2 - 0.05, 0.85), (SEP2 + 0.1, 0), (D, 0)])}'
+        f'{exhaust(p, max(20, flame * 0.6), 3, 5, [(0, 1), (SEP1 + 0.25, 1), (SEP1 + 0.5, 1.35), (SEP2, 1.35), (SEP2 + 0.1, 1), (D, 1)])}</g>',
+        f'<g opacity="0" transform="translate(0,-88)">{opacity_anim([(0, 0), (SEP2 + 0.08, 0), (SEP2 + 0.25, 0.75), (APOGEE, 0.75), (HOLD_END, 0), (D, 0)])}'
+        f'{exhaust(p, max(14, flame * 0.4), 2, 7, [(0, 1), (SEP2 + 0.3, 1), (SEP2 + 0.6, 1.2), (APOGEE, 1.2), (HOLD_END, 1), (D, 1)])}</g>',
+        # Engine glow + ignition flash at the S-IC base.
+        f'<circle cx="0" cy="0" r="9" fill="{p["key"]}" opacity="0">'
+        f'{opacity_anim([(0, 0), (T3, 0), (T1, 0.22), (IGN, 0.6), (SEP1, 0.6), (SEP1 + 0.12, 0), (D, 0)])}</circle>',
+        f'<polygon points="0,-6 -9,4 0,18 9,4" fill="{p["key"]}" opacity="0">'
+        f'{opacity_anim([(0, 0), (IGN, 0), (IGN + 0.05, 1), (IGN + 0.4, 0), (D, 0)])}</polygon>',
         # Separation flashes.
-        f'<g opacity="0"><animate attributeName="opacity" values="0;0.9;0" begin="{SEP1 - 0.05}s" dur="0.5s" fill="freeze"/>'
-        f'{_r(-13, -61, 26, 2, p["key"])}</g>',
-        f'<g opacity="0"><animate attributeName="opacity" values="0;0.9;0" begin="{SEP2 - 0.05}s" dur="0.5s" fill="freeze"/>'
-        f'{_r(-11, -109, 22, 2, p["key"])}</g>',
-        # Separated stages drifting away (down-left, fading).
-        f'<g opacity="0"><animate attributeName="opacity" values="0;0.9;0" begin="{SEP1}s" dur="1.6s" fill="freeze"/>'
-        f'<animateTransform attributeName="transform" type="translate" values="0,0;0,30" begin="{SEP1}s" dur="1.6s" fill="freeze"/>'
-        f'{s1}</g>',
-        f'<g opacity="0"><animate attributeName="opacity" values="0;0.9;0" begin="{SEP2}s" dur="1.5s" fill="freeze"/>'
-        f'<animateTransform attributeName="transform" type="translate" values="0,0;0,24" begin="{SEP2}s" dur="1.5s" fill="freeze"/>'
-        f'{s2}</g>',
-        '</g></g>',
+        f'<g opacity="0">{tl.show([(0, False), (SEP1 - 0.05, True), (SEP1 + 0.25, False), (D, False)])}'
+        f'{_r(-13, -50, 26, 2, p["key"])}</g>',
+        f'<g opacity="0">{tl.show([(0, False), (SEP2 - 0.05, True), (SEP2 + 0.25, False), (D, False)])}'
+        f'{_r(-11, -89, 22, 2, p["key"])}</g>',
+        # Stage labels.
+        stage_labels_local(p),
+        '</g></g></g>',
     ]
     out.append("".join(rocket))
-    out.append(stage_labels(p))
 
-    # --- CURRENT MISSION marker at the nose --------------------------------
+    # --- Trajectory follower (signal chasing the rocket) -------------------
+    out.append(f'<g opacity="0">{tl.show([(0, False), (LIFTOFF, True), (APOGEE, False), (D, False)])}'
+               f'{translate_anim(follower_pairs)}'
+               f'<circle r="2.2" fill="{p["key"]}"/></g>')
+
+    # --- CURRENT MISSION marker at the apogee ------------------------------
     out.append(f'<circle cx="{P1[0]}" cy="{P1[1]}" r="3" fill="{p["key"]}">'
                f'<animate attributeName="opacity" values="0.35;1;0.35" dur="1.1s" repeatCount="indefinite"/></circle>')
     out.append(f'<circle cx="{P1[0]}" cy="{P1[1]}" r="6.5" fill="none" stroke="{p["key"]}" opacity="0.5">'
                f'<animate attributeName="opacity" values="0.5;0;0.5" dur="1.1s" repeatCount="indefinite"/></circle>')
-
-    # --- Trajectory pulse (idle loop) --------------------------------------
-    out.append(f'<g opacity="0"><animateMotion values="{P0[0]},{P0[1]};{P1[0]},{P1[1]}" dur="7s" begin="4.6s" repeatCount="indefinite"/>'
-               f'<animate attributeName="opacity" values="0;0;0.8;0" keyTimes="0;0.1;0.5;1" dur="7s" begin="4.6s" repeatCount="indefinite"/>'
-               f'<circle r="2.5" fill="{p["key"]}"/></g>')
 
     # --- Ground stations (mission log) -------------------------------------
     for i, mo in enumerate(months):
