@@ -74,16 +74,16 @@ SIGNS = ["HQ", "GRID", "TECH", "DATA", "NODE", "CORE", "NET", "OPS"]
 # Palette per theme: the city is grayscale + one orange accent.
 CITY_PALETTE = {
     "dark": dict(
-        bg="#0a0c10", border="#1b2128", ink="#3fb950", dim="#2ea043",
-        key="#f85149", faint="#232a33", building="#11151c", outline="#39424e",
-        outline_hot="#f85149", window_off="#202732", window_on="#d8dee7",
-        street="#0c0f14", lane="#222933", sidewalk="#1a2028", crane="#f85149",
+        bg="#0a0c10", border="#1b2128", ink="#f0f3f6", dim="#8b949e",
+        key="#ffa657", faint="#232a33", building="#11151c", outline="#39424e",
+        outline_hot="#ffa657", window_off="#202732", window_on="#d8dee7",
+        street="#0c0f14", lane="#222933", sidewalk="#1a2028", crane="#ffa657",
     ),
     "light": dict(
-        bg="#eef1f5", border="#d4dae2", ink="#1a7f37", dim="#4b8a52",
-        key="#cf222e", faint="#d7dde4", building="#ffffff", outline="#2b3a4a",
-        outline_hot="#cf222e", window_off="#e2e7ec", window_on="#4b5b6b",
-        street="#e2e6eb", lane="#c3cbd4", sidewalk="#cfd6dd", crane="#cf222e",
+        bg="#eef1f5", border="#d4dae2", ink="#24292f", dim="#6e7781",
+        key="#953800", faint="#d7dde4", building="#ffffff", outline="#2b3a4a",
+        outline_hot="#953800", window_off="#e2e7ec", window_on="#4b5b6b",
+        street="#e2e6eb", lane="#c3cbd4", sidewalk="#cfd6dd", crane="#953800",
     ),
 }
 
