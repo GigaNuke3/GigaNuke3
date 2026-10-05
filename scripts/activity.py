@@ -50,7 +50,9 @@ DX, DY = P1[0] - P0[0], P1[1] - P0[1]
 ANGLE = math.degrees(math.atan2(-DY, DX))       # ~14.85 deg above horizontal
 ALPHA = 90 - ANGLE                              # rotation applied to the nose-up rocket
 ROCKET_LEN = 142
-TRAVEL = math.hypot(DX, DY) - ROCKET_LEN        # distance the tail travels
+TRAJ_LEN = math.hypot(DX, DY)                     # total length of the orange trajectory
+TRAJ_PATH = f"M 0,0 L {DX:.1f},{DY:.1f}"          # the motion path (relative to the pad)
+ROCKET_PATH_MAX = (TRAJ_LEN - ROCKET_LEN) / TRAJ_LEN  # tail progress when the nose sits exactly on the endpoint
 CHECKPOINTS = [0.20, 0.42, 0.64]                # JUL / AUG / SEP along the line
 
 BLOCK_Y = 344
@@ -71,6 +73,15 @@ APOGEE = 11.4
 HOLD_END = 12.8
 FADE_END = 13.5
 RESET_END = D
+
+# Stage events as percentages of the trajectory path (configurable constants).
+# The vehicle origin (S-IC engine base) travels along the path; the nose
+# reaches 100% exactly at apogee.
+START_PCT = 0.00
+SEP1_PCT = 0.32
+SEP1_END_PCT = 0.38
+SEP2_PCT = 0.62
+SEP2_END_PCT = 0.68
 
 # --- Palette ---------------------------------------------------------------
 CITY_EXTRA = {
@@ -266,26 +277,32 @@ def scale_anim(stops: list[tuple[float, float]]) -> str:
             f'keyTimes="{keys}" calcMode="linear" dur="{D}s" repeatCount="indefinite"/>')
 
 
-def pos_s(t: float) -> float:
-    """Position along the trajectory (0 = pad, 1 = apogee)."""
+def pos_p(t: float) -> float:
+    """Progress of the vehicle origin (tail) along the trajectory path.
+
+    Returns a fraction of the trajectory path length (0 = pad). The nose of
+    the rocket sits exactly on the endpoint when this returns ROCKET_PATH_MAX.
+    Stage events pass through the configured percentage checkpoints
+    (SEP1_PCT, SEP2_PCT, ...) at their configured times.
+    """
     if t < IGN:
         return 0.0
     if t < LIFTOFF:
-        return 0.012 * (t - IGN) / (LIFTOFF - IGN)
+        return 0.010 * (t - IGN) / (LIFTOFF - IGN)
     if t < SEP1:
         p = (t - LIFTOFF) / (SEP1 - LIFTOFF)
-        return 0.012 + (0.35 - 0.012) * p * p
+        return 0.010 + (SEP1_PCT - 0.010) * p * p
     if t < SEP1_END:
-        return 0.35 + 0.07 * (t - SEP1) / (SEP1_END - SEP1)
+        return SEP1_PCT + (SEP1_END_PCT - SEP1_PCT) * (t - SEP1) / (SEP1_END - SEP1)
     if t < SEP2:
         p = (t - SEP1_END) / (SEP2 - SEP1_END)
-        return 0.42 + 0.28 * p * p
+        return SEP1_END_PCT + (SEP2_PCT - SEP1_END_PCT) * p * p
     if t < SEP2_END:
-        return 0.70 + 0.06 * (t - SEP2) / (SEP2_END - SEP2)
+        return SEP2_PCT + (SEP2_END_PCT - SEP2_PCT) * (t - SEP2) / (SEP2_END - SEP2)
     if t < APOGEE:
         p = (t - SEP2_END) / (APOGEE - SEP2_END)
-        return 0.76 + 0.24 * (1 - (1 - p) * (1 - p))
-    return 1.0
+        return SEP2_END_PCT + (ROCKET_PATH_MAX - SEP2_END_PCT) * (1 - (1 - p) * (1 - p))
+    return ROCKET_PATH_MAX
 
 
 # --------------------------------------------------------------------------
@@ -449,23 +466,43 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
                f'<animate attributeName="opacity" values="1;0.15;1" dur="1.1s" repeatCount="indefinite"/></circle>')
     out.append(f'<text x="{P0[0] + 14}" y="{P0[1] + 14}" font-size="6.5" fill="{p["dim"]}">PAD 01</text>')
 
-    # --- Sampled motion ----------------------------------------------------
+    # --- Motion sampling (path-following) ----------------------------------
+    # The rocket's position is always derived from the trajectory path:
+    # keyPoints are fractions of the trajectory length, so changing the
+    # trajectory geometry automatically changes the rocket's movement.
     step = 0.08
     times = [i * step for i in range(int(D / step) + 1)]
-    mover_pairs = [(t, (0.0, -pos_s(t) * TRAVEL)) for t in times]
-    follower_pairs = []
-    for t in times:
-        sf = max(0.0, pos_s(t - 0.35))
-        follower_pairs.append((t, (P0[0] + sf * DX, P0[1] + sf * DY)))
+    keys = ";".join(f"{t / D:.5f}" for t in times)
+    rocket_kp = ";".join(f"{pos_p(t):.4f}" for t in times)
+    follower_kp = ";".join(f"{max(0.0, pos_p(t - 0.35)):.4f}" for t in times)
     shake_pairs = []
     for t in times:
         if T2 - 0.15 <= t < IGN:
             k = int(t / 0.06)
-            ox = 1.3 if k % 2 == 0 else -1.3
-            oy = 0.8 if (k // 2) % 2 == 0 else -0.8
+            ox = 0.9 if k % 2 == 0 else -0.9
+            oy = 0.6 if (k // 2) % 2 == 0 else -0.6
             shake_pairs.append((t, (ox, oy)))
         else:
             shake_pairs.append((t, (0.0, 0.0)))
+
+    def stage_path_kp(pct: float, drift: tuple[float, float], sep_t: float, drift_t: float) -> tuple[str, str]:
+        """Path + keyPoints for a detached stage: follows the trajectory to its
+        separation percentage, then drifts backward/downward on its own."""
+        l1 = pct * TRAJ_LEN
+        px, py = pct * DX, pct * DY
+        l2 = math.hypot(*drift)
+        ltot = l1 + l2
+        kps = []
+        for t in times:
+            if t < sep_t:
+                frac = pos_p(t) * TRAJ_LEN / ltot
+            elif t < sep_t + drift_t:
+                frac = (l1 + (t - sep_t) / drift_t * l2) / ltot
+            else:
+                frac = 1.0
+            kps.append(f"{min(frac, 1.0):.4f}")
+        return (f"M 0,0 L {px:.1f},{py:.1f} L {px + drift[0]:.1f},{py + drift[1]:.1f}",
+                ";".join(kps))
 
     # --- The rocket --------------------------------------------------------
     flame, n_particles = exhaust_intensity(int(stats[0][0]))
@@ -474,21 +511,19 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
     s3 = s3_payload_shapes(p)
 
     rocket = [
-        f'<g transform="translate({P0[0]},{P0[1]}) rotate({ALPHA:.2f})">',
-        # Vehicle fade-out at the end of the mission (hidden reset).
-        f'{opacity_anim([(0, 1), (HOLD_END, 1), (FADE_END, 0), (D, 0)])}',
-        # Main motion: travels forward along the rocket axis (local -y).
-        f'<g>{translate_anim(mover_pairs)}',
+        f'<g transform="translate({P0[0]},{P0[1]})">',
+        # Main motion: follows the orange trajectory path itself (0 -> 100% of
+        # the vehicle travel; the nose reaches the exact endpoint at apogee).
+        f'<g><animateMotion path="{TRAJ_PATH}" keyPoints="{rocket_kp}" keyTimes="{keys}" '
+        f'calcMode="linear" dur="{D}s" repeatCount="indefinite"/>',
+        # Vehicle orientation: nose always points along the trajectory tangent.
+        f'<g transform="rotate({ALPHA:.2f})">{opacity_anim([(0, 1), (HOLD_END, 1), (FADE_END, 0), (D, 0)])}',
         # Camera shake during engine start-up.
         f'<g>{translate_anim(shake_pairs)}',
-        # Stage 1 (detaches at SEP1).
-        f'<g>{opacity_anim([(0, 1), (SEP1 + 1.2, 1), (SEP1 + 2.4, 0), (D, 0)])}'
-        f'<g>{translate_anim([(0, (0, 0)), (SEP1, (0, 0)), (SEP1 + 2.4, (0, 34)), (D, (0, 34))])}'
-        f'<g>{rotate_anim([(0, 0), (SEP1, 0), (SEP1 + 2.4, 16), (D, 16)], (0, -21))}{s1}</g></g></g>',
-        # Stage 2 (detaches at SEP2).
-        f'<g>{opacity_anim([(0, 1), (SEP2 + 1.0, 1), (SEP2 + 2.2, 0), (D, 0)])}'
-        f'<g>{translate_anim([(0, (0, 0)), (SEP2, (0, 0)), (SEP2 + 2.2, (0, 28)), (D, (0, 28))])}'
-        f'<g>{rotate_anim([(0, 0), (SEP2, 0), (SEP2 + 2.2, 15), (D, 15)], (0, -66))}{s2}</g></g></g>',
+        # Stage 1 (fades out at SEP1; the detached copy takes over).
+        f'<g>{opacity_anim([(0, 1), (SEP1, 1), (SEP1 + 0.3, 0), (D, 0)])}{s1}</g>',
+        # Stage 2 (fades out at SEP2).
+        f'<g>{opacity_anim([(0, 1), (SEP2, 1), (SEP2 + 0.3, 0), (D, 0)])}{s2}</g>',
         # Third stage + payload (rides to apogee).
         f'<g>{s3}</g>',
         # Stage exhausts (cut off / reignited per the state machine).
@@ -510,14 +545,28 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
         f'{_r(-11, -89, 22, 2, p["key"])}</g>',
         # Stage labels.
         stage_labels_local(p),
-        '</g></g></g>',
+        '</g></g></g></g>',
     ]
     out.append("".join(rocket))
 
+    # --- Detached stages (own paths; not attached to the rocket) ------------
+    for pct, sep_t, drift, drift_t, pivot, tumble, shapes, fade_hold in (
+        (SEP1_PCT, SEP1, (-44, 22), 2.4, (0, -21), 16, s1, 1.6),
+        (SEP2_PCT, SEP2, (-38, 20), 2.2, (0, -66), 15, s2, 1.4),
+    ):
+        path, kps = stage_path_kp(pct, drift, sep_t, drift_t)
+        out.append(
+            f'<g transform="translate({P0[0]},{P0[1]})">'
+            f'<g opacity="0">{opacity_anim([(0, 0), (sep_t, 0), (sep_t + 0.18, 1), (sep_t + fade_hold, 1), (sep_t + drift_t, 0), (D, 0)])}'
+            f'<g>{rotate_anim([(0, ALPHA), (sep_t, ALPHA), (sep_t + drift_t, ALPHA + tumble), (D, ALPHA + tumble)], pivot)}'
+            f'<g><animateMotion path="{path}" keyPoints="{kps}" keyTimes="{keys}" calcMode="linear" dur="{D}s" repeatCount="indefinite"/>{shapes}</g>'
+            f'</g></g></g>')
+
     # --- Trajectory follower (signal chasing the rocket) -------------------
-    out.append(f'<g opacity="0">{tl.show([(0, False), (LIFTOFF, True), (APOGEE, False), (D, False)])}'
-               f'{translate_anim(follower_pairs)}'
-               f'<circle r="2.2" fill="{p["key"]}"/></g>')
+    out.append(f'<g transform="translate({P0[0]},{P0[1]})" opacity="0">'
+               f'{tl.show([(0, False), (LIFTOFF, True), (APOGEE, False), (D, False)])}'
+               f'<g><animateMotion path="{TRAJ_PATH}" keyPoints="{follower_kp}" keyTimes="{keys}" calcMode="linear" dur="{D}s" repeatCount="indefinite"/>'
+               f'<circle r="2.2" fill="{p["key"]}"/></g></g>')
 
     # --- CURRENT MISSION marker at the apogee ------------------------------
     out.append(f'<circle cx="{P1[0]}" cy="{P1[1]}" r="3" fill="{p["key"]}">'
