@@ -50,10 +50,10 @@ PROFILE = [
 ]
 
 THEMES = {
-    "dark": dict(bg="#161b22", text="#c9d1d9", key="#f0f3f6", value="#a5d6ff",
-                 dim="#616e7f", ascii="#c9d1d9", invert=False),
-    "light": dict(bg="#f6f8fa", text="#24292f", key="#1f2328", value="#0a3069",
-                  dim="#9aa6b5", ascii="#24292f", invert=True),
+    "dark": dict(bg="#161b22", text="#3fb950", key="#f85149", value="#7ee787",
+                 dim="#2ea043", ascii="#3fb950", invert=False),
+    "light": dict(bg="#f6f8fa", text="#1a7f37", key="#cf222e", value="#116329",
+                  dim="#4b8a52", ascii="#1a7f37", invert=True),
 }
 
 PAD = 28

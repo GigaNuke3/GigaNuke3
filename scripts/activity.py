@@ -86,9 +86,9 @@ SEP2_END_PCT = 0.68
 # --- Palette ---------------------------------------------------------------
 CITY_EXTRA = {
     "dark": dict(rocket_body="#2a313b", rocket_shade="#1c222a", block_bg="#10141a",
-                 block_stroke="#232a33", exhaust_inner="#ffffff"),
+                 block_stroke="#232a33", exhaust="#ff5722", exhaust_inner="#ffcc80"),
     "light": dict(rocket_body="#ffffff", rocket_shade="#dfe4ea", block_bg="#ffffff",
-                  block_stroke="#c6cdd6", exhaust_inner="#ffffff"),
+                  block_stroke="#c6cdd6", exhaust="#c2410c", exhaust_inner="#ffcc80"),
 }
 
 
@@ -310,7 +310,7 @@ def pos_p(t: float) -> float:
 # --------------------------------------------------------------------------
 
 def s1_shapes(p: dict) -> str:
-    body, out, shade = p["rocket_body"], p["ink"], p["rocket_shade"]
+    body, out, shade = p["rocket_body"], p["key"], p["rocket_shade"]
     g = [_r(-13, -42, 26, 42, body, out),
          _r(-19, -13, 6, 13, body, out),          # fins
          _r(13, -13, 6, 13, body, out)]
@@ -321,7 +321,7 @@ def s1_shapes(p: dict) -> str:
 
 
 def s2_shapes(p: dict) -> str:
-    body, out, shade = p["rocket_body"], p["ink"], p["rocket_shade"]
+    body, out, shade = p["rocket_body"], p["key"], p["rocket_shade"]
     g = [_r(-11, -83, 22, 34, body, out)]
     for cx in (-7.5, -3, 1.5, 6):
         g.append(_r(cx, -49, 3.4, 4, shade, out, 0.8))
@@ -330,7 +330,7 @@ def s2_shapes(p: dict) -> str:
 
 
 def s3_payload_shapes(p: dict) -> str:
-    body, out = p["rocket_body"], p["ink"]
+    body, out = p["rocket_body"], p["key"]
     g = [_r(-8, -112, 16, 24, body, out)]
     for cx in (-5, -1, 3):
         g.append(_r(cx, -88, 2.6, 4, p["rocket_shade"], out, 0.8))
@@ -341,7 +341,7 @@ def s3_payload_shapes(p: dict) -> str:
 
 def exhaust(p: dict, flame: float, n: int, seed: int, scale_stops: list[tuple[float, float]]) -> str:
     """Flame + particles pointing down (+y) from the local engine base."""
-    key, inner = p["key"], p["exhaust_inner"]
+    key, inner = p["exhaust"], p["exhaust_inner"]
     out = [
         f'<g>{scale_anim(scale_stops)}'
         f'<g><animate attributeName="opacity" values="0.85;1;0.85" dur="0.5s" repeatCount="indefinite"/>'
@@ -534,9 +534,9 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
         f'<g opacity="0" transform="translate(0,-88)">{opacity_anim([(0, 0), (SEP2 + 0.08, 0), (SEP2 + 0.25, 0.75), (APOGEE, 0.75), (HOLD_END, 0), (D, 0)])}'
         f'{exhaust(p, max(14, flame * 0.4), 2, 7, [(0, 1), (SEP2 + 0.3, 1), (SEP2 + 0.6, 1.2), (APOGEE, 1.2), (HOLD_END, 1), (D, 1)])}</g>',
         # Engine glow + ignition flash at the S-IC base.
-        f'<circle cx="0" cy="0" r="9" fill="{p["key"]}" opacity="0">'
+        f'<circle cx="0" cy="0" r="9" fill="{p["exhaust"]}" opacity="0">'
         f'{opacity_anim([(0, 0), (T3, 0), (T1, 0.22), (IGN, 0.6), (SEP1, 0.6), (SEP1 + 0.12, 0), (D, 0)])}</circle>',
-        f'<polygon points="0,-6 -9,4 0,18 9,4" fill="{p["key"]}" opacity="0">'
+        f'<polygon points="0,-6 -9,4 0,18 9,4" fill="{p["exhaust"]}" opacity="0">'
         f'{opacity_anim([(0, 0), (IGN, 0), (IGN + 0.05, 1), (IGN + 0.4, 0), (D, 0)])}</polygon>',
         # Separation flashes.
         f'<g opacity="0">{tl.show([(0, False), (SEP1 - 0.05, True), (SEP1 + 0.25, False), (D, False)])}'

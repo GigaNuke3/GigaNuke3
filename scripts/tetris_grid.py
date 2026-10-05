@@ -72,9 +72,9 @@ SHAPES = {
 # Classic Tetris colours, tuned for each card theme.
 SHAPE_COLOURS = {
     "dark": {"I": "#56d4dd", "O": "#f2cc60", "T": "#d2a8ff", "S": "#7ee787",
-             "Z": "#ff7b72", "J": "#79c0ff", "L": "#f0f3f6"},
+             "Z": "#ff7b72", "J": "#79c0ff", "L": "#f85149"},
     "light": {"I": "#1b7c83", "O": "#9a6700", "T": "#8250df", "S": "#1a7f37",
-              "Z": "#cf222e", "J": "#0969da", "L": "#1f2328"},
+              "Z": "#cf222e", "J": "#0969da", "L": "#cf222e"},
 }
 
 
