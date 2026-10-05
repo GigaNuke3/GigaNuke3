@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="426" viewBox="0 0 900 426" font-family="Consolas, 'Courier New', monospace">
+<style>text { white-space: pre; }</style>
+<rect width="900" height="426" rx="15" fill="#f6f8fa"/>
+<g fill="#24292f" font-size="12">
+<text x="28" y="140.7" textLength="295.2" lengthAdjust="spacing">                 .-=========-.           </text>
+<text x="28" y="154.6" textLength="295.2" lengthAdjust="spacing">             .-''               ''-.     </text>
+<text x="28" y="168.5" textLength="295.2" lengthAdjust="spacing">           .'       .-------.       '.   </text>
+<text x="28" y="182.4" textLength="295.2" lengthAdjust="spacing">          /       .'  .---.  '.       \  </text>
+<text x="28" y="196.3" textLength="295.2" lengthAdjust="spacing">         /       /   /  @  \   \       \ </text>
+<text x="28" y="210.2" textLength="295.2" lengthAdjust="spacing">        |       |    \  _  /    |       |</text>
+<text x="28" y="224.1" textLength="295.2" lengthAdjust="spacing">        |       |     '---'     |       |</text>
+<text x="28" y="238.0" textLength="295.2" lengthAdjust="spacing">        |       |   .---|---.   |       |</text>
+<text x="28" y="251.9" textLength="295.2" lengthAdjust="spacing">        |       |  /    |    \  |       |</text>
+<text x="28" y="265.8" textLength="295.2" lengthAdjust="spacing">         \       \  .-^-.  /       /     </text>
+<text x="28" y="279.7" textLength="295.2" lengthAdjust="spacing">          '.       '-----'       .'      </text>
+<text x="28" y="293.6" textLength="295.2" lengthAdjust="spacing">            '-.             .-'          </text>
+</g>
+<g font-size="14">
+<text x="351.2" y="42.8" textLength="520.8" lengthAdjust="spacing"><tspan fill="#24292f">eco@giganuke3 </tspan><tspan fill="#9aa6b5">————————————————————————————————————————————————</tspan></text>
+<text x="351.2" y="61.3" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">OS</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> .................................</tspan><tspan fill="#0a3069"> Fedora Linux / Windows</tspan></text>
+<text x="351.2" y="79.8" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Uptime</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> ..........................</tspan><tspan fill="#0a3069"> 1 year, 5 months, 22 days</tspan></text>
+<text x="351.2" y="98.3" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Host</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> .................................</tspan><tspan fill="#0a3069"> github.com/GigaNuke3</tspan></text>
+<text x="351.2" y="116.8" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Kernel</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> ...................</tspan><tspan fill="#0a3069"> AI Engineer / Software Developer</tspan></text>
+<text x="351.2" y="135.3" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">IDE</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> ..........................</tspan><tspan fill="#0a3069"> VS Code, Cursor, Claude Code</tspan></text>
+<text x="351.2" y="153.8" textLength="8.4" lengthAdjust="spacing"><tspan fill="#9aa6b5">.</tspan></text>
+<text x="351.2" y="172.3" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Languages.Programming</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> ........</tspan><tspan fill="#0a3069"> Python, Kotlin, PHP, JS, SQL</tspan></text>
+<text x="351.2" y="190.8" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Languages.AI/ML</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> .......</tspan><tspan fill="#0a3069"> Ollama, LLMs, Embeddings, AI Memory</tspan></text>
+<text x="351.2" y="209.3" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Languages.Real</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> ..........................</tspan><tspan fill="#0a3069"> English, Filipino</tspan></text>
+<text x="351.2" y="227.8" textLength="8.4" lengthAdjust="spacing"><tspan fill="#9aa6b5">.</tspan></text>
+<text x="351.2" y="246.3" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Role.Current</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> .............</tspan><tspan fill="#0a3069"> AI Engineer / Software Developer</tspan></text>
+<text x="351.2" y="264.8" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Role.Focus</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> .........</tspan><tspan fill="#0a3069"> Local AI / LLMs / Desktop Applications</tspan></text>
+<text x="351.2" y="283.3" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Systems</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> .......................</tspan><tspan fill="#0a3069"> Axie Flash / Callama / LMIS</tspan></text>
+<text x="351.2" y="301.8" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Mindset</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> ...........</tspan><tspan fill="#0a3069"> Build -&gt; Break -&gt; Understand -&gt; Rebuild</tspan></text>
+<text x="351.2" y="320.3" textLength="520.8" lengthAdjust="spacing"><tspan fill="#24292f">- Contact </tspan><tspan fill="#9aa6b5">————————————————————————————————————————————————————</tspan></text>
+<text x="351.2" y="338.8" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">GitHub</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> ..........................................</tspan><tspan fill="#0a3069"> GigaNuke3</tspan></text>
+<text x="351.2" y="357.3" textLength="520.8" lengthAdjust="spacing"><tspan fill="#24292f">- GitHub Stats </tspan><tspan fill="#9aa6b5">———————————————————————————————————————————————</tspan></text>
+<text x="351.2" y="375.8" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Repos</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> .........................</tspan><tspan fill="#0a3069"> 9</tspan><tspan fill="#24292f"> | </tspan><tspan fill="#953800">Stars</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> ..............</tspan><tspan fill="#0a3069"> 2</tspan></text>
+<text x="351.2" y="394.3" textLength="520.8" lengthAdjust="spacing"><tspan fill="#9aa6b5">. </tspan><tspan fill="#953800">Commits</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> .....................</tspan><tspan fill="#0a3069"> 562</tspan><tspan fill="#24292f"> | </tspan><tspan fill="#953800">Followers</tspan><tspan fill="#24292f">:</tspan><tspan fill="#9aa6b5"> ..........</tspan><tspan fill="#0a3069"> 1</tspan></text>
+</g></svg>
