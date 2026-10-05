@@ -1,10 +1,13 @@
 """Render the profile card: dark_mode.svg + light_mode.svg.
 
-Adapted for GigaNuke3 from the Gabi-comm profile card generator
-(https://github.com/Gabi-comm/Gabi-comm), with a REST fallback so the
-card can be rendered locally without a token. When GITHUB_TOKEN or
-ACCESS_TOKEN is available (GitHub Actions), GraphQL is used for richer
-all-time stats.
+A compact terminal-style window for the README: the window title bar, the
+profile picture (assets/profile.png, referenced by URL), and the developer
+readout with live GitHub stats on the right.
+
+When GITHUB_TOKEN or ACCESS_TOKEN is available (GitHub Actions), GraphQL is
+used for richer all-time stats; otherwise the public REST API + the public
+contribution calendar are used, so the card can still be rendered locally
+without a token.
 
 Usage:
     python scripts/profile_card.py            # live stats (token if present)
@@ -16,38 +19,15 @@ import json
 import os
 import re
 import urllib.request
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parent.parent
 USER = "GigaNuke3"
-JOINED = date(2025, 4, 13)  # the day the GitHub account was created
 
-WIDTH = 62  # character width of the info column
-
-
-PROFILE = [
-    ("OS", "Fedora Linux / Windows"),
-    ("Uptime", "{uptime}"),
-    ("Host", "github.com/GigaNuke3"),
-    ("Kernel", "AI Engineer / Software Developer"),
-    ("IDE", "VS Code, Cursor, Claude Code"),
-    None,
-    ("Languages.Programming", "Python, Kotlin, PHP, JS, SQL"),
-    ("Languages.AI/ML", "Ollama, LLMs, Embeddings, AI Memory"),
-    ("Languages.Real", "English, Filipino"),
-    None,
-    ("Role.Current", "AI Engineer / Software Developer"),
-    ("Role.Focus", "Local AI / LLMs / Desktop Applications"),
-    ("Systems", "Axie Flash / Callama / LMIS"),
-    ("Mindset", "Build -> Break -> Understand -> Rebuild"),
-    ("- Contact", None),
-    ("GitHub", USER),
-    ("- GitHub Stats", None),
-    "{stats_repos}",
-    "{stats_commits}",
-]
+WIDTH, HEIGHT = 900, 352
+IMG_URL = f"https://raw.githubusercontent.com/{USER}/{USER}/main/assets/profile.png"
 
 THEMES = {
     "dark": dict(bg="#161b22", text="#f0f3f6", key="#ffa657", value="#c9d1d9",
@@ -56,11 +36,10 @@ THEMES = {
                   dim="#6e7781", ascii="#24292f", invert=True),
 }
 
-PAD = 28
-ASCII_FONT, ASCII_CHAR_W, ASCII_LINE = 12, 7.2, 13.9
-INFO_FONT, INFO_CHAR_W, INFO_LINE = 14, 8.4, 18.5
-GAP = 28
-
+CARD = {
+    "dark": dict(bg="#0d1117", border="#30363d"),
+    "light": dict(bg="#f6f8fa", border="#d0d7de"),
+}
 
 QUERY = """
 query($login: String!) {
@@ -106,7 +85,7 @@ def fetch_stats_graphql(token: str) -> dict:
     user = graphql(token, QUERY, {"login": USER})["user"]
     commits = 0
     now = datetime.now(timezone.utc)
-    for year in range(JOINED.year, now.year + 1):
+    for year in range(2025, now.year + 1):
         start = datetime(year, 1, 1, tzinfo=timezone.utc)
         end = min(datetime(year + 1, 1, 1, tzinfo=timezone.utc), now)
         cc = graphql(token, COMMITS_QUERY, {
@@ -150,7 +129,7 @@ def fetch_stats_rest() -> dict:
     repos = fetch_json(f"https://api.github.com/users/{USER}/repos?per_page=100&sort=updated")
     return {
         "repos": profile.get("public_repos", 0),
-        "contributed": 0,  # needs GraphQL; only shown when a token is available
+        "contributed": 0,  # needs GraphQL; not shown on the card
         "stars": sum(int(r.get("stargazers_count", 0)) for r in repos),
         "commits": fetch_public_contrib_total(),
         "followers": profile.get("followers", 0),
@@ -166,101 +145,61 @@ def fetch_stats(token: str | None) -> dict:
     return fetch_stats_rest()
 
 
-def uptime(today: date) -> str:
-    months = (today.year - JOINED.year) * 12 + today.month - JOINED.month
-    if today.day < JOINED.day:
-        months -= 1
-    anchor_month = JOINED.month - 1 + months
-    anchor = date(JOINED.year + anchor_month // 12, anchor_month % 12 + 1, JOINED.day)
-    days = (today - anchor).days
-    years, months = divmod(months, 12)
-
-    def unit(n, word):
-        return f"{n} {word}{'' if n == 1 else 's'}"
-
-    return f"{unit(years, 'year')}, {unit(months, 'month')}, {unit(days, 'day')}"
-
-
-def kv(key: str, value: str, width: int) -> list[tuple[str, str]]:
-    """'. Key: ...... value' padded to `width` characters."""
-    head, tail = f"{key}:", f" {value}"
-    dots = width - 2 - len(head) - len(tail) - 1
-    if dots < 2:
-        raise ValueError(f"line too long for {width} cols: {key}: {value}")
-    return [("dim", ". "), ("key", key), ("text", ":"), ("dim", " " + "." * dots), ("value", tail)]
-
-
-def rule(title: str, width: int) -> list[tuple[str, str]]:
-    return [("text", title + " "), ("dim", "—" * (width - len(title) - 1))]
-
-
-STAT_SPLIT = 36  # where the ' | ' between the two stat pairs sits
-
-
-def stat_pair(left: tuple[str, str], right: tuple[str, str], width: int) -> list[tuple[str, str]]:
-    """Two key/values on one line split by ' | ', like the sample's stats rows."""
-    right_spans = kv(*right, width - STAT_SPLIT - 3 + 2)[1:]
-    return kv(*left, STAT_SPLIT) + [("text", " | ")] + right_spans
-
-
-def info_lines(stats: dict, today: date) -> list[list[tuple[str, str]]]:
-    lines = [rule("eco@giganuke3", WIDTH)]
-    for row in PROFILE:
-        if row is None:
-            lines.append([("dim", ".")])
-        elif row == "{stats_repos}":
-            lines.append(stat_pair(("Repos", f"{stats['repos']}"),
-                                   ("Stars", f"{stats['stars']:,}"), WIDTH))
-        elif row == "{stats_commits}":
-            lines.append(stat_pair(("Commits", f"{stats['commits']:,}"),
-                                   ("Followers", f"{stats['followers']:,}"), WIDTH))
-        elif row[1] is None:
-            lines.append(rule(row[0], WIDTH))
-        else:
-            key, value = row
-            lines.append(kv(key, value.format(uptime=uptime(today)), WIDTH))
-    return lines
-
-
-def render(theme: dict, portrait: list[str], info: list[list[tuple[str, str]]]) -> str:
-    ascii_cols = max(len(l) for l in portrait)
-    ascii_w = ascii_cols * ASCII_CHAR_W
-    ascii_h = len(portrait) * ASCII_LINE
-    info_w = WIDTH * INFO_CHAR_W
-    info_h = len(info) * INFO_LINE
-    content_h = max(ascii_h, info_h)
-    width = round(PAD * 2 + ascii_w + GAP + info_w)
-    height = round(PAD * 2 + content_h)
-
-    colours = {k: theme[k] for k in ("text", "key", "value", "dim")}
+def render(name: str, theme: dict, stats: dict) -> str:
+    key, dim = theme["key"], theme["dim"]
+    card = CARD[name]
     out = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
-        f'viewBox="0 0 {width} {height}" font-family="Consolas, \'Courier New\', monospace">',
-        "<style>text { white-space: pre; }</style>",
-        f'<rect width="{width}" height="{height}" rx="15" fill="{theme["bg"]}"/>',
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" '
+        f'viewBox="0 0 {WIDTH} {HEIGHT}" font-family="Consolas, \'Courier New\', monospace">',
+        f'<rect width="{WIDTH}" height="{HEIGHT}" rx="15" fill="{card["bg"]}"/>',
+        f'<rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="15" '
+        f'fill="none" stroke="{card["border"]}"/>',
+        # Title bar
+        f'<text x="26" y="27" font-size="11" fill="{key}">&#9679; &#9679; &#9679;</text>',
+        f'<text x="64" y="27" font-size="11" fill="{dim}">giganuke3@github: ~/profile</text>',
+        f'<line x1="20" y1="40" x2="{WIDTH - 20}" y2="40" stroke="{card["border"]}"/>',
+        # Profile picture (clipped to a rounded square)
+        '<defs><clipPath id="pic"><rect x="24" y="58" width="220" height="220" rx="12"/></clipPath></defs>',
+        f'<image clip-path="url(#pic)" href="{IMG_URL}" x="24" y="58" width="220" height="220" '
+        f'preserveAspectRatio="xMidYMid slice"/>',
     ]
 
-    y0 = PAD + (content_h - ascii_h) / 2 + ASCII_LINE * 0.8
-    out.append(f'<g fill="{theme["ascii"]}" font-size="{ASCII_FONT}">')
-    for i, line in enumerate(portrait):
-        line = line.ljust(ascii_cols)
-        out.append(
-            f'<text x="{PAD}" y="{y0 + i * ASCII_LINE:.1f}" textLength="{ascii_w:.1f}" '
-            f'lengthAdjust="spacing">{escape(line)}</text>'
-        )
-    out.append("</g>")
-
-    x = PAD + ascii_w + GAP
-    y1 = PAD + (content_h - info_h) / 2 + INFO_LINE * 0.8
-    out.append(f'<g font-size="{INFO_FONT}">')
-    for i, spans in enumerate(info):
-        n = sum(len(t) for _, t in spans)
-        tspans = "".join(f'<tspan fill="{colours[s]}">{escape(t)}</tspan>' for s, t in spans)
-        out.append(
-            f'<text x="{x:.1f}" y="{y1 + i * INFO_LINE:.1f}" textLength="{n * INFO_CHAR_W:.1f}" '
-            f'lengthAdjust="spacing">{tspans}</text>'
-        )
-    out.append("</g></svg>")
+    lines = [
+        ("key", "eco@giganuke3 &#9612;", 14, True),
+        ("key", "&#9472;" * 37, 11, False),
+        ("key", "AI ENGINEER / SOFTWARE DEVELOPER", 12.5, False),
+        ("dim", "Local AI &#183; LLMs &#183; Desktop Apps &#183; Web Development", 11.5, False),
+        ("key", "SYSTEMS", 12, True),
+        ("key", "Local AI / LLMs / Desktop Applications", 12, False),
+        ("key", "STACK", 12, True),
+        ("key", "Python &#183; Kotlin &#183; PHP &#183; JS &#183; SQL", 12, False),
+        ("key", "Ollama &#183; LLMs &#183; Embeddings &#183; AI Memory", 12, False),
+        ("key", "LANGUAGES", 12, True),
+        ("key", "English &#183; Filipino", 12, False),
+        ("key", "PROJECTS", 12, True),
+        ("project", "Axie Flash   ", "[AI EDUCATION]"),
+        ("project", "Callama      ", "[LOCAL AI DESKTOP]"),
+        ("project", "LMIS         ", "[INFORMATION SYSTEM]"),
+        ("key", "GITHUB", 12, True),
+        ("key", f"Repos {stats['repos']} &#183; Stars {stats['stars']:,} &#183; Followers {stats['followers']:,}", 12, False),
+        ("key", f"Commits {stats['commits']:,}", 12, False),
+        ("dim", "github.com/GigaNuke3", 11.5, False),
+    ]
+    x0, y0, lh = 272, 82, 13.6
+    for i, item in enumerate(lines):
+        y = y0 + i * lh
+        if item[0] == "project":
+            _, name, tag = item
+            out.append(f'<text x="{x0}" y="{y:.1f}" font-size="12">'
+                       f'<tspan fill="{key}">{escape(name)}</tspan>'
+                       f'<tspan fill="{dim}">{escape(tag)}</tspan></text>')
+        else:
+            kind, text, size, bold = item
+            weight = ' font-weight="bold"' if bold else ""
+            fill = key if kind == "key" else dim
+            out.append(f'<text x="{x0}" y="{y:.1f}" font-size="{size}"{weight} fill="{fill}">'
+                       f'{escape(text)}</text>')
+    out.append("</svg>")
     return "\n".join(out) + "\n"
 
 
@@ -270,17 +209,15 @@ def main() -> None:
     args = ap.parse_args()
 
     if args.offline:
-        stats = dict(repos=9, contributed=0, stars=2, commits=1234, followers=1)
+        stats = dict(repos=9, contributed=0, stars=2, commits=562, followers=1)
     else:
         token = os.environ.get("ACCESS_TOKEN") or os.environ.get("GITHUB_TOKEN")
         stats = fetch_stats(token)
     print("stats:", stats)
 
-    portrait = (ROOT / "assets" / "portrait.txt").read_text(encoding="utf-8").splitlines()
-    info = info_lines(stats, date.today())
     for name, theme in THEMES.items():
         path = ROOT / f"{name}_mode.svg"
-        path.write_text(render(theme, portrait, info), encoding="utf-8")
+        path.write_text(render(name, theme, stats), encoding="utf-8")
         print("wrote", path.name)
 
 
