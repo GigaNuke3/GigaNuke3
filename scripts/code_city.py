@@ -32,11 +32,11 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 from grid_common import TZ, fetch_public_calendar
-from profile_card import PAD
+from profile_card import PAD, THEMES, card
 
 ROOT = Path(__file__).resolve().parent.parent
 WIDTH = 900
-HEIGHT = 352
+HEIGHT = 364
 RIGHT = WIDTH - PAD
 
 # --- City layout -----------------------------------------------------------
@@ -74,13 +74,13 @@ SIGNS = ["HQ", "GRID", "TECH", "DATA", "NODE", "CORE", "NET", "OPS"]
 # Palette per theme: the city is grayscale + one orange accent.
 CITY_PALETTE = {
     "dark": dict(
-        bg="#0a0c10", border="#1b2128", ink="#f0f3f6", dim="#8b949e",
+        ink="#f0f3f6", dim="#8b949e",
         key="#ffa657", faint="#232a33", building="#11151c", outline="#39424e",
         outline_hot="#ffa657", window_off="#202732", window_on="#d8dee7",
         street="#0c0f14", lane="#222933", sidewalk="#1a2028", crane="#ffa657",
     ),
     "light": dict(
-        bg="#eef1f5", border="#d4dae2", ink="#24292f", dim="#6e7781",
+        ink="#24292f", dim="#6e7781",
         key="#953800", faint="#d7dde4", building="#ffffff", outline="#2b3a4a",
         outline_hot="#953800", window_off="#e2e7ec", window_on="#4b5b6b",
         street="#e2e6eb", lane="#c3cbd4", sidewalk="#cfd6dd", crane="#953800",
@@ -210,7 +210,7 @@ def _line(x1, y1, x2, y2, stroke, sw=1, extra="") -> str:
 
 
 def _blink(cx, cy, r, fill, dur="1.6s", begin="0s") -> str:
-    return (f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{fill}">'
+    return (f'<circle class="fx" cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{fill}">'
             f'<animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" '
             f'dur="{dur}" begin="{begin}" repeatCount="indefinite"/></circle>')
 
@@ -388,7 +388,7 @@ def render_building(spec: dict, p: dict, blinks: list[str], pulses: list[str],
     if arch is not None and arch.get("pulse") and len(pulses) < 3:
         px = cx + w / 2 - 1
         pulses.append(
-            f'<g opacity="0.7"><animateTransform attributeName="transform" type="translate" '
+            f'<g class="fx" opacity="0.7"><animateTransform attributeName="transform" type="translate" '
             f'values="0,0;0,-{(top + 4) - (top - 10):.1f}" dur="3.2s" repeatCount="indefinite"/>'
             f'<rect x="{px:.1f}" y="{top - 10:.1f}" width="1.6" height="4" fill="{p["key"]}"/></g>')
     return out
@@ -431,12 +431,13 @@ def render_car(p: dict, lane: float, dur: str, begin: str, direction: int = 1) -
     if direction == -1:
         body = f'<g transform="scale(-1,1)">{body}</g>'
     x0, x1 = ("-30", "930") if direction == 1 else ("930", "-30")
-    return (f'<g><animateTransform attributeName="transform" type="translate" '
+    return (f'<g class="fx"><animateTransform attributeName="transform" type="translate" '
             f'values="{x0},0;{x1},0" dur="{dur}" begin="{begin}" repeatCount="indefinite"/>{body}</g>')
 
 
 def render_city(name: str, days: list[dict], stats: list[tuple[str, str]], today: date) -> str:
-    p = CITY_PALETTE[name]
+    theme = THEMES[name]
+    p = {**CITY_PALETTE[name], "bg": theme["bg"], "border": theme["border"]}
     city = generate_city(days, today)
     out: list[str] = []
 
@@ -502,7 +503,7 @@ def render_city(name: str, days: list[dict], stats: list[tuple[str, str]], today
     out.append(render_car(p, LANE_Y - 1, "120s", "9s", 1))
 
     # Scanline sweeping the sky.
-    out.append(f'<rect x="0" y="{CITY_TOP}" width="1.5" height="{BASELINE - CITY_TOP}" fill="{p["ink"]}" opacity="0.03">'
+    out.append(f'<rect class="fx" x="0" y="{CITY_TOP}" width="1.5" height="{BASELINE - CITY_TOP}" fill="{p["ink"]}" opacity="0.03">'
                f'<animateTransform attributeName="transform" type="translate" values="0,0;{WIDTH},0" '
                f'dur="38s" repeatCount="indefinite"/></rect>')
 
@@ -512,15 +513,7 @@ def render_city(name: str, days: list[dict], stats: list[tuple[str, str]], today
         out.append(f'<text x="{spec["cx"]:.1f}" y="{DAY_LABEL_Y}" text-anchor="middle" font-size="7.5" '
                    f'fill="{fill}" opacity="{1 if spec["is_today"] else 0.75}">{spec["day"]}</text>')
 
-    svg = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" '
-        f'shape-rendering="crispEdges" font-family="Consolas, \'Courier New\', monospace">',
-        f'<rect width="{WIDTH}" height="{HEIGHT}" rx="15" fill="{p["bg"]}"/>',
-        f'<rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="15" fill="none" stroke="{p["border"]}"/>',
-        *out,
-        "</svg>",
-    ]
-    return "\n".join(svg) + "\n"
+    return card(theme, WIDTH, HEIGHT, "BAY 02 · SETTLEMENT · 1 MO", out)
 
 
 def main() -> None:

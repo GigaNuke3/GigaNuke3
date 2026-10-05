@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="352" viewBox="0 0 900 352" shape-rendering="crispEdges" font-family="Consolas, 'Courier New', monospace">
-<rect width="900" height="352" rx="15" fill="#0a0c10"/>
-<rect x="0.5" y="0.5" width="899" height="351" rx="15" fill="none" stroke="#1b2128"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="364" viewBox="0 0 900 364" shape-rendering="crispEdges" font-family="Consolas, 'Courier New', monospace">
+<style>.still{display:none}@media (prefers-reduced-motion: reduce){.fx{display:none}.still{display:inline}}</style>
+<rect width="900" height="364" rx="4" fill="#0d1117"/>
 <text x="28" y="30" font-size="15" font-weight="bold" fill="#ffa657">// CODE CITY</text>
 <text x="872" y="30" text-anchor="end" font-size="9.5" fill="#8b949e">daily &#183; October 2026</text>
 <text x="28" y="44" font-size="8" fill="#8b949e" opacity="0.9">A CITY BUILT BY CODE</text>
-<circle cx="754.0" cy="41.5" r="1.8" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.2s" begin="0s" repeatCount="indefinite"/></circle>
+<circle class="fx" cx="754.0" cy="41.5" r="1.8" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.2s" begin="0s" repeatCount="indefinite"/></circle>
 <text x="872" y="44" text-anchor="end" font-size="7.5" fill="#8b949e">CITY STATUS: ONLINE</text>
-<line x1="28.0" y1="52.0" x2="872.0" y2="52.0" stroke="#1b2128" stroke-width="1" />
+<line x1="28.0" y1="52.0" x2="872.0" y2="52.0" stroke="#30363d" stroke-width="1" />
 <rect x="28" y="62" width="3" height="14" fill="#ffa657"/>
 <text x="36" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">52</text>
 <text x="36" y="94" font-size="8" fill="#8b949e">THIS MONTH</text>
@@ -22,7 +22,7 @@
 <rect x="703" y="62" width="3" height="14" fill="#ffa657"/>
 <text x="711" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">5d</text>
 <text x="711" y="94" font-size="8" fill="#8b949e">STREAK</text>
-<rect x="28" y="302" width="844" height="50" fill="#0c0f14"/>
+<rect x="28" y="302" width="844" height="62" fill="#0c0f14"/>
 <line x1="28.0" y1="302.0" x2="872.0" y2="302.0" stroke="#1a2028" stroke-width="1" />
 <g opacity="0.8"><rect x="36" y="316" width="10" height="1.5" fill="#222933"/><rect x="62" y="316" width="10" height="1.5" fill="#222933"/><rect x="88" y="316" width="10" height="1.5" fill="#222933"/><rect x="114" y="316" width="10" height="1.5" fill="#222933"/><rect x="140" y="316" width="10" height="1.5" fill="#222933"/><rect x="166" y="316" width="10" height="1.5" fill="#222933"/><rect x="192" y="316" width="10" height="1.5" fill="#222933"/><rect x="218" y="316" width="10" height="1.5" fill="#222933"/><rect x="244" y="316" width="10" height="1.5" fill="#222933"/><rect x="270" y="316" width="10" height="1.5" fill="#222933"/><rect x="296" y="316" width="10" height="1.5" fill="#222933"/><rect x="322" y="316" width="10" height="1.5" fill="#222933"/><rect x="348" y="316" width="10" height="1.5" fill="#222933"/><rect x="374" y="316" width="10" height="1.5" fill="#222933"/><rect x="400" y="316" width="10" height="1.5" fill="#222933"/><rect x="426" y="316" width="10" height="1.5" fill="#222933"/><rect x="452" y="316" width="10" height="1.5" fill="#222933"/><rect x="478" y="316" width="10" height="1.5" fill="#222933"/><rect x="504" y="316" width="10" height="1.5" fill="#222933"/><rect x="530" y="316" width="10" height="1.5" fill="#222933"/><rect x="556" y="316" width="10" height="1.5" fill="#222933"/><rect x="582" y="316" width="10" height="1.5" fill="#222933"/><rect x="608" y="316" width="10" height="1.5" fill="#222933"/><rect x="634" y="316" width="10" height="1.5" fill="#222933"/><rect x="660" y="316" width="10" height="1.5" fill="#222933"/><rect x="686" y="316" width="10" height="1.5" fill="#222933"/><rect x="712" y="316" width="10" height="1.5" fill="#222933"/><rect x="738" y="316" width="10" height="1.5" fill="#222933"/><rect x="764" y="316" width="10" height="1.5" fill="#222933"/><rect x="790" y="316" width="10" height="1.5" fill="#222933"/><rect x="816" y="316" width="10" height="1.5" fill="#222933"/><rect x="842" y="316" width="10" height="1.5" fill="#222933"/></g>
 <line x1="28.0" y1="106.0" x2="28.0" y2="300.0" stroke="#232a33" stroke-width="1" />
@@ -163,15 +163,15 @@ LOW ACTIVITY</title>
 <line x1="143.5" y1="258.0" x2="148.5" y2="253.0" stroke="#ffa657" stroke-width="1" />
 <line x1="158.5" y1="258.0" x2="158.5" y2="267.0" stroke="#ffa657" stroke-width="1" />
 <rect x="157.0" y="267.0" width="3" height="3" fill="none" stroke="#ffa657"/>
-<circle cx="150.5" cy="255.0" r="2" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.1s" begin="0s" repeatCount="indefinite"/></circle>
+<circle class="fx" cx="150.5" cy="255.0" r="2" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.1s" begin="0s" repeatCount="indefinite"/></circle>
 <text x="150.5" y="249.0" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ffa657">TODAY</text>
 <rect x="144.5" y="304.0" width="12.0" height="4.0" fill="none" stroke="#ffa657" stroke-width="1" />
 <line x1="144.5" y1="306.0" x2="156.5" y2="306.0" stroke="#ffa657" stroke-width="1" />
-<circle cx="150.5" cy="282.0" r="1.8" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.4s" begin="0.84s" repeatCount="indefinite"/></circle>
-<g><animateTransform attributeName="transform" type="translate" values="-30,0;930,0" dur="55s" begin="0s" repeatCount="indefinite"/><g><rect x="0" y="310" width="13" height="4.5" rx="1" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="4" y="307.5" width="5.5" height="2.8" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="2.5" y="314" width="2" height="1.6" fill="#39424e"/><rect x="9" y="314" width="2" height="1.6" fill="#39424e"/><rect x="12.2" y="311" width="1" height="1" fill="#ffa657"/></g></g>
-<g><animateTransform attributeName="transform" type="translate" values="930,0;-30,0" dur="80s" begin="4s" repeatCount="indefinite"/><g transform="scale(-1,1)"><g><rect x="0" y="320" width="13" height="4.5" rx="1" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="4" y="317.5" width="5.5" height="2.8" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="2.5" y="324" width="2" height="1.6" fill="#39424e"/><rect x="9" y="324" width="2" height="1.6" fill="#39424e"/><rect x="12.2" y="321" width="1" height="1" fill="#ffa657"/></g></g></g>
-<g><animateTransform attributeName="transform" type="translate" values="-30,0;930,0" dur="120s" begin="9s" repeatCount="indefinite"/><g><rect x="0" y="315" width="13" height="4.5" rx="1" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="4" y="312.5" width="5.5" height="2.8" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="2.5" y="319" width="2" height="1.6" fill="#39424e"/><rect x="9" y="319" width="2" height="1.6" fill="#39424e"/><rect x="12.2" y="316" width="1" height="1" fill="#ffa657"/></g></g>
-<rect x="0" y="106" width="1.5" height="194" fill="#f0f3f6" opacity="0.03"><animateTransform attributeName="transform" type="translate" values="0,0;900,0" dur="38s" repeatCount="indefinite"/></rect>
+<circle class="fx" cx="150.5" cy="282.0" r="1.8" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.4s" begin="0.84s" repeatCount="indefinite"/></circle>
+<g class="fx"><animateTransform attributeName="transform" type="translate" values="-30,0;930,0" dur="55s" begin="0s" repeatCount="indefinite"/><g><rect x="0" y="310" width="13" height="4.5" rx="1" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="4" y="307.5" width="5.5" height="2.8" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="2.5" y="314" width="2" height="1.6" fill="#39424e"/><rect x="9" y="314" width="2" height="1.6" fill="#39424e"/><rect x="12.2" y="311" width="1" height="1" fill="#ffa657"/></g></g>
+<g class="fx"><animateTransform attributeName="transform" type="translate" values="930,0;-30,0" dur="80s" begin="4s" repeatCount="indefinite"/><g transform="scale(-1,1)"><g><rect x="0" y="320" width="13" height="4.5" rx="1" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="4" y="317.5" width="5.5" height="2.8" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="2.5" y="324" width="2" height="1.6" fill="#39424e"/><rect x="9" y="324" width="2" height="1.6" fill="#39424e"/><rect x="12.2" y="321" width="1" height="1" fill="#ffa657"/></g></g></g>
+<g class="fx"><animateTransform attributeName="transform" type="translate" values="-30,0;930,0" dur="120s" begin="9s" repeatCount="indefinite"/><g><rect x="0" y="315" width="13" height="4.5" rx="1" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="4" y="312.5" width="5.5" height="2.8" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="2.5" y="319" width="2" height="1.6" fill="#39424e"/><rect x="9" y="319" width="2" height="1.6" fill="#39424e"/><rect x="12.2" y="316" width="1" height="1" fill="#ffa657"/></g></g>
+<rect class="fx" x="0" y="106" width="1.5" height="194" fill="#f0f3f6" opacity="0.03"><animateTransform attributeName="transform" type="translate" values="0,0;900,0" dur="38s" repeatCount="indefinite"/></rect>
 <text x="41.6" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">1</text>
 <text x="68.8" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">2</text>
 <text x="96.1" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">3</text>
@@ -203,4 +203,7 @@ LOW ACTIVITY</title>
 <text x="803.9" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">29</text>
 <text x="831.2" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">30</text>
 <text x="858.4" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">31</text>
+<rect x="0.5" y="0.5" width="899" height="363" rx="4" fill="none" stroke="#30363d"/>
+<path d="M6,16 V6 H16" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M894,16 V6 H884" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M6,348 V358 H16" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M894,348 V358 H884" fill="none" stroke="#ffa657" stroke-width="2"/>
+<text x="880" y="355" text-anchor="end" font-size="7" letter-spacing="1" fill="#8b949e">GN3 / BAY 02 · SETTLEMENT · 1 MO</text>
 </svg>

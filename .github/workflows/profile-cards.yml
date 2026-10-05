@@ -11,7 +11,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/**'
-      - 'assets/portrait.txt'
+      - 'assets/avatar.jpg'
       - '.github/workflows/profile-cards.yml'
   workflow_dispatch:
 
@@ -45,6 +45,7 @@ jobs:
           python scripts/tetris_grid.py
           python scripts/activity.py
           python scripts/code_city.py
+          python scripts/payloads.py
 
       - name: Commit if changed
         env:
@@ -53,7 +54,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          CARDS="dark_mode.svg light_mode.svg tetris_dark.svg tetris_light.svg activity_dark.svg activity_light.svg graph_dark.svg graph_light.svg"
+          CARDS="dark_mode.svg light_mode.svg tetris_dark.svg tetris_light.svg activity_dark.svg activity_light.svg graph_dark.svg graph_light.svg payloads_dark.svg payloads_light.svg README.md"
           # If main moved while we rendered (a push, or another workflow),
           # don't try to merge generated SVGs: start again from the new main,
           # re-render, and retry.
@@ -74,6 +75,7 @@ jobs:
             python scripts/tetris_grid.py
             python scripts/activity.py
             python scripts/code_city.py
+            python scripts/payloads.py
           done
           echo "Could not push after 3 attempts."
           exit 1

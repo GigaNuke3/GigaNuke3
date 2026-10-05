@@ -22,7 +22,7 @@ from xml.sax.saxutils import escape
 from grid_common import (TZ, Timeline, day, fetch_api_calendar,
                          fetch_public_calendar, fill_for, patterns, tiles,
                          to_weeks)
-from profile_card import PAD, THEMES
+from profile_card import PAD, THEMES, card
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -167,13 +167,9 @@ def render(name: str, theme: dict, weeks: list[list[dict]], stats: list[tuple[st
     tl = Timeline(dur)
 
     out = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
-        f'viewBox="0 0 {width} {height}" shape-rendering="crispEdges" '
-        f'font-family="Consolas, \'Courier New\', monospace">',
         f"<defs>{patterns(ink)}"
         f'<clipPath id="boardClip"><rect x="{PAD - 2}" y="{grid_top - 2}" '
         f'width="{grid_w + 4}" height="{ROWS * ROW - (ROW - CELL_H) + 4}"/></clipPath></defs>',
-        f'<rect width="{width}" height="{height}" rx="15" fill="{bg}"/>',
     ]
 
     # Stat tiles.
@@ -225,14 +221,14 @@ def render(name: str, theme: dict, weeks: list[list[dict]], stats: list[tuple[st
             shown.append((flash_start + i * 0.15, i % 2 == 1))
         shown.append((game_end, False))
         pieces.append(f'<g>{tl.motion(tms, pts)}<g opacity="0">{tl.show(shown)}{cells}</g></g>')
-    out.append(f'<g clip-path="url(#boardClip)">{"".join(pieces)}</g>')
+    out.append(f'<g class="fx" clip-path="url(#boardClip)">{"".join(pieces)}</g>')
 
     # Signs.
     def sign(text: str, fill: str, shown: list[tuple[float, bool]]) -> str:
         w = len(text) * 7.2 + 12
         hx = PAD + grid_w / 2
         hy = grid_top + ROWS * ROW / 2 - 14
-        return (f'<g opacity="0">{tl.show(shown)}'
+        return (f'<g class="fx" opacity="0">{tl.show(shown)}'
                 f'<rect x="{hx - w / 2:.0f}" y="{hy - 12}" width="{w:.0f}" height="16" fill="{bg}"/>'
                 f'<text x="{hx}" y="{hy}" text-anchor="middle" font-size="12" font-weight="bold" '
                 f'fill="{fill}">{text}</text></g>')
@@ -251,9 +247,8 @@ def render(name: str, theme: dict, weeks: list[list[dict]], stats: list[tuple[st
             out.append(f'<text x="{PAD + w * COL}" y="{grid_top + ROWS * ROW + 12}" font-size="10" '
                        f'fill="{ink}" opacity="0.75">{month:%b}</text>')
 
-    out.append("</svg>")
     print(f"{name}: {len(drops)} pieces, loop {dur:.0f}s, game over after {len(drops)} drops")
-    return "\n".join(out) + "\n"
+    return card(theme, width, height, "BAY 01 · TERRAIN · 52 WK", out)
 
 
 def main() -> None:

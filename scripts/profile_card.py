@@ -1,7 +1,7 @@
 """Render the profile card: dark_mode.svg + light_mode.svg.
 
 A compact terminal-style window for the README: the window title bar, the
-profile picture (assets/profile.png, referenced by URL), and the developer
+profile picture (assets/avatar.jpg, embedded), and the developer
 readout with live GitHub stats on the right.
 
 When GITHUB_TOKEN or ACCESS_TOKEN is available (GitHub Actions), GraphQL is
@@ -15,6 +15,7 @@ Usage:
 """
 
 import argparse
+import base64
 import json
 import os
 import re
@@ -27,19 +28,47 @@ ROOT = Path(__file__).resolve().parent.parent
 USER = "GigaNuke3"
 
 WIDTH, HEIGHT = 900, 352
-IMG_URL = f"https://raw.githubusercontent.com/{USER}/{USER}/main/assets/profile.png"
+PAD = 28  # shared card margin (imported by the other card scripts)
+# Embedded, not linked: GitHub shows these SVGs as <img>, and an SVG image
+# may not load external files, so a URL here renders as a broken picture.
+AVATAR = ROOT / "assets" / "avatar.jpg"
 
+# One palette for every card, so the bays read as one facility.
 THEMES = {
-    "dark": dict(bg="#161b22", text="#f0f3f6", key="#ffa657", value="#c9d1d9",
-                 dim="#8b949e", ascii="#f0f3f6", invert=False),
-    "light": dict(bg="#f6f8fa", text="#24292f", key="#953800", value="#57606a",
-                  dim="#6e7781", ascii="#24292f", invert=True),
+    "dark": dict(bg="#0d1117", border="#30363d", text="#f0f3f6", key="#ffa657",
+                 value="#c9d1d9", dim="#8b949e"),
+    "light": dict(bg="#f6f8fa", border="#d0d7de", text="#24292f", key="#953800",
+                  value="#57606a", dim="#6e7781"),
 }
 
-CARD = {
-    "dark": dict(bg="#0d1117", border="#30363d"),
-    "light": dict(bg="#f6f8fa", border="#d0d7de"),
-}
+# Animated layers carry class "fx"; reduced-motion viewers get the "still"
+# layers instead (the static frame each card is designed around).
+MOTION_CSS = ("<style>.still{display:none}@media (prefers-reduced-motion: reduce)"
+              "{.fx{display:none}.still{display:inline}}</style>")
+
+
+def card(theme: dict, width: float, height: float, bay: str, body: list[str]) -> str:
+    """Shared chrome for every card: background, border, orange corner
+    registration marks and the bay label (bottom right) naming the room."""
+    k, t = theme["key"], 10
+    ticks = "".join(
+        f'<path d="M{x},{y + t * sy} V{y} H{x + t * sx}" fill="none" stroke="{k}" stroke-width="2"/>'
+        for x, y, sx, sy in ((6, 6, 1, 1), (width - 6, 6, -1, 1),
+                             (6, height - 6, 1, -1), (width - 6, height - 6, -1, -1)))
+    return "\n".join([
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}" shape-rendering="crispEdges" '
+        f'font-family="Consolas, \'Courier New\', monospace">',
+        MOTION_CSS,
+        f'<rect width="{width}" height="{height}" rx="4" fill="{theme["bg"]}"/>',
+        *body,
+        f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="4" '
+        f'fill="none" stroke="{theme["border"]}"/>',
+        ticks,
+        f'<text x="{width - 20}" y="{height - 9}" text-anchor="end" font-size="7" '
+        f'letter-spacing="1" fill="{theme["dim"]}">GN3 / {escape(bay)}</text>',
+        "</svg>",
+    ]) + "\n"
 
 QUERY = """
 query($login: String!) {
@@ -131,7 +160,9 @@ def fetch_stats_rest() -> dict:
         "repos": profile.get("public_repos", 0),
         "contributed": 0,  # needs GraphQL; not shown on the card
         "stars": sum(int(r.get("stargazers_count", 0)) for r in repos),
+        # Without a token only the calendar total is public: label it as such.
         "commits": fetch_public_contrib_total(),
+        "commits_label": "Contributions (1y)",
         "followers": profile.get("followers", 0),
     }
 
@@ -145,44 +176,38 @@ def fetch_stats(token: str | None) -> dict:
     return fetch_stats_rest()
 
 
-def render(name: str, theme: dict, stats: dict) -> str:
+def render(theme: dict, stats: dict, avatar: str) -> str:
     key, dim = theme["key"], theme["dim"]
-    card = CARD[name]
     out = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" '
-        f'viewBox="0 0 {WIDTH} {HEIGHT}" font-family="Consolas, \'Courier New\', monospace">',
-        f'<rect width="{WIDTH}" height="{HEIGHT}" rx="15" fill="{card["bg"]}"/>',
-        f'<rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="15" '
-        f'fill="none" stroke="{card["border"]}"/>',
         # Title bar
-        f'<text x="26" y="27" font-size="11" fill="{key}">&#9679; &#9679; &#9679;</text>',
+        f'<text x="26" y="27" font-size="11" fill="{key}">● ● ●</text>',
         f'<text x="64" y="27" font-size="11" fill="{dim}">giganuke3@github: ~/profile</text>',
-        f'<line x1="20" y1="40" x2="{WIDTH - 20}" y2="40" stroke="{card["border"]}"/>',
+        f'<line x1="20" y1="40" x2="{WIDTH - 20}" y2="40" stroke="{theme["border"]}"/>',
         # Profile picture (clipped to a rounded square)
-        '<defs><clipPath id="pic"><rect x="24" y="58" width="220" height="220" rx="12"/></clipPath></defs>',
-        f'<image clip-path="url(#pic)" href="{IMG_URL}" x="24" y="58" width="220" height="220" '
-        f'preserveAspectRatio="xMidYMid slice"/>',
+        '<defs><clipPath id="pic"><rect x="24" y="58" width="220" height="220" rx="4"/></clipPath></defs>',
+        f'<image clip-path="url(#pic)" href="data:image/jpeg;base64,{avatar}" x="24" y="58" '
+        f'width="220" height="220" preserveAspectRatio="xMidYMid slice"/>',
     ]
 
     lines = [
-        ("key", "eco@giganuke3 &#9612;", 14, True),
-        ("key", "&#9472;" * 37, 11, False),
+        ("key", "eco@giganuke3", 14, True),
+        ("key", "─" * 37, 11, False),
         ("key", "AI ENGINEER / SOFTWARE DEVELOPER", 12.5, False),
-        ("dim", "Local AI &#183; LLMs &#183; Desktop Apps &#183; Web Development", 11.5, False),
+        ("dim", "Local AI · LLMs · Desktop Apps · Web Development", 11.5, False),
         ("key", "SYSTEMS", 12, True),
         ("key", "Local AI / LLMs / Desktop Applications", 12, False),
         ("key", "STACK", 12, True),
-        ("key", "Python &#183; Kotlin &#183; PHP &#183; JS &#183; SQL", 12, False),
-        ("key", "Ollama &#183; LLMs &#183; Embeddings &#183; AI Memory", 12, False),
+        ("key", "Python · Kotlin · PHP · JS · SQL", 12, False),
+        ("key", "Ollama · LLMs · Embeddings · AI Memory", 12, False),
         ("key", "LANGUAGES", 12, True),
-        ("key", "English &#183; Filipino", 12, False),
+        ("key", "English · Filipino", 12, False),
         ("key", "PROJECTS", 12, True),
         ("project", "Axie Flash   ", "[AI EDUCATION]"),
         ("project", "Callama      ", "[LOCAL AI DESKTOP]"),
         ("project", "LMIS         ", "[INFORMATION SYSTEM]"),
         ("key", "GITHUB", 12, True),
-        ("key", f"Repos {stats['repos']} &#183; Stars {stats['stars']:,} &#183; Followers {stats['followers']:,}", 12, False),
-        ("key", f"Commits {stats['commits']:,}", 12, False),
+        ("key", f"Repos {stats['repos']} · Stars {stats['stars']:,} · Followers {stats['followers']:,}", 12, False),
+        ("key", f"{stats.get('commits_label', 'Commits')} {stats['commits']:,}", 12, False),
         ("dim", "github.com/GigaNuke3", 11.5, False),
     ]
     x0, y0, lh = 272, 82, 13.6
@@ -190,17 +215,19 @@ def render(name: str, theme: dict, stats: dict) -> str:
         y = y0 + i * lh
         if item[0] == "project":
             _, name, tag = item
-            out.append(f'<text x="{x0}" y="{y:.1f}" font-size="12">'
+            out.append(f'<text x="{x0}" y="{y:.1f}" font-size="12" xml:space="preserve">'
                        f'<tspan fill="{key}">{escape(name)}</tspan>'
                        f'<tspan fill="{dim}">{escape(tag)}</tspan></text>')
         else:
             kind, text, size, bold = item
             weight = ' font-weight="bold"' if bold else ""
             fill = key if kind == "key" else dim
+            # Prompt cursor after the first line: the one moving thing on this card.
+            cursor = (' <tspan class="fx">▌<animate attributeName="opacity" values="1;1;0;0" '
+                      'keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/></tspan>') if i == 0 else ""
             out.append(f'<text x="{x0}" y="{y:.1f}" font-size="{size}"{weight} fill="{fill}">'
-                       f'{escape(text)}</text>')
-    out.append("</svg>")
-    return "\n".join(out) + "\n"
+                       f'{escape(text)}{cursor}</text>')
+    return card(theme, WIDTH, HEIGHT, "BAY 00 · IDENT", out)
 
 
 def main() -> None:
@@ -215,9 +242,10 @@ def main() -> None:
         stats = fetch_stats(token)
     print("stats:", stats)
 
+    avatar = base64.b64encode(AVATAR.read_bytes()).decode()
     for name, theme in THEMES.items():
         path = ROOT / f"{name}_mode.svg"
-        path.write_text(render(name, theme, stats), encoding="utf-8")
+        path.write_text(render(theme, stats, avatar), encoding="utf-8")
         print("wrote", path.name)
 
 

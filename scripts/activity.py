@@ -36,7 +36,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 from grid_common import TZ, Timeline
-from profile_card import PAD, THEMES, USER
+from profile_card import PAD, THEMES, USER, card
 
 ROOT = Path(__file__).resolve().parent.parent
 MONTHS = 4
@@ -100,7 +100,7 @@ def palette(theme: dict, name: str) -> dict:
 
 
 # --------------------------------------------------------------------------
-# Data (unchanged from the previous activity card)
+# Data
 # --------------------------------------------------------------------------
 
 def fetch_month(year: int, month: int) -> list[dict]:
@@ -142,6 +142,8 @@ def fetch_month(year: int, month: int) -> list[dict]:
             repo = re.search(r'data-hovercard-type="repository"[^>]*href="/([^\"]+)"', block)
             if repo and repo.group(1) not in summary:
                 rows.append({"repo": repo.group(1), "count": None, "lang": None, "date": None})
+        if summary == "Activity" and not rows:  # empty placeholder item, nothing to log
+            continue
         items.append({"summary": summary, "rows": rows})
     return items
 
@@ -152,25 +154,13 @@ def recent_months(today) -> list[tuple[int, int]]:
     for _ in range(MONTHS):
         out.append((y, m))
         y, m = (y, m - 1) if m > 1 else (y - 1, 12)
-    return out
+    return out[::-1]  # oldest first: the pad is the past, apogee is this month
 
 
 def totals(months: list[dict]) -> list[tuple[str, str]]:
-    commits = repos_made = prs = 0
-    active = set()
-    for mo in months:
-        for it in mo["items"]:
-            s = it["summary"].lower()
-            if "commit" in s:
-                commits += sum(r["count"] or 0 for r in it["rows"])
-                active |= {r["repo"] for r in it["rows"]}
-            elif s.startswith("created") and "repositor" in s:
-                n = re.search(r"created (\d+) repositor", s)
-                repos_made += int(n.group(1)) if n else 1
-            elif "pull request" in s and "first" not in s:
-                prs += 1
-    return [(str(commits), "COMMITS"), (str(len(active)), "ACTIVE REPOS"),
-            (str(repos_made), "REPOS CREATED"), (str(prs), "PULL REQUESTS")]
+    commits, active, created, prs = month_stats({"items": [it for mo in months for it in mo["items"]]})
+    return [(str(commits), "COMMITS"), (str(active), "ACTIVE REPOS"),
+            (str(created), "REPOS CREATED"), (str(prs), "PULL REQUESTS")]
 
 
 def month_stats(mo: dict) -> tuple[int, int, int, int]:
@@ -450,6 +440,7 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
         dots.append((x, y))
         out.append(f'<rect x="{x - 2.5:.1f}" y="{y - 2.5:.1f}" width="5" height="5" fill="{p["key"]}"/>')
         out.append(f'<text x="{x - 8:.1f}" y="{y - 8:.1f}" text-anchor="end" font-size="6.5" fill="{p["dim"]}">{month_names[i]}</text>')
+    out.append(f'<text x="{P1[0] - 10}" y="{P1[1] - 8}" text-anchor="end" font-size="6.5" fill="{p["key"]}">{month_names[-1]} · NOW</text>')
 
     # --- Leaders: ground stations -> checkpoints ---------------------------
     block_cxs = [PAD + BLOCK_W / 2 + i * (BLOCK_W + BLOCK_GAP) for i in range(MONTHS)]
@@ -510,8 +501,10 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
     s2 = s2_shapes(p)
     s3 = s3_payload_shapes(p)
 
+    out.append(f'<g class="still" transform="translate({P0[0]},{P0[1]}) rotate({ALPHA:.2f})">'
+               f'{s1}{s2}{s3}{stage_labels_local(p)}</g>')
     rocket = [
-        f'<g transform="translate({P0[0]},{P0[1]})">',
+        f'<g class="fx" transform="translate({P0[0]},{P0[1]})">',
         # Main motion: follows the orange trajectory path itself (0 -> 100% of
         # the vehicle travel; the nose reaches the exact endpoint at apogee).
         f'<g><animateMotion path="{TRAJ_PATH}" keyPoints="{rocket_kp}" keyTimes="{keys}" '
@@ -556,14 +549,14 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
     ):
         path, kps = stage_path_kp(pct, drift, sep_t, drift_t)
         out.append(
-            f'<g transform="translate({P0[0]},{P0[1]})">'
+            f'<g class="fx" transform="translate({P0[0]},{P0[1]})">'
             f'<g opacity="0">{opacity_anim([(0, 0), (sep_t, 0), (sep_t + 0.18, 1), (sep_t + fade_hold, 1), (sep_t + drift_t, 0), (D, 0)])}'
             f'<g>{rotate_anim([(0, ALPHA), (sep_t, ALPHA), (sep_t + drift_t, ALPHA + tumble), (D, ALPHA + tumble)], pivot)}'
             f'<g><animateMotion path="{path}" keyPoints="{kps}" keyTimes="{keys}" calcMode="linear" dur="{D}s" repeatCount="indefinite"/>{shapes}</g>'
             f'</g></g></g>')
 
     # --- Trajectory follower (signal chasing the rocket) -------------------
-    out.append(f'<g transform="translate({P0[0]},{P0[1]})" opacity="0">'
+    out.append(f'<g class="fx" transform="translate({P0[0]},{P0[1]})" opacity="0">'
                f'{tl.show([(0, False), (LIFTOFF, True), (APOGEE, False), (D, False)])}'
                f'<g><animateMotion path="{TRAJ_PATH}" keyPoints="{follower_kp}" keyTimes="{keys}" calcMode="linear" dur="{D}s" repeatCount="indefinite"/>'
                f'<circle r="2.2" fill="{p["key"]}"/></g></g>')
@@ -587,6 +580,9 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
         out.append(f'<text x="{bx + 17}" y="{BLOCK_Y + 15}" font-size="9" font-weight="bold" '
                    f'fill="{p["key"] if is_current else p["ink"]}">{escape(label)}</text>')
         if is_current:
+            out.append(f'<rect class="fx" x="{bx}" y="{BLOCK_Y}" width="{BLOCK_W}" height="{BLOCK_H}" rx="6" '
+                       f'fill="{p["key"]}" opacity="0">'
+                       f'{opacity_anim([(0, 0), (APOGEE, 0), (APOGEE + 0.1, 0.22), (HOLD_END, 0), (D, 0)])}</rect>')
             out.append(f'<text x="{bx + BLOCK_W - 10}" y="{BLOCK_Y + 15}" text-anchor="end" font-size="6.5" '
                        f'fill="{p["key"]}">CURRENT MISSION</text>')
         lines = block_lines(mo) if mo["items"] else [("item", "No activity this month")]
@@ -600,15 +596,7 @@ def render(name: str, theme: dict, months: list[dict], stats: list[tuple[str, st
                 out.append(f'<text x="{bx + 16}" y="{y:.1f}" font-size="7.2" fill="{p["dim"]}" opacity="0.75">{escape(trunc(text, 36))}</text>')
         out.append('</g>')
 
-    svg = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" '
-        f'shape-rendering="crispEdges" font-family="Consolas, \'Courier New\', monospace">',
-        f'<rect width="{WIDTH}" height="{HEIGHT}" rx="15" fill="{p["bg"]}"/>',
-        f'<rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="15" fill="none" stroke="{p["block_stroke"]}"/>',
-        *out,
-        "</svg>",
-    ]
-    return "\n".join(svg) + "\n"
+    return card(theme, WIDTH, HEIGHT, "BAY 04 · FLIGHT · 4 MO", out)
 
 
 def main() -> None:

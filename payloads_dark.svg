@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="282" viewBox="0 0 900 282" shape-rendering="crispEdges" font-family="Consolas, 'Courier New', monospace">
+<style>.still{display:none}@media (prefers-reduced-motion: reduce){.fx{display:none}.still{display:inline}}</style>
+<rect width="900" height="282" rx="4" fill="#0d1117"/>
+<text x="28" y="30" font-size="15" font-weight="bold" fill="#ffa657">PAYLOAD MANIFEST</text>
+<text x="872" y="30" text-anchor="end" font-size="9.5" fill="#8b949e">9 REPOSITORIES &#183; ORDERED BY CREATION</text>
+<text x="28" y="44" font-size="8" fill="#8b949e">WHAT THE ROCKET CARRIES</text>
+<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#8b949e">3 LIVE &#183; 2 WARM &#183; 4 COLD</text>
+<line x1="28" y1="52" x2="872" y2="52" stroke="#30363d"/>
+<rect x="28" y="214" width="844" height="3" fill="#8b949e" opacity="0.6"/>
+<line x1="28.0" y1="206" x2="28.0" y2="217" stroke="#ffa657"/><text x="31.0" y="212" font-size="6.5" fill="#ffa657">2025</text>
+<rect x="52.9" y="116.1" width="44.0" height="97.9" fill="#0d1117" stroke="#8b949e"/>
+<line x1="55.9" y1="128" x2="93.9" y2="128" stroke="#30363d"/>
+<line x1="55.9" y1="140" x2="93.9" y2="140" stroke="#30363d"/>
+<line x1="55.9" y1="152" x2="93.9" y2="152" stroke="#30363d"/>
+<line x1="55.9" y1="164" x2="93.9" y2="164" stroke="#30363d"/>
+<line x1="55.9" y1="176" x2="93.9" y2="176" stroke="#30363d"/>
+<line x1="55.9" y1="188" x2="93.9" y2="188" stroke="#30363d"/>
+<line x1="55.9" y1="200" x2="93.9" y2="200" stroke="#30363d"/>
+<polygon points="56.9,116.1 92.9,116.1 86.9,109.1 62.9,109.1" fill="#0d1117" stroke="#8b949e"/>
+<rect x="71.9" y="102.1" width="6" height="5" fill="none" stroke="#8b949e"/>
+<text x="74.9" y="232" text-anchor="middle" font-size="8" fill="#f0f3f6">HandsMenThread…</text>
+<text x="74.9" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">— &#183; 2.1 MB</text>
+<text x="74.9" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">COLD &#183; 11-25</text>
+<line x1="121.8" y1="206" x2="121.8" y2="217" stroke="#ffa657"/><text x="124.8" y="212" font-size="6.5" fill="#ffa657">2026</text>
+<rect x="146.7" y="146.6" width="44.0" height="67.4" fill="#0d1117" stroke="#8b949e"/>
+<line x1="149.7" y1="158" x2="187.7" y2="158" stroke="#30363d"/>
+<line x1="149.7" y1="170" x2="187.7" y2="170" stroke="#30363d"/>
+<line x1="149.7" y1="182" x2="187.7" y2="182" stroke="#30363d"/>
+<line x1="149.7" y1="194" x2="187.7" y2="194" stroke="#30363d"/>
+<line x1="149.7" y1="206" x2="187.7" y2="206" stroke="#30363d"/>
+<polygon points="150.7,146.6 186.7,146.6 180.7,139.6 156.7,139.6" fill="#0d1117" stroke="#8b949e"/>
+<rect x="165.7" y="132.6" width="6" height="5" fill="none" stroke="#8b949e"/>
+<text x="168.7" y="232" text-anchor="middle" font-size="8" fill="#f0f3f6">To-do-list-Web…</text>
+<text x="168.7" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">PHP &#183; 113 KB</text>
+<text x="168.7" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">COLD &#183; 03-21</text>
+<rect x="240.4" y="139.7" width="44.0" height="74.3" fill="#0d1117" stroke="#8b949e"/>
+<line x1="243.4" y1="151" x2="281.4" y2="151" stroke="#30363d"/>
+<line x1="243.4" y1="163" x2="281.4" y2="163" stroke="#30363d"/>
+<line x1="243.4" y1="175" x2="281.4" y2="175" stroke="#30363d"/>
+<line x1="243.4" y1="187" x2="281.4" y2="187" stroke="#30363d"/>
+<line x1="243.4" y1="199" x2="281.4" y2="199" stroke="#30363d"/>
+<polygon points="244.4,139.7 280.4,139.7 274.4,132.7 250.4,132.7" fill="#0d1117" stroke="#8b949e"/>
+<rect x="259.4" y="125.7" width="6" height="5" fill="none" stroke="#8b949e"/>
+<text x="262.4" y="232" text-anchor="middle" font-size="8" fill="#f0f3f6">chatapp</text>
+<text x="262.4" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">PHP &#183; 220 KB</text>
+<text x="262.4" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">COLD &#183; 04-24</text>
+<rect x="334.2" y="84.0" width="44.0" height="130.0" fill="#0d1117" stroke="#8b949e"/>
+<line x1="337.2" y1="96" x2="375.2" y2="96" stroke="#30363d"/>
+<line x1="337.2" y1="108" x2="375.2" y2="108" stroke="#30363d"/>
+<line x1="337.2" y1="120" x2="375.2" y2="120" stroke="#30363d"/>
+<line x1="337.2" y1="132" x2="375.2" y2="132" stroke="#30363d"/>
+<line x1="337.2" y1="144" x2="375.2" y2="144" stroke="#30363d"/>
+<line x1="337.2" y1="156" x2="375.2" y2="156" stroke="#30363d"/>
+<line x1="337.2" y1="168" x2="375.2" y2="168" stroke="#30363d"/>
+<line x1="337.2" y1="180" x2="375.2" y2="180" stroke="#30363d"/>
+<line x1="337.2" y1="192" x2="375.2" y2="192" stroke="#30363d"/>
+<line x1="337.2" y1="204" x2="375.2" y2="204" stroke="#30363d"/>
+<polygon points="338.2,84.0 374.2,84.0 368.2,77.0 344.2,77.0" fill="#0d1117" stroke="#8b949e"/>
+<rect x="353.2" y="70.0" width="6" height="5" fill="none" stroke="#8b949e"/>
+<text x="356.2" y="232" text-anchor="middle" font-size="8" fill="#f0f3f6">My-Bestfriends…</text>
+<text x="356.2" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">TypeScript &#183; 133.4 MB</text>
+<text x="356.2" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">COLD &#183; 07-27</text>
+<rect x="428.0" y="87.6" width="44.0" height="126.4" fill="#0d1117" stroke="#8b949e"/>
+<line x1="431.0" y1="99" x2="469.0" y2="99" stroke="#30363d"/>
+<line x1="431.0" y1="111" x2="469.0" y2="111" stroke="#30363d"/>
+<line x1="431.0" y1="123" x2="469.0" y2="123" stroke="#30363d"/>
+<line x1="431.0" y1="135" x2="469.0" y2="135" stroke="#30363d"/>
+<line x1="431.0" y1="147" x2="469.0" y2="147" stroke="#30363d"/>
+<line x1="431.0" y1="159" x2="469.0" y2="159" stroke="#30363d"/>
+<line x1="431.0" y1="171" x2="469.0" y2="171" stroke="#30363d"/>
+<line x1="431.0" y1="183" x2="469.0" y2="183" stroke="#30363d"/>
+<line x1="431.0" y1="195" x2="469.0" y2="195" stroke="#30363d"/>
+<line x1="431.0" y1="207" x2="469.0" y2="207" stroke="#30363d"/>
+<polygon points="432.0,87.6 468.0,87.6 462.0,80.6 438.0,80.6" fill="#0d1117" stroke="#8b949e"/>
+<rect x="447.0" y="73.6" width="6" height="5" fill="#ffa657" stroke="#ffa657"/>
+<text x="450.0" y="232" text-anchor="middle" font-size="8" fill="#f0f3f6">Callama</text>
+<text x="450.0" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">CSS &#183; 32.2 MB</text>
+<text x="450.0" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">WARM &#183; 08-17 &#183; <tspan fill="#ffa657">★1</tspan></text>
+<rect x="521.8" y="113.2" width="44.0" height="100.8" fill="#0d1117" stroke="#ffa657"/>
+<line x1="524.8" y1="125" x2="562.8" y2="125" stroke="#30363d"/>
+<line x1="524.8" y1="137" x2="562.8" y2="137" stroke="#30363d"/>
+<line x1="524.8" y1="149" x2="562.8" y2="149" stroke="#30363d"/>
+<line x1="524.8" y1="161" x2="562.8" y2="161" stroke="#30363d"/>
+<line x1="524.8" y1="173" x2="562.8" y2="173" stroke="#30363d"/>
+<line x1="524.8" y1="185" x2="562.8" y2="185" stroke="#30363d"/>
+<line x1="524.8" y1="197" x2="562.8" y2="197" stroke="#30363d"/>
+<line x1="524.8" y1="209" x2="562.8" y2="209" stroke="#30363d"/>
+<polygon points="525.8,113.2 561.8,113.2 555.8,106.2 531.8,106.2" fill="#0d1117" stroke="#ffa657"/>
+<g class="fx"><rect x="540.8" y="99.2" width="6" height="5" fill="#ffa657" stroke="#ffa657"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="540.8" y="99.2" width="6" height="5" fill="#ffa657" stroke="#ffa657"/></g>
+<text x="543.8" y="232" text-anchor="middle" font-size="8" fill="#ffa657">GigaNuke3</text>
+<text x="543.8" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">Python &#183; 2.8 MB</text>
+<text x="543.8" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">LIVE &#183; 10-05</text>
+<rect x="615.6" y="96.3" width="44.0" height="117.7" fill="#0d1117" stroke="#ffa657"/>
+<line x1="618.6" y1="108" x2="656.6" y2="108" stroke="#30363d"/>
+<line x1="618.6" y1="120" x2="656.6" y2="120" stroke="#30363d"/>
+<line x1="618.6" y1="132" x2="656.6" y2="132" stroke="#30363d"/>
+<line x1="618.6" y1="144" x2="656.6" y2="144" stroke="#30363d"/>
+<line x1="618.6" y1="156" x2="656.6" y2="156" stroke="#30363d"/>
+<line x1="618.6" y1="168" x2="656.6" y2="168" stroke="#30363d"/>
+<line x1="618.6" y1="180" x2="656.6" y2="180" stroke="#30363d"/>
+<line x1="618.6" y1="192" x2="656.6" y2="192" stroke="#30363d"/>
+<line x1="618.6" y1="204" x2="656.6" y2="204" stroke="#30363d"/>
+<polygon points="619.6,96.3 655.6,96.3 649.6,89.3 625.6,89.3" fill="#0d1117" stroke="#ffa657"/>
+<g class="fx"><rect x="634.6" y="82.3" width="6" height="5" fill="#ffa657" stroke="#ffa657"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="634.6" y="82.3" width="6" height="5" fill="#ffa657" stroke="#ffa657"/></g>
+<text x="637.6" y="232" text-anchor="middle" font-size="8" fill="#ffa657">Road-To-Ai-Eng…</text>
+<text x="637.6" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">Python &#183; 13.9 MB</text>
+<text x="637.6" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">LIVE &#183; 09-24</text>
+<rect x="709.3" y="161.6" width="44.0" height="52.4" fill="#0d1117" stroke="#8b949e"/>
+<line x1="712.3" y1="173" x2="750.3" y2="173" stroke="#30363d"/>
+<line x1="712.3" y1="185" x2="750.3" y2="185" stroke="#30363d"/>
+<line x1="712.3" y1="197" x2="750.3" y2="197" stroke="#30363d"/>
+<line x1="712.3" y1="209" x2="750.3" y2="209" stroke="#30363d"/>
+<polygon points="713.3,161.6 749.3,161.6 743.3,154.6 719.3,154.6" fill="#0d1117" stroke="#8b949e"/>
+<rect x="728.3" y="147.6" width="6" height="5" fill="#ffa657" stroke="#ffa657"/>
+<text x="731.3" y="232" text-anchor="middle" font-size="8" fill="#f0f3f6">Specification-…</text>
+<text x="731.3" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">— &#183; 26 KB</text>
+<text x="731.3" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">WARM &#183; 09-12 &#183; <tspan fill="#ffa657">★1</tspan></text>
+<rect x="803.1" y="90.1" width="44.0" height="123.9" fill="#0d1117" stroke="#ffa657"/>
+<line x1="806.1" y1="102" x2="844.1" y2="102" stroke="#30363d"/>
+<line x1="806.1" y1="114" x2="844.1" y2="114" stroke="#30363d"/>
+<line x1="806.1" y1="126" x2="844.1" y2="126" stroke="#30363d"/>
+<line x1="806.1" y1="138" x2="844.1" y2="138" stroke="#30363d"/>
+<line x1="806.1" y1="150" x2="844.1" y2="150" stroke="#30363d"/>
+<line x1="806.1" y1="162" x2="844.1" y2="162" stroke="#30363d"/>
+<line x1="806.1" y1="174" x2="844.1" y2="174" stroke="#30363d"/>
+<line x1="806.1" y1="186" x2="844.1" y2="186" stroke="#30363d"/>
+<line x1="806.1" y1="198" x2="844.1" y2="198" stroke="#30363d"/>
+<polygon points="807.1,90.1 843.1,90.1 837.1,83.1 813.1,83.1" fill="#0d1117" stroke="#ffa657"/>
+<g class="fx"><rect x="822.1" y="76.1" width="6" height="5" fill="#ffa657" stroke="#ffa657"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="822.1" y="76.1" width="6" height="5" fill="#ffa657" stroke="#ffa657"/></g>
+<text x="825.1" y="232" text-anchor="middle" font-size="8" fill="#ffa657">Portfolio</text>
+<text x="825.1" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">TypeScript &#183; 25.3 MB</text>
+<text x="825.1" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">LIVE &#183; 10-01</text>
+<g class="fx"><animateTransform attributeName="transform" type="translate" values="0.0,0;93.8,0;187.6,0;281.3,0;375.1,0;468.9,0;562.7,0;656.4,0;750.2,0" calcMode="discrete" dur="14.4s" repeatCount="indefinite"/><path d="M32,64 h-4 V260 h4 M117.77777777777777,64 h4 V260 h-4" fill="none" stroke="#ffa657" opacity="0.5"/></g>
+<rect x="0.5" y="0.5" width="899" height="281" rx="4" fill="none" stroke="#30363d"/>
+<path d="M6,16 V6 H16" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M894,16 V6 H884" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M6,266 V276 H16" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M894,266 V276 H884" fill="none" stroke="#ffa657" stroke-width="2"/>
+<text x="880" y="273" text-anchor="end" font-size="7" letter-spacing="1" fill="#8b949e">GN3 / BAY 03 · PAYLOADS · REPOS</text>
+</svg>
