@@ -89,7 +89,7 @@
 <g class="fx"><rect x="540.8" y="96.4" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="540.8" y="96.4" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="543.8" y="232" text-anchor="middle" font-size="8" fill="#953800">GigaNuke3</text>
 <text x="543.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 3.6 MB</text>
-<text x="543.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-06</text>
+<text x="543.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-07</text>
 <rect x="615.6" y="96.3" width="44.0" height="117.7" fill="#f6f8fa" stroke="#953800"/>
 <line x1="618.6" y1="108" x2="656.6" y2="108" stroke="#d0d7de"/>
 <line x1="618.6" y1="120" x2="656.6" y2="120" stroke="#d0d7de"/>
