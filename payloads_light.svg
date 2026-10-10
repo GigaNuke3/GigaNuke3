@@ -76,19 +76,19 @@
 <text x="450.0" y="232" text-anchor="middle" font-size="8" fill="#24292f">Callama</text>
 <text x="450.0" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">CSS &#183; 32.2 MB</text>
 <text x="450.0" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">WARM &#183; 08-17 &#183; <tspan fill="#953800">★1</tspan></text>
-<rect x="521.8" y="112.5" width="44.0" height="101.5" fill="#f6f8fa" stroke="#953800"/>
-<line x1="524.8" y1="124" x2="562.8" y2="124" stroke="#d0d7de"/>
-<line x1="524.8" y1="136" x2="562.8" y2="136" stroke="#d0d7de"/>
-<line x1="524.8" y1="148" x2="562.8" y2="148" stroke="#d0d7de"/>
-<line x1="524.8" y1="160" x2="562.8" y2="160" stroke="#d0d7de"/>
-<line x1="524.8" y1="172" x2="562.8" y2="172" stroke="#d0d7de"/>
-<line x1="524.8" y1="184" x2="562.8" y2="184" stroke="#d0d7de"/>
-<line x1="524.8" y1="196" x2="562.8" y2="196" stroke="#d0d7de"/>
-<line x1="524.8" y1="208" x2="562.8" y2="208" stroke="#d0d7de"/>
-<polygon points="525.8,112.5 561.8,112.5 555.8,105.5 531.8,105.5" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="540.8" y="98.5" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="540.8" y="98.5" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<rect x="521.8" y="112.0" width="44.0" height="102.0" fill="#f6f8fa" stroke="#953800"/>
+<line x1="524.8" y1="123" x2="562.8" y2="123" stroke="#d0d7de"/>
+<line x1="524.8" y1="135" x2="562.8" y2="135" stroke="#d0d7de"/>
+<line x1="524.8" y1="147" x2="562.8" y2="147" stroke="#d0d7de"/>
+<line x1="524.8" y1="159" x2="562.8" y2="159" stroke="#d0d7de"/>
+<line x1="524.8" y1="171" x2="562.8" y2="171" stroke="#d0d7de"/>
+<line x1="524.8" y1="183" x2="562.8" y2="183" stroke="#d0d7de"/>
+<line x1="524.8" y1="195" x2="562.8" y2="195" stroke="#d0d7de"/>
+<line x1="524.8" y1="207" x2="562.8" y2="207" stroke="#d0d7de"/>
+<polygon points="525.8,112.0 561.8,112.0 555.8,105.0 531.8,105.0" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="540.8" y="98.0" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="540.8" y="98.0" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="543.8" y="232" text-anchor="middle" font-size="8" fill="#953800">GigaNuke3</text>
-<text x="543.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 2.9 MB</text>
+<text x="543.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 3.1 MB</text>
 <text x="543.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-10</text>
 <rect x="615.6" y="96.3" width="44.0" height="117.7" fill="#f6f8fa" stroke="#953800"/>
 <line x1="618.6" y1="108" x2="656.6" y2="108" stroke="#d0d7de"/>
