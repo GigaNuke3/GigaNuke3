@@ -8,19 +8,19 @@
 <text x="872" y="44" text-anchor="end" font-size="7.5" fill="#6e7781">CITY STATUS: ONLINE</text>
 <line x1="28.0" y1="52.0" x2="872.0" y2="52.0" stroke="#d0d7de" stroke-width="1" />
 <rect x="28" y="62" width="3" height="14" fill="#953800"/>
-<text x="36" y="80" font-size="19" font-weight="bold" fill="#24292f">62</text>
+<text x="36" y="80" font-size="19" font-weight="bold" fill="#24292f">128</text>
 <text x="36" y="94" font-size="8" fill="#6e7781">THIS MONTH</text>
 <rect x="197" y="62" width="3" height="14" fill="#953800"/>
-<text x="205" y="80" font-size="19" font-weight="bold" fill="#24292f">36</text>
+<text x="205" y="80" font-size="19" font-weight="bold" fill="#24292f">50</text>
 <text x="205" y="94" font-size="8" fill="#6e7781">BEST DAY OCT 04</text>
 <rect x="366" y="62" width="3" height="14" fill="#953800"/>
-<text x="374" y="80" font-size="19" font-weight="bold" fill="#24292f">6.2</text>
+<text x="374" y="80" font-size="19" font-weight="bold" fill="#24292f">12.8</text>
 <text x="374" y="94" font-size="8" fill="#6e7781">DAILY AVG</text>
 <rect x="534" y="62" width="3" height="14" fill="#953800"/>
-<text x="542" y="80" font-size="19" font-weight="bold" fill="#24292f">7</text>
+<text x="542" y="80" font-size="19" font-weight="bold" fill="#24292f">8</text>
 <text x="542" y="94" font-size="8" fill="#6e7781">ACTIVE DAYS</text>
 <rect x="703" y="62" width="3" height="14" fill="#953800"/>
-<text x="711" y="80" font-size="19" font-weight="bold" fill="#24292f">0d</text>
+<text x="711" y="80" font-size="19" font-weight="bold" fill="#24292f">1d</text>
 <text x="711" y="94" font-size="8" fill="#6e7781">STREAK</text>
 <rect x="28" y="302" width="844" height="62" fill="#e2e6eb"/>
 <line x1="28.0" y1="302.0" x2="872.0" y2="302.0" stroke="#cfd6dd" stroke-width="1" />
@@ -61,48 +61,63 @@
 <line x1="28.0" y1="200.0" x2="872.0" y2="200.0" stroke="#d7dde4" stroke-width="1" />
 <line x1="28.0" y1="250.0" x2="872.0" y2="250.0" stroke="#d7dde4" stroke-width="1" />
 <g><title>Oct 01, 2026
-1 CONTRIBUTIONS
-LOW ACTIVITY</title>
+10 CONTRIBUTIONS
+ACTIVE</title>
 <rect x="29.0" y="106.0" width="25.2" height="194.0" fill="transparent"/>
 <g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.10s" dur="0.5s" fill="freeze"/>
-<rect x="28.0" y="284.0" width="9.0" height="16.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
-<rect x="32.5" y="287.0" width="3.0" height="4.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="10.7s" begin="1.6s" repeatCount="indefinite"/></rect>
-<rect x="36.6" y="277.0" width="10.0" height="7.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
-<line x1="37.6" y1="277.0" x2="37.6" y2="275.0" stroke="#2b3a4a" stroke-width="1" />
-<line x1="45.6" y1="277.0" x2="45.6" y2="275.0" stroke="#2b3a4a" stroke-width="1" />
+<rect x="28.0" y="260.0" width="12.0" height="40.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<line x1="29.0" y1="269.0" x2="39.0" y2="269.0" stroke="#2b3a4a" stroke-width="1" />
+<line x1="29.0" y1="278.0" x2="39.0" y2="278.0" stroke="#2b3a4a" stroke-width="1" />
+<line x1="29.0" y1="287.0" x2="39.0" y2="287.0" stroke="#2b3a4a" stroke-width="1" />
+<rect x="32.5" y="263.0" width="3.0" height="4.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="10.7s" begin="1.6s" repeatCount="indefinite"/></rect>
+<rect x="32.5" y="272.0" width="3.0" height="4.0" fill="#e2e7ec"></rect>
+<rect x="32.5" y="281.0" width="3.0" height="4.0" fill="#e2e7ec"></rect>
+<rect x="32.5" y="290.0" width="3.0" height="4.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="14.2s" begin="2.5s" repeatCount="indefinite"/></rect>
+<rect x="36.6" y="253.0" width="10.0" height="7.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<line x1="37.6" y1="253.0" x2="37.6" y2="251.0" stroke="#2b3a4a" stroke-width="1" />
+<line x1="45.6" y1="253.0" x2="45.6" y2="251.0" stroke="#2b3a4a" stroke-width="1" />
 </g>
 </g>
 <g><title>Oct 02, 2026
-5 CONTRIBUTIONS
-MODERATE</title>
+11 CONTRIBUTIONS
+HIGH ACTIVITY</title>
 <rect x="56.2" y="106.0" width="25.2" height="194.0" fill="transparent"/>
 <g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.15s" dur="0.5s" fill="freeze"/>
-<rect x="55.2" y="270.0" width="11.0" height="30.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
-<line x1="57.2" y1="270.0" x2="57.2" y2="300.0" stroke="#2b3a4a" stroke-width="1" />
-<line x1="64.2" y1="270.0" x2="64.2" y2="300.0" stroke="#2b3a4a" stroke-width="1" />
-<rect x="59.7" y="273.0" width="3.0" height="4.0" fill="#e2e7ec"></rect>
-<rect x="59.7" y="291.0" width="3.0" height="4.0" fill="#4b5b6b"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="11.5s" begin="2.2s" repeatCount="indefinite"/></rect>
-<rect x="63.8" y="265.0" width="4.0" height="5.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
-<rect x="69.8" y="264.0" width="4.0" height="6.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<rect x="55.2" y="234.0" width="17.0" height="66.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<line x1="57.2" y1="234.0" x2="57.2" y2="300.0" stroke="#2b3a4a" stroke-width="1" />
+<line x1="70.2" y1="234.0" x2="70.2" y2="300.0" stroke="#2b3a4a" stroke-width="1" />
+<rect x="62.2" y="237.0" width="3.0" height="4.0" fill="#4b5b6b"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="8.8s" begin="4.4s" repeatCount="indefinite"/></rect>
+<rect x="62.2" y="255.0" width="3.0" height="4.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="11.5s" begin="2.2s" repeatCount="indefinite"/></rect>
+<rect x="62.2" y="273.0" width="3.0" height="4.0" fill="#e2e7ec"></rect>
+<rect x="62.2" y="291.0" width="3.0" height="4.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="13.5s" begin="1.9s" repeatCount="indefinite"/></rect>
+<rect x="63.8" y="229.0" width="4.0" height="5.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<rect x="69.8" y="228.0" width="4.0" height="6.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<rect x="55.2" y="234.0" width="17.0" height="7.0" fill="#ffffff" />
+<text x="68.8" y="239.5" text-anchor="middle" font-size="5" fill="#6e7781" opacity="0.85">DATA</text>
 </g>
 </g>
 <g><title>Oct 03, 2026
-9 CONTRIBUTIONS
-ACTIVE</title>
+20 CONTRIBUTIONS
+HIGH ACTIVITY</title>
 <rect x="83.5" y="106.0" width="25.2" height="194.0" fill="transparent"/>
 <g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.21s" dur="0.5s" fill="freeze"/>
-<rect x="82.5" y="247.0" width="14.0" height="53.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
-<rect x="84.5" y="250.0" width="10.0" height="3.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="12.5s" begin="1.2s" repeatCount="indefinite"/></rect>
-<rect x="84.5" y="259.0" width="10.0" height="3.0" fill="#e2e7ec"></rect>
-<rect x="84.5" y="268.0" width="10.0" height="3.0" fill="#e2e7ec"></rect>
-<rect x="84.5" y="277.0" width="10.0" height="3.0" fill="#e2e7ec"></rect>
-<rect x="84.5" y="286.0" width="10.0" height="3.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="12.2s" begin="2.7s" repeatCount="indefinite"/></rect>
-<circle cx="96.1" cy="243.0" r="4" fill="none" stroke="#2b3a4a"/>
-<line x1="96.1" y1="243.0" x2="96.1" y2="248.0" stroke="#2b3a4a" stroke-width="1" />
+<rect x="82.5" y="225.0" width="17.0" height="75.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<rect x="84.5" y="228.0" width="13.0" height="3.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="12.5s" begin="1.2s" repeatCount="indefinite"/></rect>
+<rect x="84.5" y="237.0" width="13.0" height="3.0" fill="#e2e7ec"></rect>
+<rect x="84.5" y="246.0" width="13.0" height="3.0" fill="#e2e7ec"></rect>
+<rect x="84.5" y="255.0" width="13.0" height="3.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="8.1s" begin="3.9s" repeatCount="indefinite"/></rect>
+<rect x="84.5" y="264.0" width="13.0" height="3.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="12.2s" begin="2.7s" repeatCount="indefinite"/></rect>
+<rect x="84.5" y="273.0" width="13.0" height="3.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="10.7s" begin="1.6s" repeatCount="indefinite"/></rect>
+<rect x="84.5" y="282.0" width="13.0" height="3.0" fill="#e2e7ec"></rect>
+<rect x="84.5" y="291.0" width="13.0" height="3.0" fill="#e2e7ec"></rect>
+<circle cx="96.1" cy="221.0" r="4" fill="none" stroke="#2b3a4a"/>
+<line x1="96.1" y1="221.0" x2="96.1" y2="226.0" stroke="#2b3a4a" stroke-width="1" />
+<rect x="82.5" y="225.0" width="17.0" height="7.0" fill="#ffffff" />
+<text x="96.1" y="230.5" text-anchor="middle" font-size="5" fill="#6e7781" opacity="0.85">NODE</text>
 </g>
 </g>
 <g><title>Oct 04, 2026
-36 CONTRIBUTIONS
+50 CONTRIBUTIONS
 LANDMARK DAY</title>
 <rect x="110.7" y="106.0" width="25.2" height="194.0" fill="transparent"/>
 <g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.27s" dur="0.5s" fill="freeze"/>
@@ -132,25 +147,33 @@ LOW ACTIVITY</title>
 </g>
 </g>
 <g><title>Oct 06, 2026
-9 CONTRIBUTIONS
-ACTIVE</title>
+29 CONTRIBUTIONS
+VERY HIGH</title>
 <rect x="165.1" y="106.0" width="25.2" height="194.0" fill="transparent"/>
 <g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.38s" dur="0.5s" fill="freeze"/>
-<rect x="164.1" y="248.0" width="16.0" height="52.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
-<rect x="166.1" y="251.0" width="12.0" height="3.0" fill="#953800"></rect>
-<rect x="166.1" y="260.0" width="12.0" height="3.0" fill="#e2e7ec"></rect>
-<rect x="166.1" y="269.0" width="12.0" height="3.0" fill="#4b5b6b"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="15.1s" begin="3.1s" repeatCount="indefinite"/></rect>
-<rect x="166.1" y="278.0" width="12.0" height="3.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="13.6s" begin="2.0s" repeatCount="indefinite"/></rect>
-<rect x="166.1" y="287.0" width="12.0" height="3.0" fill="#953800"></rect>
-<circle cx="171.7" cy="245.0" r="2.4" fill="none" stroke="#2b3a4a"/>
-<circle cx="177.7" cy="245.0" r="2.4" fill="none" stroke="#2b3a4a"/>
-<circle cx="183.7" cy="245.0" r="2.4" fill="none" stroke="#2b3a4a"/>
-<line x1="168.7" y1="245.0" x2="186.7" y2="245.0" stroke="#2b3a4a" stroke-width="1" />
-<rect x="186.7" y="242.0" width="2.0" height="6.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<rect x="164.1" y="195.0" width="21.0" height="105.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<rect x="166.1" y="198.0" width="17.0" height="3.0" fill="#953800"></rect>
+<rect x="166.1" y="207.0" width="17.0" height="3.0" fill="#e2e7ec"></rect>
+<rect x="166.1" y="216.0" width="17.0" height="3.0" fill="#953800"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="15.1s" begin="3.1s" repeatCount="indefinite"/></rect>
+<rect x="166.1" y="225.0" width="17.0" height="3.0" fill="#953800"></rect>
+<rect x="166.1" y="234.0" width="17.0" height="3.0" fill="#953800"></rect>
+<rect x="166.1" y="243.0" width="17.0" height="3.0" fill="#e2e7ec"></rect>
+<rect x="166.1" y="252.0" width="17.0" height="3.0" fill="#953800"></rect>
+<rect x="166.1" y="261.0" width="17.0" height="3.0" fill="#953800"></rect>
+<rect x="166.1" y="270.0" width="17.0" height="3.0" fill="#953800"></rect>
+<rect x="166.1" y="279.0" width="17.0" height="3.0" fill="#953800"></rect>
+<rect x="166.1" y="288.0" width="17.0" height="3.0" fill="#953800"></rect>
+<circle cx="171.7" cy="192.0" r="2.4" fill="none" stroke="#2b3a4a"/>
+<circle cx="177.7" cy="192.0" r="2.4" fill="none" stroke="#2b3a4a"/>
+<circle cx="183.7" cy="192.0" r="2.4" fill="none" stroke="#2b3a4a"/>
+<line x1="168.7" y1="192.0" x2="186.7" y2="192.0" stroke="#2b3a4a" stroke-width="1" />
+<rect x="186.7" y="189.0" width="2.0" height="6.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<rect x="164.1" y="195.0" width="21.0" height="7.0" fill="#ffffff" />
+<text x="177.7" y="200.5" text-anchor="middle" font-size="5" fill="#6e7781" opacity="0.85">OPS</text>
 </g>
 </g>
 <g><title>Oct 07, 2026
-1 CONTRIBUTIONS
+2 CONTRIBUTIONS
 LOW ACTIVITY</title>
 <rect x="192.4" y="106.0" width="25.2" height="194.0" fill="transparent"/>
 <g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.43s" dur="0.5s" fill="freeze"/>
@@ -164,8 +187,19 @@ LOW ACTIVITY</title>
 <rect x="229.2" y="291.0" width="6.0" height="6.0" fill="none" stroke="#d7dde4" stroke-width="1" />
 <rect x="247.8" y="297.0" width="19.2" height="3.0" fill="#ffffff" stroke="#d7dde4" stroke-width="1" />
 <rect x="256.4" y="291.0" width="6.0" height="6.0" fill="none" stroke="#d7dde4" stroke-width="1" />
-<rect x="275.0" y="297.0" width="19.2" height="3.0" fill="#ffffff" stroke="#d7dde4" stroke-width="1" />
-<rect x="283.6" y="291.0" width="6.0" height="6.0" fill="none" stroke="#d7dde4" stroke-width="1" />
+<g><title>Oct 10, 2026
+5 CONTRIBUTIONS
+MODERATE</title>
+<rect x="274.0" y="106.0" width="25.2" height="194.0" fill="transparent"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.59s" dur="0.5s" fill="freeze"/>
+<rect x="273.0" y="273.0" width="14.0" height="27.0" fill="#ffffff" stroke="#953800" stroke-width="1" />
+<line x1="275.0" y1="273.0" x2="275.0" y2="300.0" stroke="#953800" stroke-width="1" />
+<line x1="285.0" y1="273.0" x2="285.0" y2="300.0" stroke="#953800" stroke-width="1" />
+<rect x="278.5" y="276.0" width="3.0" height="4.0" fill="#4b5b6b"></rect>
+<rect x="281.6" y="268.0" width="4.0" height="5.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<rect x="287.6" y="267.0" width="4.0" height="6.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+</g>
+</g>
 <rect x="303.3" y="286.0" width="17.2" height="14" fill="none" stroke="#d7dde4" stroke-width="1" stroke-dasharray="2 2"/>
 <rect x="330.5" y="286.0" width="17.2" height="14" fill="none" stroke="#d7dde4" stroke-width="1" stroke-dasharray="2 2"/>
 <rect x="357.7" y="286.0" width="17.2" height="14" fill="none" stroke="#d7dde4" stroke-width="1" stroke-dasharray="2 2"/>
@@ -187,19 +221,19 @@ LOW ACTIVITY</title>
 <rect x="793.3" y="286.0" width="17.2" height="14" fill="none" stroke="#d7dde4" stroke-width="1" stroke-dasharray="2 2"/>
 <rect x="820.5" y="286.0" width="17.2" height="14" fill="none" stroke="#d7dde4" stroke-width="1" stroke-dasharray="2 2"/>
 <rect x="847.8" y="286.0" width="17.2" height="14" fill="none" stroke="#d7dde4" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="284.6" y1="300.0" x2="284.6" y2="274.0" stroke="#953800" stroke-width="1.4" />
+<line x1="284.6" y1="300.0" x2="284.6" y2="247.0" stroke="#953800" stroke-width="1.4" />
 <line x1="282.6" y1="300.0" x2="282.6" y2="290.0" stroke="#953800" stroke-width="1.4" />
-<line x1="279.6" y1="274.0" x2="297.6" y2="274.0" stroke="#953800" stroke-width="1.4" />
-<line x1="279.6" y1="274.0" x2="284.6" y2="269.0" stroke="#953800" stroke-width="1" />
-<line x1="294.6" y1="274.0" x2="294.6" y2="283.0" stroke="#953800" stroke-width="1" />
-<rect x="293.1" y="283.0" width="3" height="3" fill="none" stroke="#953800"/>
-<circle class="fx" cx="286.6" cy="271.0" r="2" fill="#953800"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.1s" begin="0s" repeatCount="indefinite"/></circle>
-<text x="286.6" y="265.0" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#953800">TODAY</text>
+<line x1="279.6" y1="247.0" x2="297.6" y2="247.0" stroke="#953800" stroke-width="1.4" />
+<line x1="279.6" y1="247.0" x2="284.6" y2="242.0" stroke="#953800" stroke-width="1" />
+<line x1="294.6" y1="247.0" x2="294.6" y2="256.0" stroke="#953800" stroke-width="1" />
+<rect x="293.1" y="256.0" width="3" height="3" fill="none" stroke="#953800"/>
+<circle class="fx" cx="286.6" cy="244.0" r="2" fill="#953800"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.1s" begin="0s" repeatCount="indefinite"/></circle>
+<text x="286.6" y="238.0" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#953800">TODAY</text>
 <rect x="280.6" y="304.0" width="12.0" height="4.0" fill="none" stroke="#953800" stroke-width="1" />
 <line x1="280.6" y1="306.0" x2="292.6" y2="306.0" stroke="#953800" stroke-width="1" />
 <circle class="fx" cx="150.5" cy="282.0" r="1.8" fill="#953800"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.4s" begin="0.84s" repeatCount="indefinite"/></circle>
 <circle class="fx" cx="205.0" cy="269.0" r="1.6" fill="#953800"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.8s" begin="0.45s" repeatCount="indefinite"/></circle>
-<g class="fx" opacity="0.7"><animateTransform attributeName="transform" type="translate" values="0,0;0,-14.0" dur="3.2s" repeatCount="indefinite"/><rect x="184.7" y="238.0" width="1.6" height="4" fill="#953800"/></g>
+<g class="fx" opacity="0.7"><animateTransform attributeName="transform" type="translate" values="0,0;0,-14.0" dur="3.2s" repeatCount="indefinite"/><rect x="187.2" y="185.0" width="1.6" height="4" fill="#953800"/></g>
 <g class="fx"><animateTransform attributeName="transform" type="translate" values="-30,0;930,0" dur="55s" begin="0s" repeatCount="indefinite"/><g><rect x="0" y="310" width="13" height="4.5" rx="1" fill="#ffffff" stroke="#2b3a4a" stroke-width="0.8"/><rect x="4" y="307.5" width="5.5" height="2.8" fill="#ffffff" stroke="#2b3a4a" stroke-width="0.8"/><rect x="2.5" y="314" width="2" height="1.6" fill="#2b3a4a"/><rect x="9" y="314" width="2" height="1.6" fill="#2b3a4a"/><rect x="12.2" y="311" width="1" height="1" fill="#953800"/></g></g>
 <g class="fx"><animateTransform attributeName="transform" type="translate" values="930,0;-30,0" dur="80s" begin="4s" repeatCount="indefinite"/><g transform="scale(-1,1)"><g><rect x="0" y="320" width="13" height="4.5" rx="1" fill="#ffffff" stroke="#2b3a4a" stroke-width="0.8"/><rect x="4" y="317.5" width="5.5" height="2.8" fill="#ffffff" stroke="#2b3a4a" stroke-width="0.8"/><rect x="2.5" y="324" width="2" height="1.6" fill="#2b3a4a"/><rect x="9" y="324" width="2" height="1.6" fill="#2b3a4a"/><rect x="12.2" y="321" width="1" height="1" fill="#953800"/></g></g></g>
 <g class="fx"><animateTransform attributeName="transform" type="translate" values="-30,0;930,0" dur="120s" begin="9s" repeatCount="indefinite"/><g><rect x="0" y="315" width="13" height="4.5" rx="1" fill="#ffffff" stroke="#2b3a4a" stroke-width="0.8"/><rect x="4" y="312.5" width="5.5" height="2.8" fill="#ffffff" stroke="#2b3a4a" stroke-width="0.8"/><rect x="2.5" y="319" width="2" height="1.6" fill="#2b3a4a"/><rect x="9" y="319" width="2" height="1.6" fill="#2b3a4a"/><rect x="12.2" y="316" width="1" height="1" fill="#953800"/></g></g>
