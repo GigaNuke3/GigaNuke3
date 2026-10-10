@@ -8,13 +8,13 @@
 <text x="872" y="44" text-anchor="end" font-size="7.5" fill="#6e7781">CITY STATUS: ONLINE</text>
 <line x1="28.0" y1="52.0" x2="872.0" y2="52.0" stroke="#d0d7de" stroke-width="1" />
 <rect x="28" y="62" width="3" height="14" fill="#953800"/>
-<text x="36" y="80" font-size="19" font-weight="bold" fill="#24292f">128</text>
+<text x="36" y="80" font-size="19" font-weight="bold" fill="#24292f">130</text>
 <text x="36" y="94" font-size="8" fill="#6e7781">THIS MONTH</text>
 <rect x="197" y="62" width="3" height="14" fill="#953800"/>
 <text x="205" y="80" font-size="19" font-weight="bold" fill="#24292f">50</text>
 <text x="205" y="94" font-size="8" fill="#6e7781">BEST DAY OCT 04</text>
 <rect x="366" y="62" width="3" height="14" fill="#953800"/>
-<text x="374" y="80" font-size="19" font-weight="bold" fill="#24292f">12.8</text>
+<text x="374" y="80" font-size="19" font-weight="bold" fill="#24292f">13.0</text>
 <text x="374" y="94" font-size="8" fill="#6e7781">DAILY AVG</text>
 <rect x="534" y="62" width="3" height="14" fill="#953800"/>
 <text x="542" y="80" font-size="19" font-weight="bold" fill="#24292f">8</text>
@@ -188,16 +188,17 @@ LOW ACTIVITY</title>
 <rect x="247.8" y="297.0" width="19.2" height="3.0" fill="#ffffff" stroke="#d7dde4" stroke-width="1" />
 <rect x="256.4" y="291.0" width="6.0" height="6.0" fill="none" stroke="#d7dde4" stroke-width="1" />
 <g><title>Oct 10, 2026
-5 CONTRIBUTIONS
-MODERATE</title>
+7 CONTRIBUTIONS
+ACTIVE</title>
 <rect x="274.0" y="106.0" width="25.2" height="194.0" fill="transparent"/>
 <g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.59s" dur="0.5s" fill="freeze"/>
-<rect x="273.0" y="273.0" width="14.0" height="27.0" fill="#ffffff" stroke="#953800" stroke-width="1" />
-<line x1="275.0" y1="273.0" x2="275.0" y2="300.0" stroke="#953800" stroke-width="1" />
-<line x1="285.0" y1="273.0" x2="285.0" y2="300.0" stroke="#953800" stroke-width="1" />
-<rect x="278.5" y="276.0" width="3.0" height="4.0" fill="#4b5b6b"></rect>
-<rect x="281.6" y="268.0" width="4.0" height="5.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
-<rect x="287.6" y="267.0" width="4.0" height="6.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<rect x="273.0" y="259.0" width="16.0" height="41.0" fill="#ffffff" stroke="#953800" stroke-width="1" />
+<line x1="275.0" y1="259.0" x2="275.0" y2="300.0" stroke="#953800" stroke-width="1" />
+<line x1="287.0" y1="259.0" x2="287.0" y2="300.0" stroke="#953800" stroke-width="1" />
+<rect x="279.5" y="262.0" width="3.0" height="4.0" fill="#4b5b6b"></rect>
+<rect x="279.5" y="280.0" width="3.0" height="4.0" fill="#e2e7ec"></rect>
+<rect x="281.6" y="254.0" width="4.0" height="5.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
+<rect x="287.6" y="253.0" width="4.0" height="6.0" fill="#ffffff" stroke="#2b3a4a" stroke-width="1" />
 </g>
 </g>
 <rect x="303.3" y="286.0" width="17.2" height="14" fill="none" stroke="#d7dde4" stroke-width="1" stroke-dasharray="2 2"/>
@@ -221,14 +222,14 @@ MODERATE</title>
 <rect x="793.3" y="286.0" width="17.2" height="14" fill="none" stroke="#d7dde4" stroke-width="1" stroke-dasharray="2 2"/>
 <rect x="820.5" y="286.0" width="17.2" height="14" fill="none" stroke="#d7dde4" stroke-width="1" stroke-dasharray="2 2"/>
 <rect x="847.8" y="286.0" width="17.2" height="14" fill="none" stroke="#d7dde4" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="284.6" y1="300.0" x2="284.6" y2="247.0" stroke="#953800" stroke-width="1.4" />
+<line x1="284.6" y1="300.0" x2="284.6" y2="233.0" stroke="#953800" stroke-width="1.4" />
 <line x1="282.6" y1="300.0" x2="282.6" y2="290.0" stroke="#953800" stroke-width="1.4" />
-<line x1="279.6" y1="247.0" x2="297.6" y2="247.0" stroke="#953800" stroke-width="1.4" />
-<line x1="279.6" y1="247.0" x2="284.6" y2="242.0" stroke="#953800" stroke-width="1" />
-<line x1="294.6" y1="247.0" x2="294.6" y2="256.0" stroke="#953800" stroke-width="1" />
-<rect x="293.1" y="256.0" width="3" height="3" fill="none" stroke="#953800"/>
-<circle class="fx" cx="286.6" cy="244.0" r="2" fill="#953800"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.1s" begin="0s" repeatCount="indefinite"/></circle>
-<text x="286.6" y="238.0" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#953800">TODAY</text>
+<line x1="279.6" y1="233.0" x2="297.6" y2="233.0" stroke="#953800" stroke-width="1.4" />
+<line x1="279.6" y1="233.0" x2="284.6" y2="228.0" stroke="#953800" stroke-width="1" />
+<line x1="294.6" y1="233.0" x2="294.6" y2="242.0" stroke="#953800" stroke-width="1" />
+<rect x="293.1" y="242.0" width="3" height="3" fill="none" stroke="#953800"/>
+<circle class="fx" cx="286.6" cy="230.0" r="2" fill="#953800"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.1s" begin="0s" repeatCount="indefinite"/></circle>
+<text x="286.6" y="224.0" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#953800">TODAY</text>
 <rect x="280.6" y="304.0" width="12.0" height="4.0" fill="none" stroke="#953800" stroke-width="1" />
 <line x1="280.6" y1="306.0" x2="292.6" y2="306.0" stroke="#953800" stroke-width="1" />
 <circle class="fx" cx="150.5" cy="282.0" r="1.8" fill="#953800"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.4s" begin="0.84s" repeatCount="indefinite"/></circle>
