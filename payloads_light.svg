@@ -76,7 +76,7 @@
 <text x="407.8" y="232" text-anchor="middle" font-size="8" fill="#24292f">Callama</text>
 <text x="407.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">CSS &#183; 32.2 MB</text>
 <text x="407.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">WARM &#183; 08-17 &#183; <tspan fill="#953800">★1</tspan></text>
-<rect x="470.2" y="110.9" width="44.0" height="103.1" fill="#f6f8fa" stroke="#953800"/>
+<rect x="470.2" y="110.1" width="44.0" height="103.9" fill="#f6f8fa" stroke="#953800"/>
 <line x1="473.2" y1="122" x2="511.2" y2="122" stroke="#d0d7de"/>
 <line x1="473.2" y1="134" x2="511.2" y2="134" stroke="#d0d7de"/>
 <line x1="473.2" y1="146" x2="511.2" y2="146" stroke="#d0d7de"/>
@@ -85,10 +85,10 @@
 <line x1="473.2" y1="182" x2="511.2" y2="182" stroke="#d0d7de"/>
 <line x1="473.2" y1="194" x2="511.2" y2="194" stroke="#d0d7de"/>
 <line x1="473.2" y1="206" x2="511.2" y2="206" stroke="#d0d7de"/>
-<polygon points="474.2,110.9 510.2,110.9 504.2,103.9 480.2,103.9" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="489.2" y="96.9" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="489.2" y="96.9" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<polygon points="474.2,110.1 510.2,110.1 504.2,103.1 480.2,103.1" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="489.2" y="96.1" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="489.2" y="96.1" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="492.2" y="232" text-anchor="middle" font-size="8" fill="#953800">GigaNuke3</text>
-<text x="492.2" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 3.4 MB</text>
+<text x="492.2" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 3.7 MB</text>
 <text x="492.2" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-11</text>
 <rect x="554.6" y="96.3" width="44.0" height="117.7" fill="#f6f8fa" stroke="#953800"/>
 <line x1="557.6" y1="108" x2="595.6" y2="108" stroke="#d0d7de"/>
@@ -130,12 +130,19 @@
 <text x="745.4" y="232" text-anchor="middle" font-size="8" fill="#953800">Portfolio</text>
 <text x="745.4" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">TypeScript &#183; 25.3 MB</text>
 <text x="745.4" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-01</text>
-<rect x="807.8" y="196.0" width="44.0" height="18.0" fill="#f6f8fa" stroke="#953800"/>
-<line x1="810.8" y1="208" x2="848.8" y2="208" stroke="#d0d7de"/>
-<polygon points="811.8,196.0 847.8,196.0 841.8,189.0 817.8,189.0" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="826.8" y="182.0" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="826.8" y="182.0" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<rect x="807.8" y="109.8" width="44.0" height="104.2" fill="#f6f8fa" stroke="#953800"/>
+<line x1="810.8" y1="121" x2="848.8" y2="121" stroke="#d0d7de"/>
+<line x1="810.8" y1="133" x2="848.8" y2="133" stroke="#d0d7de"/>
+<line x1="810.8" y1="145" x2="848.8" y2="145" stroke="#d0d7de"/>
+<line x1="810.8" y1="157" x2="848.8" y2="157" stroke="#d0d7de"/>
+<line x1="810.8" y1="169" x2="848.8" y2="169" stroke="#d0d7de"/>
+<line x1="810.8" y1="181" x2="848.8" y2="181" stroke="#d0d7de"/>
+<line x1="810.8" y1="193" x2="848.8" y2="193" stroke="#d0d7de"/>
+<line x1="810.8" y1="205" x2="848.8" y2="205" stroke="#d0d7de"/>
+<polygon points="811.8,109.8 847.8,109.8 841.8,102.8 817.8,102.8" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="826.8" y="95.8" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="826.8" y="95.8" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="829.8" y="232" text-anchor="middle" font-size="8" fill="#953800">ADP</text>
-<text x="829.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">TypeScript &#183; 0 KB</text>
+<text x="829.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">TypeScript &#183; 3.8 MB</text>
 <text x="829.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-11</text>
 <g class="fx"><animateTransform attributeName="transform" type="translate" values="0.0,0;84.4,0;168.8,0;253.2,0;337.6,0;422.0,0;506.4,0;590.8,0;675.2,0;759.6,0" calcMode="discrete" dur="16.0s" repeatCount="indefinite"/><path d="M32,64 h-4 V260 h4 M108.4,64 h4 V260 h-4" fill="none" stroke="#953800" opacity="0.5"/></g>
 <rect x="0.5" y="0.5" width="899" height="281" rx="4" fill="none" stroke="#d0d7de"/>
