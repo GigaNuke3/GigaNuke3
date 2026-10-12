@@ -76,7 +76,7 @@
 <text x="407.8" y="232" text-anchor="middle" font-size="8" fill="#24292f">Callama</text>
 <text x="407.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">CSS &#183; 32.2 MB</text>
 <text x="407.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">WARM &#183; 08-17 &#183; <tspan fill="#953800">★1</tspan></text>
-<rect x="470.2" y="109.3" width="44.0" height="104.7" fill="#f6f8fa" stroke="#953800"/>
+<rect x="470.2" y="109.2" width="44.0" height="104.8" fill="#f6f8fa" stroke="#953800"/>
 <line x1="473.2" y1="121" x2="511.2" y2="121" stroke="#d0d7de"/>
 <line x1="473.2" y1="133" x2="511.2" y2="133" stroke="#d0d7de"/>
 <line x1="473.2" y1="145" x2="511.2" y2="145" stroke="#d0d7de"/>
@@ -85,8 +85,8 @@
 <line x1="473.2" y1="181" x2="511.2" y2="181" stroke="#d0d7de"/>
 <line x1="473.2" y1="193" x2="511.2" y2="193" stroke="#d0d7de"/>
 <line x1="473.2" y1="205" x2="511.2" y2="205" stroke="#d0d7de"/>
-<polygon points="474.2,109.3 510.2,109.3 504.2,102.3 480.2,102.3" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="489.2" y="95.3" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="489.2" y="95.3" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<polygon points="474.2,109.2 510.2,109.2 504.2,102.2 480.2,102.2" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="489.2" y="95.2" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="489.2" y="95.2" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="492.2" y="232" text-anchor="middle" font-size="8" fill="#953800">GigaNuke3</text>
 <text x="492.2" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 4.0 MB</text>
 <text x="492.2" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-12</text>
