@@ -76,7 +76,7 @@
 <text x="407.8" y="232" text-anchor="middle" font-size="8" fill="#24292f">Callama</text>
 <text x="407.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">CSS &#183; 32.2 MB</text>
 <text x="407.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">WARM &#183; 08-17 &#183; <tspan fill="#953800">★1</tspan></text>
-<rect x="470.2" y="108.8" width="44.0" height="105.2" fill="#f6f8fa" stroke="#953800"/>
+<rect x="470.2" y="108.4" width="44.0" height="105.6" fill="#f6f8fa" stroke="#953800"/>
 <line x1="473.2" y1="120" x2="511.2" y2="120" stroke="#d0d7de"/>
 <line x1="473.2" y1="132" x2="511.2" y2="132" stroke="#d0d7de"/>
 <line x1="473.2" y1="144" x2="511.2" y2="144" stroke="#d0d7de"/>
@@ -85,10 +85,10 @@
 <line x1="473.2" y1="180" x2="511.2" y2="180" stroke="#d0d7de"/>
 <line x1="473.2" y1="192" x2="511.2" y2="192" stroke="#d0d7de"/>
 <line x1="473.2" y1="204" x2="511.2" y2="204" stroke="#d0d7de"/>
-<polygon points="474.2,108.8 510.2,108.8 504.2,101.8 480.2,101.8" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="489.2" y="94.8" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="489.2" y="94.8" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<polygon points="474.2,108.4 510.2,108.4 504.2,101.4 480.2,101.4" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="489.2" y="94.4" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="489.2" y="94.4" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="492.2" y="232" text-anchor="middle" font-size="8" fill="#953800">GigaNuke3</text>
-<text x="492.2" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 4.2 MB</text>
+<text x="492.2" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 4.3 MB</text>
 <text x="492.2" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-14</text>
 <rect x="554.6" y="96.3" width="44.0" height="117.7" fill="#f6f8fa" stroke="#953800"/>
 <line x1="557.6" y1="108" x2="595.6" y2="108" stroke="#d0d7de"/>
