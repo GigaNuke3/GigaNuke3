@@ -77,14 +77,14 @@
 <text x="373.3" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">CSS &#183; 32.2 MB</text>
 <text x="373.3" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">WARM &#183; 08-17 &#183; <tspan fill="#ffa657">★1</tspan></text>
 <rect x="428.0" y="108.0" width="44.0" height="106.0" fill="#0d1117" stroke="#ffa657"/>
-<line x1="431.0" y1="120" x2="469.0" y2="120" stroke="#30363d"/>
-<line x1="431.0" y1="132" x2="469.0" y2="132" stroke="#30363d"/>
-<line x1="431.0" y1="144" x2="469.0" y2="144" stroke="#30363d"/>
-<line x1="431.0" y1="156" x2="469.0" y2="156" stroke="#30363d"/>
-<line x1="431.0" y1="168" x2="469.0" y2="168" stroke="#30363d"/>
-<line x1="431.0" y1="180" x2="469.0" y2="180" stroke="#30363d"/>
-<line x1="431.0" y1="192" x2="469.0" y2="192" stroke="#30363d"/>
-<line x1="431.0" y1="204" x2="469.0" y2="204" stroke="#30363d"/>
+<line x1="431.0" y1="119" x2="469.0" y2="119" stroke="#30363d"/>
+<line x1="431.0" y1="131" x2="469.0" y2="131" stroke="#30363d"/>
+<line x1="431.0" y1="143" x2="469.0" y2="143" stroke="#30363d"/>
+<line x1="431.0" y1="155" x2="469.0" y2="155" stroke="#30363d"/>
+<line x1="431.0" y1="167" x2="469.0" y2="167" stroke="#30363d"/>
+<line x1="431.0" y1="179" x2="469.0" y2="179" stroke="#30363d"/>
+<line x1="431.0" y1="191" x2="469.0" y2="191" stroke="#30363d"/>
+<line x1="431.0" y1="203" x2="469.0" y2="203" stroke="#30363d"/>
 <polygon points="432.0,108.0 468.0,108.0 462.0,101.0 438.0,101.0" fill="#0d1117" stroke="#ffa657"/>
 <g class="fx"><rect x="447.0" y="94.0" width="6" height="5" fill="#ffa657" stroke="#ffa657"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="447.0" y="94.0" width="6" height="5" fill="#ffa657" stroke="#ffa657"/></g>
 <text x="450.0" y="232" text-anchor="middle" font-size="8" fill="#ffa657">GigaNuke3</text>
