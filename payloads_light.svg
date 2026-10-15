@@ -4,7 +4,7 @@
 <text x="28" y="30" font-size="15" font-weight="bold" fill="#953800">PAYLOAD MANIFEST</text>
 <text x="872" y="30" text-anchor="end" font-size="9.5" fill="#6e7781">11 REPOSITORIES &#183; ORDERED BY CREATION</text>
 <text x="28" y="44" font-size="8" fill="#6e7781">WHAT THE ROCKET CARRIES</text>
-<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#6e7781">5 LIVE &#183; 2 WARM &#183; 4 COLD</text>
+<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#6e7781">4 LIVE &#183; 3 WARM &#183; 4 COLD</text>
 <line x1="28" y1="52" x2="872" y2="52" stroke="#d0d7de"/>
 <rect x="28" y="214" width="844" height="3" fill="#6e7781" opacity="0.6"/>
 <line x1="28.0" y1="206" x2="28.0" y2="217" stroke="#953800"/><text x="31.0" y="212" font-size="6.5" fill="#953800">2025</text>
@@ -115,7 +115,7 @@
 <text x="603.5" y="232" text-anchor="middle" font-size="8" fill="#24292f">Specificati…</text>
 <text x="603.5" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">— &#183; 26 KB</text>
 <text x="603.5" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">WARM &#183; 09-12 &#183; <tspan fill="#953800">★1</tspan></text>
-<rect x="658.2" y="90.1" width="44.0" height="123.9" fill="#f6f8fa" stroke="#953800"/>
+<rect x="658.2" y="90.1" width="44.0" height="123.9" fill="#f6f8fa" stroke="#6e7781"/>
 <line x1="661.2" y1="102" x2="699.2" y2="102" stroke="#d0d7de"/>
 <line x1="661.2" y1="114" x2="699.2" y2="114" stroke="#d0d7de"/>
 <line x1="661.2" y1="126" x2="699.2" y2="126" stroke="#d0d7de"/>
@@ -125,11 +125,11 @@
 <line x1="661.2" y1="174" x2="699.2" y2="174" stroke="#d0d7de"/>
 <line x1="661.2" y1="186" x2="699.2" y2="186" stroke="#d0d7de"/>
 <line x1="661.2" y1="198" x2="699.2" y2="198" stroke="#d0d7de"/>
-<polygon points="662.2,90.1 698.2,90.1 692.2,83.1 668.2,83.1" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="677.2" y="76.1" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="677.2" y="76.1" width="6" height="5" fill="#953800" stroke="#953800"/></g>
-<text x="680.2" y="232" text-anchor="middle" font-size="8" fill="#953800">Portfolio</text>
+<polygon points="662.2,90.1 698.2,90.1 692.2,83.1 668.2,83.1" fill="#f6f8fa" stroke="#6e7781"/>
+<rect x="677.2" y="76.1" width="6" height="5" fill="#953800" stroke="#953800"/>
+<text x="680.2" y="232" text-anchor="middle" font-size="8" fill="#24292f">Portfolio</text>
 <text x="680.2" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">TypeScript &#183; 25.3 MB</text>
-<text x="680.2" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-01</text>
+<text x="680.2" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">WARM &#183; 10-01</text>
 <rect x="734.9" y="109.8" width="44.0" height="104.2" fill="#f6f8fa" stroke="#953800"/>
 <line x1="737.9" y1="121" x2="775.9" y2="121" stroke="#d0d7de"/>
 <line x1="737.9" y1="133" x2="775.9" y2="133" stroke="#d0d7de"/>

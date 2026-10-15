@@ -43,7 +43,7 @@
 | [GigaNuke3](https://github.com/GigaNuke3/GigaNuke3) | Python | LIVE | 2026-10-15 |  |
 | [Road-To-Ai-Engineering](https://github.com/GigaNuke3/Road-To-Ai-Engineering) | Python | LIVE | 2026-10-08 | To Become an Ai Engineer |
 | [Specification-First-Model-Orchestration-SFMO-](https://github.com/GigaNuke3/Specification-First-Model-Orchestration-SFMO-) | — | WARM | 2026-09-12 | It's a Documentation Approach on Creating Applications Using the SFMO Method which I  created on which it will help for an Efficient and Elegant Way of Using Tokens for better Execution Generation. |
-| [Portfolio](https://github.com/GigaNuke3/Portfolio) | TypeScript | LIVE | 2026-10-01 |  |
+| [Portfolio](https://github.com/GigaNuke3/Portfolio) | TypeScript | WARM | 2026-10-01 |  |
 | [ADP](https://github.com/GigaNuke3/ADP) | TypeScript | LIVE | 2026-10-11 |  |
 | [n8n-ai-automation-portfolio](https://github.com/GigaNuke3/n8n-ai-automation-portfolio) | — | LIVE | 2026-10-15 |  |
 
