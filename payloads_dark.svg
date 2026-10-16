@@ -90,19 +90,19 @@
 <text x="414.8" y="232" text-anchor="middle" font-size="8" fill="#ffa657">Callama</text>
 <text x="414.8" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">CSS &#183; 32.4 MB</text>
 <text x="414.8" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">LIVE &#183; 10-16 &#183; <tspan fill="#ffa657">★1</tspan></text>
-<rect x="463.2" y="106.9" width="44.0" height="107.1" fill="#0d1117" stroke="#ffa657"/>
-<line x1="466.2" y1="118" x2="504.2" y2="118" stroke="#30363d"/>
-<line x1="466.2" y1="130" x2="504.2" y2="130" stroke="#30363d"/>
-<line x1="466.2" y1="142" x2="504.2" y2="142" stroke="#30363d"/>
-<line x1="466.2" y1="154" x2="504.2" y2="154" stroke="#30363d"/>
-<line x1="466.2" y1="166" x2="504.2" y2="166" stroke="#30363d"/>
-<line x1="466.2" y1="178" x2="504.2" y2="178" stroke="#30363d"/>
-<line x1="466.2" y1="190" x2="504.2" y2="190" stroke="#30363d"/>
-<line x1="466.2" y1="202" x2="504.2" y2="202" stroke="#30363d"/>
-<polygon points="467.2,106.9 503.2,106.9 497.2,99.9 473.2,99.9" fill="#0d1117" stroke="#ffa657"/>
-<g class="fx"><rect x="482.2" y="92.9" width="6" height="5" fill="#ffa657" stroke="#ffa657"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="482.2" y="92.9" width="6" height="5" fill="#ffa657" stroke="#ffa657"/></g>
+<rect x="463.2" y="112.2" width="44.0" height="101.8" fill="#0d1117" stroke="#ffa657"/>
+<line x1="466.2" y1="124" x2="504.2" y2="124" stroke="#30363d"/>
+<line x1="466.2" y1="136" x2="504.2" y2="136" stroke="#30363d"/>
+<line x1="466.2" y1="148" x2="504.2" y2="148" stroke="#30363d"/>
+<line x1="466.2" y1="160" x2="504.2" y2="160" stroke="#30363d"/>
+<line x1="466.2" y1="172" x2="504.2" y2="172" stroke="#30363d"/>
+<line x1="466.2" y1="184" x2="504.2" y2="184" stroke="#30363d"/>
+<line x1="466.2" y1="196" x2="504.2" y2="196" stroke="#30363d"/>
+<line x1="466.2" y1="208" x2="504.2" y2="208" stroke="#30363d"/>
+<polygon points="467.2,112.2 503.2,112.2 497.2,105.2 473.2,105.2" fill="#0d1117" stroke="#ffa657"/>
+<g class="fx"><rect x="482.2" y="98.2" width="6" height="5" fill="#ffa657" stroke="#ffa657"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="482.2" y="98.2" width="6" height="5" fill="#ffa657" stroke="#ffa657"/></g>
 <text x="485.2" y="232" text-anchor="middle" font-size="8" fill="#ffa657">GigaNuke3</text>
-<text x="485.2" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">Python &#183; 5.0 MB</text>
+<text x="485.2" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">Python &#183; 3.0 MB</text>
 <text x="485.2" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">LIVE &#183; 10-16</text>
 <rect x="533.5" y="96.3" width="44.0" height="117.7" fill="#0d1117" stroke="#ffa657"/>
 <line x1="536.5" y1="108" x2="574.5" y2="108" stroke="#30363d"/>
