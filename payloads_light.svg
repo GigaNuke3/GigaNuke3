@@ -44,7 +44,7 @@
 <text x="203.8" y="232" text-anchor="middle" font-size="8" fill="#24292f">chatapp</text>
 <text x="203.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">PHP &#183; 220 KB</text>
 <text x="203.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">COLD &#183; 04-24</text>
-<rect x="252.2" y="110.0" width="44.0" height="104.0" fill="#f6f8fa" stroke="#953800"/>
+<rect x="252.2" y="109.9" width="44.0" height="104.1" fill="#f6f8fa" stroke="#953800"/>
 <line x1="255.2" y1="121" x2="293.2" y2="121" stroke="#d0d7de"/>
 <line x1="255.2" y1="133" x2="293.2" y2="133" stroke="#d0d7de"/>
 <line x1="255.2" y1="145" x2="293.2" y2="145" stroke="#d0d7de"/>
@@ -53,10 +53,10 @@
 <line x1="255.2" y1="181" x2="293.2" y2="181" stroke="#d0d7de"/>
 <line x1="255.2" y1="193" x2="293.2" y2="193" stroke="#d0d7de"/>
 <line x1="255.2" y1="205" x2="293.2" y2="205" stroke="#d0d7de"/>
-<polygon points="256.2,110.0 292.2,110.0 286.2,103.0 262.2,103.0" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="271.2" y="96.0" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="271.2" y="96.0" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<polygon points="256.2,109.9 292.2,109.9 286.2,102.9 262.2,102.9" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="271.2" y="95.9" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="271.2" y="95.9" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="274.2" y="232" text-anchor="middle" font-size="8" fill="#953800">Kaizen</text>
-<text x="274.2" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">JavaScript &#183; 3.7 MB</text>
+<text x="274.2" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">JavaScript &#183; 3.8 MB</text>
 <text x="274.2" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-16 &#183; <tspan fill="#953800">★1</tspan></text>
 <rect x="322.5" y="84.0" width="44.0" height="130.0" fill="#f6f8fa" stroke="#6e7781"/>
 <line x1="325.5" y1="96" x2="363.5" y2="96" stroke="#d0d7de"/>
@@ -74,7 +74,7 @@
 <text x="344.5" y="232" text-anchor="middle" font-size="8" fill="#24292f">My-Bestfri…</text>
 <text x="344.5" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">TypeScript &#183; 133.4 MB</text>
 <text x="344.5" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">COLD &#183; 07-27</text>
-<rect x="392.8" y="87.6" width="44.0" height="126.4" fill="#f6f8fa" stroke="#953800"/>
+<rect x="392.8" y="87.5" width="44.0" height="126.5" fill="#f6f8fa" stroke="#953800"/>
 <line x1="395.8" y1="99" x2="433.8" y2="99" stroke="#d0d7de"/>
 <line x1="395.8" y1="111" x2="433.8" y2="111" stroke="#d0d7de"/>
 <line x1="395.8" y1="123" x2="433.8" y2="123" stroke="#d0d7de"/>
@@ -85,10 +85,10 @@
 <line x1="395.8" y1="183" x2="433.8" y2="183" stroke="#d0d7de"/>
 <line x1="395.8" y1="195" x2="433.8" y2="195" stroke="#d0d7de"/>
 <line x1="395.8" y1="207" x2="433.8" y2="207" stroke="#d0d7de"/>
-<polygon points="396.8,87.6 432.8,87.6 426.8,80.6 402.8,80.6" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="411.8" y="73.6" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="411.8" y="73.6" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<polygon points="396.8,87.5 432.8,87.5 426.8,80.5 402.8,80.5" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="411.8" y="73.5" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="411.8" y="73.5" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="414.8" y="232" text-anchor="middle" font-size="8" fill="#953800">Callama</text>
-<text x="414.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">CSS &#183; 32.2 MB</text>
+<text x="414.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">CSS &#183; 32.4 MB</text>
 <text x="414.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-16 &#183; <tspan fill="#953800">★1</tspan></text>
 <rect x="463.2" y="107.6" width="44.0" height="106.4" fill="#f6f8fa" stroke="#953800"/>
 <line x1="466.2" y1="119" x2="504.2" y2="119" stroke="#d0d7de"/>
