@@ -33,16 +33,16 @@
 <text x="133.5" y="232" text-anchor="middle" font-size="8" fill="#24292f">To-do-list…</text>
 <text x="133.5" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">PHP &#183; 113 KB</text>
 <text x="133.5" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">COLD &#183; 03-21</text>
-<rect x="181.8" y="139.7" width="44.0" height="74.3" fill="#f6f8fa" stroke="#953800"/>
+<rect x="181.8" y="139.6" width="44.0" height="74.4" fill="#f6f8fa" stroke="#953800"/>
 <line x1="184.8" y1="151" x2="222.8" y2="151" stroke="#d0d7de"/>
 <line x1="184.8" y1="163" x2="222.8" y2="163" stroke="#d0d7de"/>
 <line x1="184.8" y1="175" x2="222.8" y2="175" stroke="#d0d7de"/>
 <line x1="184.8" y1="187" x2="222.8" y2="187" stroke="#d0d7de"/>
 <line x1="184.8" y1="199" x2="222.8" y2="199" stroke="#d0d7de"/>
-<polygon points="185.8,139.7 221.8,139.7 215.8,132.7 191.8,132.7" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="200.8" y="125.7" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="200.8" y="125.7" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<polygon points="185.8,139.6 221.8,139.6 215.8,132.6 191.8,132.6" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="200.8" y="125.6" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="200.8" y="125.6" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="203.8" y="232" text-anchor="middle" font-size="8" fill="#953800">chatapp</text>
-<text x="203.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">PHP &#183; 220 KB</text>
+<text x="203.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">PHP &#183; 222 KB</text>
 <text x="203.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-18</text>
 <rect x="252.2" y="109.9" width="44.0" height="104.1" fill="#f6f8fa" stroke="#953800"/>
 <line x1="255.2" y1="121" x2="293.2" y2="121" stroke="#d0d7de"/>
@@ -90,7 +90,7 @@
 <text x="414.8" y="232" text-anchor="middle" font-size="8" fill="#953800">Callama</text>
 <text x="414.8" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">CSS &#183; 32.4 MB</text>
 <text x="414.8" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-16 &#183; <tspan fill="#953800">★1</tspan></text>
-<rect x="463.2" y="110.8" width="44.0" height="103.2" fill="#f6f8fa" stroke="#953800"/>
+<rect x="463.2" y="110.7" width="44.0" height="103.3" fill="#f6f8fa" stroke="#953800"/>
 <line x1="466.2" y1="122" x2="504.2" y2="122" stroke="#d0d7de"/>
 <line x1="466.2" y1="134" x2="504.2" y2="134" stroke="#d0d7de"/>
 <line x1="466.2" y1="146" x2="504.2" y2="146" stroke="#d0d7de"/>
@@ -99,8 +99,8 @@
 <line x1="466.2" y1="182" x2="504.2" y2="182" stroke="#d0d7de"/>
 <line x1="466.2" y1="194" x2="504.2" y2="194" stroke="#d0d7de"/>
 <line x1="466.2" y1="206" x2="504.2" y2="206" stroke="#d0d7de"/>
-<polygon points="467.2,110.8 503.2,110.8 497.2,103.8 473.2,103.8" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="482.2" y="96.8" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="482.2" y="96.8" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<polygon points="467.2,110.7 503.2,110.7 497.2,103.7 473.2,103.7" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="482.2" y="96.7" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="482.2" y="96.7" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="485.2" y="232" text-anchor="middle" font-size="8" fill="#953800">GigaNuke3</text>
 <text x="485.2" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 3.5 MB</text>
 <text x="485.2" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-18</text>
