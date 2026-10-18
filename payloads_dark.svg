@@ -42,7 +42,7 @@
 <polygon points="185.8,139.6 221.8,139.6 215.8,132.6 191.8,132.6" fill="#0d1117" stroke="#ffa657"/>
 <g class="fx"><rect x="200.8" y="125.6" width="6" height="5" fill="#ffa657" stroke="#ffa657"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="200.8" y="125.6" width="6" height="5" fill="#ffa657" stroke="#ffa657"/></g>
 <text x="203.8" y="232" text-anchor="middle" font-size="8" fill="#ffa657">chatapp</text>
-<text x="203.8" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">PHP &#183; 222 KB</text>
+<text x="203.8" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">PHP &#183; 223 KB</text>
 <text x="203.8" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">LIVE &#183; 10-18</text>
 <rect x="252.2" y="109.9" width="44.0" height="104.1" fill="#0d1117" stroke="#ffa657"/>
 <line x1="255.2" y1="121" x2="293.2" y2="121" stroke="#30363d"/>
