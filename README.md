@@ -37,7 +37,7 @@
 |---|---|---|---|---|
 | [HandsMenThreadsProject](https://github.com/GigaNuke3/HandsMenThreadsProject) | — | COLD | 2025-11-25 |  |
 | [To-do-list-Web-app-But-evolves-progressively-](https://github.com/GigaNuke3/To-do-list-Web-app-But-evolves-progressively-) | PHP | COLD | 2026-03-21 |  |
-| [chatapp](https://github.com/GigaNuke3/chatapp) | PHP | LIVE | 2026-10-18 |  |
+| [chatapp](https://github.com/GigaNuke3/chatapp) | PHP | LIVE | 2026-10-19 |  |
 | [Kaizen](https://github.com/GigaNuke3/Kaizen) | JavaScript | LIVE | 2026-10-16 | Kaizen (改善) — the Japanese philosophy of small, consistent daily improvements compounding into massive change over time. That's literally what your app tracks. Every time a user opens it, the name itself reminds them why they're there. |
 | [My-Bestfriends-Bday](https://github.com/GigaNuke3/My-Bestfriends-Bday) | TypeScript | COLD | 2026-07-27 |  |
 | [Callama](https://github.com/GigaNuke3/Callama) | CSS | LIVE | 2026-10-16 | Callama is an Ollama Electron Engine Application for Personal Use |
