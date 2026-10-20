@@ -47,6 +47,7 @@
 | [Portfolio](https://github.com/GigaNuke3/Portfolio) | TypeScript | WARM | 2026-10-01 |  |
 | [ADP](https://github.com/GigaNuke3/ADP) | TypeScript | LIVE | 2026-10-11 |  |
 | [n8n-ai-automation-portfolio](https://github.com/GigaNuke3/n8n-ai-automation-portfolio) | — | LIVE | 2026-10-15 |  |
+| [Health-Desktop-Application-USING-MULTIMODAL-APPROACH](https://github.com/GigaNuke3/Health-Desktop-Application-USING-MULTIMODAL-APPROACH) | — | LIVE | 2026-10-20 |  |
 
 </details>
 <!-- manifest:end -->
