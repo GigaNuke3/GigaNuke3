@@ -4,7 +4,7 @@
 <text x="28" y="30" font-size="15" font-weight="bold" fill="#953800">PAYLOAD MANIFEST</text>
 <text x="872" y="30" text-anchor="end" font-size="9.5" fill="#6e7781">13 REPOSITORIES &#183; ORDERED BY CREATION</text>
 <text x="28" y="44" font-size="8" fill="#6e7781">WHAT THE ROCKET CARRIES</text>
-<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#6e7781">8 LIVE &#183; 2 WARM &#183; 3 COLD</text>
+<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#6e7781">7 LIVE &#183; 3 WARM &#183; 3 COLD</text>
 <line x1="28" y1="52" x2="872" y2="52" stroke="#d0d7de"/>
 <rect x="28" y="214" width="844" height="3" fill="#6e7781" opacity="0.6"/>
 <line x1="28.0" y1="206" x2="28.0" y2="217" stroke="#953800"/><text x="31.0" y="212" font-size="6.5" fill="#953800">2025</text>
@@ -104,7 +104,7 @@
 <text x="450.0" y="232" text-anchor="middle" font-size="8" fill="#953800">GigaNuke3</text>
 <text x="450.0" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 4.1 MB</text>
 <text x="450.0" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-22</text>
-<rect x="495.5" y="96.3" width="38.9" height="117.7" fill="#f6f8fa" stroke="#953800"/>
+<rect x="495.5" y="96.3" width="38.9" height="117.7" fill="#f6f8fa" stroke="#6e7781"/>
 <line x1="498.5" y1="108" x2="531.4" y2="108" stroke="#d0d7de"/>
 <line x1="498.5" y1="120" x2="531.4" y2="120" stroke="#d0d7de"/>
 <line x1="498.5" y1="132" x2="531.4" y2="132" stroke="#d0d7de"/>
@@ -114,11 +114,11 @@
 <line x1="498.5" y1="180" x2="531.4" y2="180" stroke="#d0d7de"/>
 <line x1="498.5" y1="192" x2="531.4" y2="192" stroke="#d0d7de"/>
 <line x1="498.5" y1="204" x2="531.4" y2="204" stroke="#d0d7de"/>
-<polygon points="499.5,96.3 530.4,96.3 524.4,89.3 505.5,89.3" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="511.9" y="82.3" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="511.9" y="82.3" width="6" height="5" fill="#953800" stroke="#953800"/></g>
-<text x="514.9" y="232" text-anchor="middle" font-size="8" fill="#953800">Road-To-A…</text>
+<polygon points="499.5,96.3 530.4,96.3 524.4,89.3 505.5,89.3" fill="#f6f8fa" stroke="#6e7781"/>
+<rect x="511.9" y="82.3" width="6" height="5" fill="#953800" stroke="#953800"/>
+<text x="514.9" y="232" text-anchor="middle" font-size="8" fill="#24292f">Road-To-A…</text>
 <text x="514.9" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 13.9 MB</text>
-<text x="514.9" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-08</text>
+<text x="514.9" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">WARM &#183; 10-08</text>
 <rect x="560.4" y="161.6" width="38.9" height="52.4" fill="#f6f8fa" stroke="#6e7781"/>
 <line x1="563.4" y1="173" x2="596.3" y2="173" stroke="#d0d7de"/>
 <line x1="563.4" y1="185" x2="596.3" y2="185" stroke="#d0d7de"/>

@@ -42,7 +42,7 @@
 | [My-Bestfriends-Bday](https://github.com/GigaNuke3/My-Bestfriends-Bday) | TypeScript | COLD | 2026-07-27 |  |
 | [Callama](https://github.com/GigaNuke3/Callama) | CSS | LIVE | 2026-10-16 | Callama is an Ollama Electron Engine Application for Personal Use |
 | [GigaNuke3](https://github.com/GigaNuke3/GigaNuke3) | Python | LIVE | 2026-10-22 |  |
-| [Road-To-Ai-Engineering](https://github.com/GigaNuke3/Road-To-Ai-Engineering) | Python | LIVE | 2026-10-08 | To Become an Ai Engineer |
+| [Road-To-Ai-Engineering](https://github.com/GigaNuke3/Road-To-Ai-Engineering) | Python | WARM | 2026-10-08 | To Become an Ai Engineer |
 | [Specification-First-Model-Orchestration-SFMO-](https://github.com/GigaNuke3/Specification-First-Model-Orchestration-SFMO-) | — | WARM | 2026-09-12 | It's a Documentation Approach on Creating Applications Using the SFMO Method which I  created on which it will help for an Efficient and Elegant Way of Using Tokens for better Execution Generation. |
 | [Portfolio](https://github.com/GigaNuke3/Portfolio) | TypeScript | WARM | 2026-10-01 |  |
 | [ADP](https://github.com/GigaNuke3/ADP) | TypeScript | LIVE | 2026-10-11 |  |
