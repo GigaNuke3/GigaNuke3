@@ -90,7 +90,7 @@
 <text x="385.1" y="232" text-anchor="middle" font-size="8" fill="#953800">Callama</text>
 <text x="385.1" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">CSS &#183; 32.4 MB</text>
 <text x="385.1" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-16 &#183; <tspan fill="#953800">★1</tspan></text>
-<rect x="430.5" y="108.9" width="38.9" height="105.1" fill="#f6f8fa" stroke="#953800"/>
+<rect x="430.5" y="108.5" width="38.9" height="105.5" fill="#f6f8fa" stroke="#953800"/>
 <line x1="433.5" y1="120" x2="466.5" y2="120" stroke="#d0d7de"/>
 <line x1="433.5" y1="132" x2="466.5" y2="132" stroke="#d0d7de"/>
 <line x1="433.5" y1="144" x2="466.5" y2="144" stroke="#d0d7de"/>
@@ -99,10 +99,10 @@
 <line x1="433.5" y1="180" x2="466.5" y2="180" stroke="#d0d7de"/>
 <line x1="433.5" y1="192" x2="466.5" y2="192" stroke="#d0d7de"/>
 <line x1="433.5" y1="204" x2="466.5" y2="204" stroke="#d0d7de"/>
-<polygon points="434.5,108.9 465.5,108.9 459.5,101.9 440.5,101.9" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="447.0" y="94.9" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="447.0" y="94.9" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<polygon points="434.5,108.5 465.5,108.5 459.5,101.5 440.5,101.5" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="447.0" y="94.5" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="447.0" y="94.5" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="450.0" y="232" text-anchor="middle" font-size="8" fill="#953800">GigaNuke3</text>
-<text x="450.0" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 4.2 MB</text>
+<text x="450.0" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">Python &#183; 4.3 MB</text>
 <text x="450.0" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-24</text>
 <rect x="495.5" y="96.3" width="38.9" height="117.7" fill="#f6f8fa" stroke="#6e7781"/>
 <line x1="498.5" y1="108" x2="531.4" y2="108" stroke="#d0d7de"/>
@@ -158,13 +158,17 @@
 <text x="709.7" y="232" text-anchor="middle" font-size="8" fill="#953800">ADP</text>
 <text x="709.7" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">TypeScript &#183; 3.8 MB</text>
 <text x="709.7" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-11</text>
-<rect x="755.2" y="174.3" width="38.9" height="39.7" fill="#f6f8fa" stroke="#953800"/>
-<line x1="758.2" y1="186" x2="791.1" y2="186" stroke="#d0d7de"/>
-<line x1="758.2" y1="198" x2="791.1" y2="198" stroke="#d0d7de"/>
-<polygon points="759.2,174.3 790.1,174.3 784.1,167.3 765.2,167.3" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="771.6" y="160.3" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="771.6" y="160.3" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<rect x="755.2" y="132.5" width="38.9" height="81.5" fill="#f6f8fa" stroke="#953800"/>
+<line x1="758.2" y1="144" x2="791.1" y2="144" stroke="#d0d7de"/>
+<line x1="758.2" y1="156" x2="791.1" y2="156" stroke="#d0d7de"/>
+<line x1="758.2" y1="168" x2="791.1" y2="168" stroke="#d0d7de"/>
+<line x1="758.2" y1="180" x2="791.1" y2="180" stroke="#d0d7de"/>
+<line x1="758.2" y1="192" x2="791.1" y2="192" stroke="#d0d7de"/>
+<line x1="758.2" y1="204" x2="791.1" y2="204" stroke="#d0d7de"/>
+<polygon points="759.2,132.5 790.1,132.5 784.1,125.5 765.2,125.5" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="771.6" y="118.5" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="771.6" y="118.5" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="774.6" y="232" text-anchor="middle" font-size="8" fill="#953800">n8n-ai-au…</text>
-<text x="774.6" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">— &#183; 7 KB</text>
+<text x="774.6" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">— &#183; 442 KB</text>
 <text x="774.6" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-24</text>
 <rect x="820.1" y="196.0" width="38.9" height="18.0" fill="#f6f8fa" stroke="#953800"/>
 <line x1="823.1" y1="208" x2="856.0" y2="208" stroke="#d0d7de"/>
