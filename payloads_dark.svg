@@ -4,7 +4,7 @@
 <text x="28" y="30" font-size="15" font-weight="bold" fill="#ffa657">PAYLOAD MANIFEST</text>
 <text x="872" y="30" text-anchor="end" font-size="9.5" fill="#8b949e">13 REPOSITORIES &#183; ORDERED BY CREATION</text>
 <text x="28" y="44" font-size="8" fill="#8b949e">WHAT THE ROCKET CARRIES</text>
-<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#8b949e">7 LIVE &#183; 3 WARM &#183; 3 COLD</text>
+<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#8b949e">6 LIVE &#183; 4 WARM &#183; 3 COLD</text>
 <line x1="28" y1="52" x2="872" y2="52" stroke="#30363d"/>
 <rect x="28" y="214" width="844" height="3" fill="#8b949e" opacity="0.6"/>
 <line x1="28.0" y1="206" x2="28.0" y2="217" stroke="#ffa657"/><text x="31.0" y="212" font-size="6.5" fill="#ffa657">2025</text>
@@ -144,7 +144,7 @@
 <text x="644.8" y="232" text-anchor="middle" font-size="8" fill="#f0f3f6">Portfolio</text>
 <text x="644.8" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">TypeScript &#183; 25.3 MB</text>
 <text x="644.8" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">WARM &#183; 10-01</text>
-<rect x="690.2" y="109.8" width="38.9" height="104.2" fill="#0d1117" stroke="#ffa657"/>
+<rect x="690.2" y="109.8" width="38.9" height="104.2" fill="#0d1117" stroke="#8b949e"/>
 <line x1="693.2" y1="121" x2="726.2" y2="121" stroke="#30363d"/>
 <line x1="693.2" y1="133" x2="726.2" y2="133" stroke="#30363d"/>
 <line x1="693.2" y1="145" x2="726.2" y2="145" stroke="#30363d"/>
@@ -153,11 +153,11 @@
 <line x1="693.2" y1="181" x2="726.2" y2="181" stroke="#30363d"/>
 <line x1="693.2" y1="193" x2="726.2" y2="193" stroke="#30363d"/>
 <line x1="693.2" y1="205" x2="726.2" y2="205" stroke="#30363d"/>
-<polygon points="694.2,109.8 725.2,109.8 719.2,102.8 700.2,102.8" fill="#0d1117" stroke="#ffa657"/>
-<g class="fx"><rect x="706.7" y="95.8" width="6" height="5" fill="#ffa657" stroke="#ffa657"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="706.7" y="95.8" width="6" height="5" fill="#ffa657" stroke="#ffa657"/></g>
-<text x="709.7" y="232" text-anchor="middle" font-size="8" fill="#ffa657">ADP</text>
+<polygon points="694.2,109.8 725.2,109.8 719.2,102.8 700.2,102.8" fill="#0d1117" stroke="#8b949e"/>
+<rect x="706.7" y="95.8" width="6" height="5" fill="#ffa657" stroke="#ffa657"/>
+<text x="709.7" y="232" text-anchor="middle" font-size="8" fill="#f0f3f6">ADP</text>
 <text x="709.7" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">TypeScript &#183; 3.8 MB</text>
-<text x="709.7" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">LIVE &#183; 10-11</text>
+<text x="709.7" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">WARM &#183; 10-11</text>
 <rect x="755.2" y="132.5" width="38.9" height="81.5" fill="#0d1117" stroke="#ffa657"/>
 <line x1="758.2" y1="144" x2="791.1" y2="144" stroke="#30363d"/>
 <line x1="758.2" y1="156" x2="791.1" y2="156" stroke="#30363d"/>
