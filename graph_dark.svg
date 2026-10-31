@@ -2,515 +2,138 @@
 <style>.still{display:none}@media (prefers-reduced-motion: reduce){.fx{display:none}.still{display:inline}}</style>
 <rect width="900" height="364" rx="4" fill="#0d1117"/>
 <text x="28" y="30" font-size="15" font-weight="bold" fill="#ffa657">// CODE CITY</text>
-<text x="872" y="30" text-anchor="end" font-size="9.5" fill="#8b949e">daily &#183; October 2026</text>
+<text x="872" y="30" text-anchor="end" font-size="9.5" fill="#8b949e">daily &#183; November 2026</text>
 <text x="28" y="44" font-size="8" fill="#8b949e" opacity="0.9">A CITY BUILT BY CODE</text>
 <circle class="fx" cx="754.0" cy="41.5" r="1.8" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.2s" begin="0s" repeatCount="indefinite"/></circle>
 <text x="872" y="44" text-anchor="end" font-size="7.5" fill="#8b949e">CITY STATUS: ONLINE</text>
 <line x1="28.0" y1="52.0" x2="872.0" y2="52.0" stroke="#30363d" stroke-width="1" />
 <rect x="28" y="62" width="3" height="14" fill="#ffa657"/>
-<text x="36" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">247</text>
+<text x="36" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">0</text>
 <text x="36" y="94" font-size="8" fill="#8b949e">THIS MONTH</text>
 <rect x="197" y="62" width="3" height="14" fill="#ffa657"/>
-<text x="205" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">50</text>
-<text x="205" y="94" font-size="8" fill="#8b949e">BEST DAY OCT 04</text>
+<text x="205" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">0</text>
+<text x="205" y="94" font-size="8" fill="#8b949e">BEST DAY</text>
 <rect x="366" y="62" width="3" height="14" fill="#ffa657"/>
-<text x="374" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">8.0</text>
+<text x="374" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">0.0</text>
 <text x="374" y="94" font-size="8" fill="#8b949e">DAILY AVG</text>
 <rect x="534" y="62" width="3" height="14" fill="#ffa657"/>
-<text x="542" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">22</text>
+<text x="542" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">0</text>
 <text x="542" y="94" font-size="8" fill="#8b949e">ACTIVE DAYS</text>
 <rect x="703" y="62" width="3" height="14" fill="#ffa657"/>
-<text x="711" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">1d</text>
+<text x="711" y="80" font-size="19" font-weight="bold" fill="#f0f3f6">0d</text>
 <text x="711" y="94" font-size="8" fill="#8b949e">STREAK</text>
 <rect x="28" y="302" width="844" height="62" fill="#0c0f14"/>
 <line x1="28.0" y1="302.0" x2="872.0" y2="302.0" stroke="#1a2028" stroke-width="1" />
 <g opacity="0.8"><rect x="36" y="316" width="10" height="1.5" fill="#222933"/><rect x="62" y="316" width="10" height="1.5" fill="#222933"/><rect x="88" y="316" width="10" height="1.5" fill="#222933"/><rect x="114" y="316" width="10" height="1.5" fill="#222933"/><rect x="140" y="316" width="10" height="1.5" fill="#222933"/><rect x="166" y="316" width="10" height="1.5" fill="#222933"/><rect x="192" y="316" width="10" height="1.5" fill="#222933"/><rect x="218" y="316" width="10" height="1.5" fill="#222933"/><rect x="244" y="316" width="10" height="1.5" fill="#222933"/><rect x="270" y="316" width="10" height="1.5" fill="#222933"/><rect x="296" y="316" width="10" height="1.5" fill="#222933"/><rect x="322" y="316" width="10" height="1.5" fill="#222933"/><rect x="348" y="316" width="10" height="1.5" fill="#222933"/><rect x="374" y="316" width="10" height="1.5" fill="#222933"/><rect x="400" y="316" width="10" height="1.5" fill="#222933"/><rect x="426" y="316" width="10" height="1.5" fill="#222933"/><rect x="452" y="316" width="10" height="1.5" fill="#222933"/><rect x="478" y="316" width="10" height="1.5" fill="#222933"/><rect x="504" y="316" width="10" height="1.5" fill="#222933"/><rect x="530" y="316" width="10" height="1.5" fill="#222933"/><rect x="556" y="316" width="10" height="1.5" fill="#222933"/><rect x="582" y="316" width="10" height="1.5" fill="#222933"/><rect x="608" y="316" width="10" height="1.5" fill="#222933"/><rect x="634" y="316" width="10" height="1.5" fill="#222933"/><rect x="660" y="316" width="10" height="1.5" fill="#222933"/><rect x="686" y="316" width="10" height="1.5" fill="#222933"/><rect x="712" y="316" width="10" height="1.5" fill="#222933"/><rect x="738" y="316" width="10" height="1.5" fill="#222933"/><rect x="764" y="316" width="10" height="1.5" fill="#222933"/><rect x="790" y="316" width="10" height="1.5" fill="#222933"/><rect x="816" y="316" width="10" height="1.5" fill="#222933"/><rect x="842" y="316" width="10" height="1.5" fill="#222933"/></g>
 <line x1="28.0" y1="106.0" x2="28.0" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="55.2" y1="106.0" x2="55.2" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="82.5" y1="106.0" x2="82.5" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="109.7" y1="106.0" x2="109.7" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="136.9" y1="106.0" x2="136.9" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="164.1" y1="106.0" x2="164.1" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="191.4" y1="106.0" x2="191.4" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="218.6" y1="106.0" x2="218.6" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="245.8" y1="106.0" x2="245.8" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="273.0" y1="106.0" x2="273.0" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="300.3" y1="106.0" x2="300.3" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="327.5" y1="106.0" x2="327.5" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="354.7" y1="106.0" x2="354.7" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="381.9" y1="106.0" x2="381.9" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="409.2" y1="106.0" x2="409.2" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="436.4" y1="106.0" x2="436.4" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="463.6" y1="106.0" x2="463.6" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="490.8" y1="106.0" x2="490.8" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="518.1" y1="106.0" x2="518.1" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="545.3" y1="106.0" x2="545.3" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="572.5" y1="106.0" x2="572.5" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="599.7" y1="106.0" x2="599.7" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="627.0" y1="106.0" x2="627.0" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="654.2" y1="106.0" x2="654.2" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="681.4" y1="106.0" x2="681.4" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="708.6" y1="106.0" x2="708.6" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="735.9" y1="106.0" x2="735.9" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="763.1" y1="106.0" x2="763.1" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="790.3" y1="106.0" x2="790.3" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="817.5" y1="106.0" x2="817.5" y2="300.0" stroke="#232a33" stroke-width="1" />
-<line x1="844.8" y1="106.0" x2="844.8" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="56.1" y1="106.0" x2="56.1" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="84.3" y1="106.0" x2="84.3" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="112.4" y1="106.0" x2="112.4" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="140.5" y1="106.0" x2="140.5" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="168.7" y1="106.0" x2="168.7" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="196.8" y1="106.0" x2="196.8" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="224.9" y1="106.0" x2="224.9" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="253.1" y1="106.0" x2="253.1" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="281.2" y1="106.0" x2="281.2" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="309.3" y1="106.0" x2="309.3" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="337.5" y1="106.0" x2="337.5" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="365.6" y1="106.0" x2="365.6" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="393.7" y1="106.0" x2="393.7" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="421.9" y1="106.0" x2="421.9" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="450.0" y1="106.0" x2="450.0" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="478.1" y1="106.0" x2="478.1" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="506.3" y1="106.0" x2="506.3" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="534.4" y1="106.0" x2="534.4" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="562.5" y1="106.0" x2="562.5" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="590.7" y1="106.0" x2="590.7" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="618.8" y1="106.0" x2="618.8" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="646.9" y1="106.0" x2="646.9" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="675.1" y1="106.0" x2="675.1" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="703.2" y1="106.0" x2="703.2" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="731.3" y1="106.0" x2="731.3" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="759.5" y1="106.0" x2="759.5" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="787.6" y1="106.0" x2="787.6" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="815.7" y1="106.0" x2="815.7" y2="300.0" stroke="#232a33" stroke-width="1" />
+<line x1="843.9" y1="106.0" x2="843.9" y2="300.0" stroke="#232a33" stroke-width="1" />
 <line x1="28.0" y1="300.0" x2="872.0" y2="300.0" stroke="#232a33" stroke-width="1" />
 <line x1="28.0" y1="150.0" x2="872.0" y2="150.0" stroke="#232a33" stroke-width="1" />
 <line x1="28.0" y1="200.0" x2="872.0" y2="200.0" stroke="#232a33" stroke-width="1" />
 <line x1="28.0" y1="250.0" x2="872.0" y2="250.0" stroke="#232a33" stroke-width="1" />
-<g><title>Oct 01, 2026
-10 CONTRIBUTIONS
-ACTIVE</title>
-<rect x="29.0" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.10s" dur="0.5s" fill="freeze"/>
-<rect x="28.0" y="260.0" width="12.0" height="40.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<line x1="29.0" y1="269.0" x2="39.0" y2="269.0" stroke="#39424e" stroke-width="1" />
-<line x1="29.0" y1="278.0" x2="39.0" y2="278.0" stroke="#39424e" stroke-width="1" />
-<line x1="29.0" y1="287.0" x2="39.0" y2="287.0" stroke="#39424e" stroke-width="1" />
-<rect x="32.5" y="263.0" width="3.0" height="4.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="10.7s" begin="1.6s" repeatCount="indefinite"/></rect>
-<rect x="32.5" y="272.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="32.5" y="281.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="32.5" y="290.0" width="3.0" height="4.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="14.2s" begin="2.5s" repeatCount="indefinite"/></rect>
-<rect x="36.6" y="253.0" width="10.0" height="7.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<line x1="37.6" y1="253.0" x2="37.6" y2="251.0" stroke="#39424e" stroke-width="1" />
-<line x1="45.6" y1="253.0" x2="45.6" y2="251.0" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<g><title>Oct 02, 2026
-11 CONTRIBUTIONS
-HIGH ACTIVITY</title>
-<rect x="56.2" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.15s" dur="0.5s" fill="freeze"/>
-<rect x="55.2" y="234.0" width="17.0" height="66.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<line x1="57.2" y1="234.0" x2="57.2" y2="300.0" stroke="#39424e" stroke-width="1" />
-<line x1="70.2" y1="234.0" x2="70.2" y2="300.0" stroke="#39424e" stroke-width="1" />
-<rect x="62.2" y="237.0" width="3.0" height="4.0" fill="#d8dee7"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="8.8s" begin="4.4s" repeatCount="indefinite"/></rect>
-<rect x="62.2" y="255.0" width="3.0" height="4.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="11.5s" begin="2.2s" repeatCount="indefinite"/></rect>
-<rect x="62.2" y="273.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="62.2" y="291.0" width="3.0" height="4.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="13.5s" begin="1.9s" repeatCount="indefinite"/></rect>
-<rect x="63.8" y="229.0" width="4.0" height="5.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="69.8" y="228.0" width="4.0" height="6.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="55.2" y="234.0" width="17.0" height="7.0" fill="#11151c" />
-<text x="68.8" y="239.5" text-anchor="middle" font-size="5" fill="#8b949e" opacity="0.85">DATA</text>
-</g>
-</g>
-<g><title>Oct 03, 2026
-20 CONTRIBUTIONS
-HIGH ACTIVITY</title>
-<rect x="83.5" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.21s" dur="0.5s" fill="freeze"/>
-<rect x="82.5" y="225.0" width="17.0" height="75.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="84.5" y="228.0" width="13.0" height="3.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="12.5s" begin="1.2s" repeatCount="indefinite"/></rect>
-<rect x="84.5" y="237.0" width="13.0" height="3.0" fill="#202732"></rect>
-<rect x="84.5" y="246.0" width="13.0" height="3.0" fill="#202732"></rect>
-<rect x="84.5" y="255.0" width="13.0" height="3.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="8.1s" begin="3.9s" repeatCount="indefinite"/></rect>
-<rect x="84.5" y="264.0" width="13.0" height="3.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="12.2s" begin="2.7s" repeatCount="indefinite"/></rect>
-<rect x="84.5" y="273.0" width="13.0" height="3.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="10.7s" begin="1.6s" repeatCount="indefinite"/></rect>
-<rect x="84.5" y="282.0" width="13.0" height="3.0" fill="#202732"></rect>
-<rect x="84.5" y="291.0" width="13.0" height="3.0" fill="#202732"></rect>
-<circle cx="96.1" cy="221.0" r="4" fill="none" stroke="#39424e"/>
-<line x1="96.1" y1="221.0" x2="96.1" y2="226.0" stroke="#39424e" stroke-width="1" />
-<rect x="82.5" y="225.0" width="17.0" height="7.0" fill="#11151c" />
-<text x="96.1" y="230.5" text-anchor="middle" font-size="5" fill="#8b949e" opacity="0.85">NODE</text>
-</g>
-</g>
-<g><title>Oct 04, 2026
-50 CONTRIBUTIONS
-LANDMARK DAY</title>
-<rect x="110.7" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.27s" dur="0.5s" fill="freeze"/>
-<rect x="109.7" y="176.0" width="21.0" height="124.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="112.8" y="169.0" width="14.7" height="9.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="118.7" y="172.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="118.7" y="190.0" width="3.0" height="4.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="13.3s" begin="1.8s" repeatCount="indefinite"/></rect>
-<rect x="118.7" y="208.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="118.7" y="226.0" width="3.0" height="4.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="15.3s" begin="3.3s" repeatCount="indefinite"/></rect>
-<rect x="118.7" y="244.0" width="3.0" height="4.0" fill="#d8dee7"></rect>
-<rect x="118.7" y="262.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="118.7" y="280.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="109.7" y="167.0" width="21.0" height="2.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="109.7" y="169.0" width="21.0" height="7.0" fill="#11151c" />
-<text x="123.3" y="174.5" text-anchor="middle" font-size="5" fill="#8b949e" opacity="0.85">CORE</text>
-</g>
-</g>
-<g><title>Oct 05, 2026
-1 CONTRIBUTIONS
-LOW ACTIVITY</title>
-<rect x="137.9" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.32s" dur="0.5s" fill="freeze"/>
-<line x1="146.5" y1="300.0" x2="150.5" y2="284.0" stroke="#39424e" stroke-width="1" />
-<line x1="154.5" y1="300.0" x2="150.5" y2="284.0" stroke="#39424e" stroke-width="1" />
-<line x1="150.5" y1="300.0" x2="150.5" y2="284.0" stroke="#39424e" stroke-width="1" />
-<line x1="147.5" y1="293.0" x2="153.5" y2="293.0" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<g><title>Oct 06, 2026
-29 CONTRIBUTIONS
-VERY HIGH</title>
-<rect x="165.1" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.38s" dur="0.5s" fill="freeze"/>
-<rect x="164.1" y="195.0" width="21.0" height="105.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="166.1" y="198.0" width="17.0" height="3.0" fill="#ffa657"></rect>
-<rect x="166.1" y="207.0" width="17.0" height="3.0" fill="#202732"></rect>
-<rect x="166.1" y="216.0" width="17.0" height="3.0" fill="#ffa657"><animate attributeName="opacity" values="1;0.15;1" keyTimes="0;0.5;1" dur="15.1s" begin="3.1s" repeatCount="indefinite"/></rect>
-<rect x="166.1" y="225.0" width="17.0" height="3.0" fill="#ffa657"></rect>
-<rect x="166.1" y="234.0" width="17.0" height="3.0" fill="#ffa657"></rect>
-<rect x="166.1" y="243.0" width="17.0" height="3.0" fill="#202732"></rect>
-<rect x="166.1" y="252.0" width="17.0" height="3.0" fill="#ffa657"></rect>
-<rect x="166.1" y="261.0" width="17.0" height="3.0" fill="#ffa657"></rect>
-<rect x="166.1" y="270.0" width="17.0" height="3.0" fill="#ffa657"></rect>
-<rect x="166.1" y="279.0" width="17.0" height="3.0" fill="#ffa657"></rect>
-<rect x="166.1" y="288.0" width="17.0" height="3.0" fill="#ffa657"></rect>
-<circle cx="171.7" cy="192.0" r="2.4" fill="none" stroke="#39424e"/>
-<circle cx="177.7" cy="192.0" r="2.4" fill="none" stroke="#39424e"/>
-<circle cx="183.7" cy="192.0" r="2.4" fill="none" stroke="#39424e"/>
-<line x1="168.7" y1="192.0" x2="186.7" y2="192.0" stroke="#39424e" stroke-width="1" />
-<rect x="186.7" y="189.0" width="2.0" height="6.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="164.1" y="195.0" width="21.0" height="7.0" fill="#11151c" />
-<text x="177.7" y="200.5" text-anchor="middle" font-size="5" fill="#8b949e" opacity="0.85">OPS</text>
-</g>
-</g>
-<g><title>Oct 07, 2026
-2 CONTRIBUTIONS
-LOW ACTIVITY</title>
-<rect x="192.4" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.43s" dur="0.5s" fill="freeze"/>
-<rect x="191.4" y="282.0" width="9.0" height="18.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="195.9" y="285.0" width="3.0" height="4.0" fill="#202732"></rect>
-<line x1="205.0" y1="282.0" x2="205.0" y2="270.0" stroke="#39424e" stroke-width="1" />
-<line x1="202.0" y1="278.0" x2="208.0" y2="278.0" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<rect x="220.6" y="297.0" width="19.2" height="3.0" fill="#11151c" stroke="#232a33" stroke-width="1" />
-<rect x="229.2" y="291.0" width="6.0" height="6.0" fill="none" stroke="#232a33" stroke-width="1" />
-<rect x="247.8" y="297.0" width="19.2" height="3.0" fill="#11151c" stroke="#232a33" stroke-width="1" />
-<rect x="256.4" y="291.0" width="6.0" height="6.0" fill="none" stroke="#232a33" stroke-width="1" />
-<g><title>Oct 10, 2026
-15 CONTRIBUTIONS
-HIGH ACTIVITY</title>
-<rect x="274.0" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.59s" dur="0.5s" fill="freeze"/>
-<rect x="273.0" y="241.0" width="19.0" height="59.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<line x1="275.0" y1="241.0" x2="275.0" y2="300.0" stroke="#39424e" stroke-width="1" />
-<line x1="290.0" y1="241.0" x2="290.0" y2="300.0" stroke="#39424e" stroke-width="1" />
-<rect x="281.0" y="244.0" width="3.0" height="4.0" fill="#d8dee7"></rect>
-<rect x="281.0" y="262.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="281.0" y="280.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="281.6" y="236.0" width="4.0" height="5.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="287.6" y="235.0" width="4.0" height="6.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="273.0" y="241.0" width="19.0" height="7.0" fill="#11151c" />
-<text x="286.6" y="246.5" text-anchor="middle" font-size="5" fill="#8b949e" opacity="0.85">DATA</text>
-</g>
-</g>
-<g><title>Oct 11, 2026
-10 CONTRIBUTIONS
-ACTIVE</title>
-<rect x="301.3" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.65s" dur="0.5s" fill="freeze"/>
-<rect x="300.3" y="249.0" width="13.0" height="51.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="302.3" y="252.0" width="9.0" height="3.0" fill="#202732"></rect>
-<rect x="302.3" y="261.0" width="9.0" height="3.0" fill="#202732"></rect>
-<rect x="302.3" y="270.0" width="9.0" height="3.0" fill="#d8dee7"></rect>
-<rect x="302.3" y="279.0" width="9.0" height="3.0" fill="#d8dee7"></rect>
-<rect x="302.3" y="288.0" width="9.0" height="3.0" fill="#202732"></rect>
-<circle cx="313.9" cy="245.0" r="4" fill="none" stroke="#39424e"/>
-<line x1="313.9" y1="245.0" x2="313.9" y2="250.0" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<g><title>Oct 12, 2026
-12 CONTRIBUTIONS
-HIGH ACTIVITY</title>
-<rect x="328.5" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.70s" dur="0.5s" fill="freeze"/>
-<rect x="327.5" y="244.0" width="19.0" height="56.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="330.3" y="237.0" width="13.3" height="9.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="335.5" y="240.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="335.5" y="258.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="335.5" y="276.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="327.5" y="235.0" width="19.0" height="2.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="327.5" y="237.0" width="19.0" height="7.0" fill="#11151c" />
-<text x="341.1" y="242.5" text-anchor="middle" font-size="5" fill="#8b949e" opacity="0.85">CORE</text>
-</g>
-</g>
-<g><title>Oct 13, 2026
-2 CONTRIBUTIONS
-LOW ACTIVITY</title>
-<rect x="355.7" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.76s" dur="0.5s" fill="freeze"/>
-<line x1="364.3" y1="300.0" x2="368.3" y2="280.0" stroke="#39424e" stroke-width="1" />
-<line x1="372.3" y1="300.0" x2="368.3" y2="280.0" stroke="#39424e" stroke-width="1" />
-<line x1="368.3" y1="300.0" x2="368.3" y2="280.0" stroke="#39424e" stroke-width="1" />
-<line x1="365.3" y1="293.0" x2="371.3" y2="293.0" stroke="#39424e" stroke-width="1" />
-<line x1="365.3" y1="286.0" x2="371.3" y2="286.0" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<g><title>Oct 14, 2026
-1 CONTRIBUTIONS
-LOW ACTIVITY</title>
-<rect x="382.9" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.81s" dur="0.5s" fill="freeze"/>
-<rect x="381.9" y="282.0" width="13.0" height="18.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="383.9" y="285.0" width="9.0" height="3.0" fill="#202732"></rect>
-<rect x="383.9" y="294.0" width="9.0" height="3.0" fill="#202732"></rect>
-<circle cx="389.5" cy="279.0" r="2.4" fill="none" stroke="#39424e"/>
-<circle cx="395.5" cy="279.0" r="2.4" fill="none" stroke="#39424e"/>
-<circle cx="401.5" cy="279.0" r="2.4" fill="none" stroke="#39424e"/>
-<line x1="386.5" y1="279.0" x2="404.5" y2="279.0" stroke="#39424e" stroke-width="1" />
-<rect x="404.5" y="276.0" width="2.0" height="6.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<g><title>Oct 15, 2026
-7 CONTRIBUTIONS
-ACTIVE</title>
-<rect x="410.2" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.87s" dur="0.5s" fill="freeze"/>
-<rect x="409.2" y="260.0" width="11.0" height="40.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="413.7" y="263.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="413.7" y="272.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="413.7" y="281.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="413.7" y="290.0" width="3.0" height="4.0" fill="#202732"></rect>
-<line x1="422.8" y1="260.0" x2="422.8" y2="248.0" stroke="#39424e" stroke-width="1" />
-<line x1="419.8" y1="256.0" x2="425.8" y2="256.0" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<g><title>Oct 16, 2026
-26 CONTRIBUTIONS
-VERY HIGH</title>
-<rect x="437.4" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.92s" dur="0.5s" fill="freeze"/>
-<rect x="436.4" y="208.0" width="21.0" height="92.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="440.4" y="211.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="445.4" y="211.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="450.4" y="211.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="440.4" y="220.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="445.4" y="220.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="450.4" y="220.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="440.4" y="229.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="445.4" y="229.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="450.4" y="229.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="440.4" y="238.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="445.4" y="238.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="450.4" y="238.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="440.4" y="247.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="445.4" y="247.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="450.4" y="247.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="440.4" y="256.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="445.4" y="256.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="450.4" y="256.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="440.4" y="265.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="445.4" y="265.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="450.4" y="265.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="440.4" y="274.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="445.4" y="274.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="450.4" y="274.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="440.4" y="283.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="445.4" y="283.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="450.4" y="283.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="440.4" y="292.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="445.4" y="292.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="450.4" y="292.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="443.0" y="204.0" width="6.0" height="4.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="451.0" y="204.0" width="6.0" height="4.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="436.4" y="208.0" width="21.0" height="7.0" fill="#11151c" />
-<text x="450.0" y="213.5" text-anchor="middle" font-size="5" fill="#8b949e" opacity="0.85">GRID</text>
-</g>
-</g>
-<g><title>Oct 17, 2026
-28 CONTRIBUTIONS
-VERY HIGH</title>
-<rect x="464.6" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="0.98s" dur="0.5s" fill="freeze"/>
-<rect x="463.6" y="214.0" width="17.0" height="86.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<line x1="464.6" y1="223.0" x2="479.6" y2="223.0" stroke="#39424e" stroke-width="1" />
-<line x1="464.6" y1="232.0" x2="479.6" y2="232.0" stroke="#39424e" stroke-width="1" />
-<line x1="464.6" y1="241.0" x2="479.6" y2="241.0" stroke="#39424e" stroke-width="1" />
-<line x1="464.6" y1="250.0" x2="479.6" y2="250.0" stroke="#39424e" stroke-width="1" />
-<line x1="464.6" y1="259.0" x2="479.6" y2="259.0" stroke="#39424e" stroke-width="1" />
-<line x1="464.6" y1="268.0" x2="479.6" y2="268.0" stroke="#39424e" stroke-width="1" />
-<line x1="464.6" y1="277.0" x2="479.6" y2="277.0" stroke="#39424e" stroke-width="1" />
-<line x1="464.6" y1="286.0" x2="479.6" y2="286.0" stroke="#39424e" stroke-width="1" />
-<rect x="467.9" y="217.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="473.4" y="217.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="467.9" y="226.0" width="3.0" height="4.0" fill="#d8dee7"></rect>
-<rect x="473.4" y="226.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="467.9" y="235.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="473.4" y="235.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="467.9" y="244.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="473.4" y="244.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="467.9" y="253.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="473.4" y="253.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="467.9" y="262.0" width="3.0" height="4.0" fill="#d8dee7"></rect>
-<rect x="473.4" y="262.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="467.9" y="271.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="473.4" y="271.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="467.9" y="280.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="473.4" y="280.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="467.9" y="289.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="473.4" y="289.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="472.2" y="207.0" width="10.0" height="7.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<line x1="473.2" y1="207.0" x2="473.2" y2="205.0" stroke="#39424e" stroke-width="1" />
-<line x1="481.2" y1="207.0" x2="481.2" y2="205.0" stroke="#39424e" stroke-width="1" />
-<rect x="463.6" y="214.0" width="17.0" height="7.0" fill="#11151c" />
-<text x="477.2" y="219.5" text-anchor="middle" font-size="5" fill="#8b949e" opacity="0.85">TECH</text>
-</g>
-</g>
-<g><title>Oct 18, 2026
-8 CONTRIBUTIONS
-ACTIVE</title>
-<rect x="491.8" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="1.04s" dur="0.5s" fill="freeze"/>
-<rect x="490.8" y="251.0" width="15.0" height="49.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<line x1="492.8" y1="251.0" x2="492.8" y2="300.0" stroke="#39424e" stroke-width="1" />
-<line x1="503.8" y1="251.0" x2="503.8" y2="300.0" stroke="#39424e" stroke-width="1" />
-<rect x="496.8" y="254.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="496.8" y="272.0" width="3.0" height="4.0" fill="#d8dee7"></rect>
-<rect x="496.8" y="290.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="499.5" y="246.0" width="4.0" height="5.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="505.5" y="245.0" width="4.0" height="6.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<g><title>Oct 19, 2026
-3 CONTRIBUTIONS
-MODERATE</title>
-<rect x="519.1" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="1.09s" dur="0.5s" fill="freeze"/>
-<rect x="518.1" y="270.0" width="13.0" height="30.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="520.1" y="273.0" width="9.0" height="3.0" fill="#202732"></rect>
-<rect x="520.1" y="282.0" width="9.0" height="3.0" fill="#202732"></rect>
-<rect x="520.1" y="291.0" width="9.0" height="3.0" fill="#202732"></rect>
-<circle cx="531.7" cy="266.0" r="4" fill="none" stroke="#39424e"/>
-<line x1="531.7" y1="266.0" x2="531.7" y2="271.0" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<g><title>Oct 20, 2026
-2 CONTRIBUTIONS
-LOW ACTIVITY</title>
-<rect x="546.3" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="1.15s" dur="0.5s" fill="freeze"/>
-<rect x="545.3" y="287.0" width="10.0" height="13.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="546.8" y="280.0" width="7.0" height="9.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="549.8" y="283.0" width="3.0" height="4.0" fill="#ffa657"></rect>
-<rect x="545.3" y="278.0" width="10.0" height="2.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<rect x="574.5" y="297.0" width="19.2" height="3.0" fill="#11151c" stroke="#232a33" stroke-width="1" />
-<rect x="583.1" y="291.0" width="6.0" height="6.0" fill="none" stroke="#232a33" stroke-width="1" />
-<rect x="601.7" y="297.0" width="19.2" height="3.0" fill="#11151c" stroke="#232a33" stroke-width="1" />
-<rect x="610.4" y="291.0" width="6.0" height="6.0" fill="none" stroke="#232a33" stroke-width="1" />
-<rect x="629.0" y="297.0" width="19.2" height="3.0" fill="#11151c" stroke="#232a33" stroke-width="1" />
-<rect x="637.6" y="291.0" width="6.0" height="6.0" fill="none" stroke="#232a33" stroke-width="1" />
-<g><title>Oct 24, 2026
-1 CONTRIBUTIONS
-LOW ACTIVITY</title>
-<rect x="655.2" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="1.36s" dur="0.5s" fill="freeze"/>
-<rect x="654.2" y="282.0" width="12.0" height="18.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="658.7" y="285.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="660.8" y="278.0" width="6.0" height="4.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="668.8" y="278.0" width="6.0" height="4.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<g><title>Oct 25, 2026
-2 CONTRIBUTIONS
-LOW ACTIVITY</title>
-<rect x="682.4" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="1.42s" dur="0.5s" fill="freeze"/>
-<rect x="681.4" y="280.0" width="9.0" height="20.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<line x1="682.4" y1="289.0" x2="689.4" y2="289.0" stroke="#39424e" stroke-width="1" />
-<rect x="685.9" y="283.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="685.9" y="292.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="690.0" y="273.0" width="10.0" height="7.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<line x1="691.0" y1="273.0" x2="691.0" y2="271.0" stroke="#39424e" stroke-width="1" />
-<line x1="699.0" y1="273.0" x2="699.0" y2="271.0" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<rect x="710.6" y="297.0" width="19.2" height="3.0" fill="#11151c" stroke="#232a33" stroke-width="1" />
-<rect x="719.3" y="291.0" width="6.0" height="6.0" fill="none" stroke="#232a33" stroke-width="1" />
-<g><title>Oct 27, 2026
-1 CONTRIBUTIONS
-LOW ACTIVITY</title>
-<rect x="736.9" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="1.53s" dur="0.5s" fill="freeze"/>
-<rect x="735.9" y="284.0" width="9.0" height="16.0" fill="#11151c" stroke="#39424e" stroke-width="1" />
-<rect x="737.9" y="287.0" width="5.0" height="3.0" fill="#d8dee7"></rect>
-<circle cx="749.5" cy="280.0" r="4" fill="none" stroke="#39424e"/>
-<line x1="749.5" y1="280.0" x2="749.5" y2="285.0" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<rect x="765.1" y="297.0" width="19.2" height="3.0" fill="#11151c" stroke="#232a33" stroke-width="1" />
-<rect x="773.7" y="291.0" width="6.0" height="6.0" fill="none" stroke="#232a33" stroke-width="1" />
-<rect x="792.3" y="297.0" width="19.2" height="3.0" fill="#11151c" stroke="#232a33" stroke-width="1" />
-<rect x="800.9" y="291.0" width="6.0" height="6.0" fill="none" stroke="#232a33" stroke-width="1" />
-<rect x="819.5" y="297.0" width="19.2" height="3.0" fill="#11151c" stroke="#232a33" stroke-width="1" />
-<rect x="828.2" y="291.0" width="6.0" height="6.0" fill="none" stroke="#232a33" stroke-width="1" />
-<g><title>Oct 31, 2026
-6 CONTRIBUTIONS
-ACTIVE</title>
-<rect x="845.8" y="106.0" width="25.2" height="194.0" fill="transparent"/>
-<g><animateTransform attributeName="transform" type="translate" values="0,4;0,0" begin="1.75s" dur="0.5s" fill="freeze"/>
-<rect x="844.8" y="257.0" width="12.0" height="43.0" fill="#11151c" stroke="#ffa657" stroke-width="1" />
-<rect x="849.3" y="260.0" width="3.0" height="4.0" fill="#d8dee7"></rect>
-<rect x="849.3" y="269.0" width="3.0" height="4.0" fill="#d8dee7"></rect>
-<rect x="849.3" y="278.0" width="3.0" height="4.0" fill="#202732"></rect>
-<rect x="849.3" y="287.0" width="3.0" height="4.0" fill="#202732"></rect>
-<line x1="858.4" y1="257.0" x2="858.4" y2="245.0" stroke="#39424e" stroke-width="1" />
-<line x1="855.4" y1="253.0" x2="861.4" y2="253.0" stroke="#39424e" stroke-width="1" />
-</g>
-</g>
-<line x1="856.4" y1="300.0" x2="856.4" y2="231.0" stroke="#ffa657" stroke-width="1.4" />
-<line x1="854.4" y1="300.0" x2="854.4" y2="290.0" stroke="#ffa657" stroke-width="1.4" />
-<line x1="851.4" y1="231.0" x2="869.4" y2="231.0" stroke="#ffa657" stroke-width="1.4" />
-<line x1="851.4" y1="231.0" x2="856.4" y2="226.0" stroke="#ffa657" stroke-width="1" />
-<line x1="866.4" y1="231.0" x2="866.4" y2="240.0" stroke="#ffa657" stroke-width="1" />
-<rect x="864.9" y="240.0" width="3" height="3" fill="none" stroke="#ffa657"/>
-<circle class="fx" cx="858.4" cy="228.0" r="2" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.1s" begin="0s" repeatCount="indefinite"/></circle>
-<text x="858.4" y="222.0" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ffa657">TODAY</text>
-<rect x="852.4" y="304.0" width="12.0" height="4.0" fill="none" stroke="#ffa657" stroke-width="1" />
-<line x1="852.4" y1="306.0" x2="864.4" y2="306.0" stroke="#ffa657" stroke-width="1" />
-<circle class="fx" cx="150.5" cy="282.0" r="1.8" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.4s" begin="0.84s" repeatCount="indefinite"/></circle>
-<circle class="fx" cx="205.0" cy="269.0" r="1.6" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.8s" begin="0.45s" repeatCount="indefinite"/></circle>
-<circle class="fx" cx="368.3" cy="278.0" r="1.8" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.4s" begin="0.49s" repeatCount="indefinite"/></circle>
-<circle class="fx" cx="422.8" cy="247.0" r="1.6" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.8s" begin="1.17s" repeatCount="indefinite"/></circle>
-<circle class="fx" cx="858.4" cy="244.0" r="1.6" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.8s" begin="0.23s" repeatCount="indefinite"/></circle>
-<g class="fx" opacity="0.7"><animateTransform attributeName="transform" type="translate" values="0,0;0,-14.0" dur="3.2s" repeatCount="indefinite"/><rect x="187.2" y="185.0" width="1.6" height="4" fill="#ffa657"/></g>
-<g class="fx" opacity="0.7"><animateTransform attributeName="transform" type="translate" values="0,0;0,-14.0" dur="3.2s" repeatCount="indefinite"/><rect x="401.0" y="272.0" width="1.6" height="4" fill="#ffa657"/></g>
+<rect x="30.0" y="297.0" width="20.1" height="3.0" fill="#11151c" stroke="#232a33" stroke-width="1" />
+<rect x="39.1" y="291.0" width="6.0" height="6.0" fill="none" stroke="#232a33" stroke-width="1" />
+<rect x="59.1" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="87.3" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="115.4" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="143.5" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="171.7" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="199.8" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="227.9" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="256.1" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="284.2" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="312.3" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="340.5" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="368.6" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="396.7" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="424.9" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="453.0" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="481.1" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="509.3" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="537.4" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="565.5" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="593.7" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="621.8" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="649.9" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="678.1" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="706.2" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="734.3" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="762.5" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="790.6" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="818.7" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<rect x="846.9" y="286.0" width="18.1" height="14" fill="none" stroke="#232a33" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="40.1" y1="300.0" x2="40.1" y2="274.0" stroke="#ffa657" stroke-width="1.4" />
+<line x1="38.1" y1="300.0" x2="38.1" y2="290.0" stroke="#ffa657" stroke-width="1.4" />
+<line x1="35.1" y1="274.0" x2="53.1" y2="274.0" stroke="#ffa657" stroke-width="1.4" />
+<line x1="35.1" y1="274.0" x2="40.1" y2="269.0" stroke="#ffa657" stroke-width="1" />
+<line x1="50.1" y1="274.0" x2="50.1" y2="283.0" stroke="#ffa657" stroke-width="1" />
+<rect x="48.6" y="283.0" width="3" height="3" fill="none" stroke="#ffa657"/>
+<circle class="fx" cx="42.1" cy="271.0" r="2" fill="#ffa657"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="1.1s" begin="0s" repeatCount="indefinite"/></circle>
+<text x="42.1" y="265.0" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ffa657">TODAY</text>
+<rect x="36.1" y="304.0" width="12.0" height="4.0" fill="none" stroke="#ffa657" stroke-width="1" />
+<line x1="36.1" y1="306.0" x2="48.1" y2="306.0" stroke="#ffa657" stroke-width="1" />
 <g class="fx"><animateTransform attributeName="transform" type="translate" values="-30,0;930,0" dur="55s" begin="0s" repeatCount="indefinite"/><g><rect x="0" y="310" width="13" height="4.5" rx="1" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="4" y="307.5" width="5.5" height="2.8" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="2.5" y="314" width="2" height="1.6" fill="#39424e"/><rect x="9" y="314" width="2" height="1.6" fill="#39424e"/><rect x="12.2" y="311" width="1" height="1" fill="#ffa657"/></g></g>
 <g class="fx"><animateTransform attributeName="transform" type="translate" values="930,0;-30,0" dur="80s" begin="4s" repeatCount="indefinite"/><g transform="scale(-1,1)"><g><rect x="0" y="320" width="13" height="4.5" rx="1" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="4" y="317.5" width="5.5" height="2.8" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="2.5" y="324" width="2" height="1.6" fill="#39424e"/><rect x="9" y="324" width="2" height="1.6" fill="#39424e"/><rect x="12.2" y="321" width="1" height="1" fill="#ffa657"/></g></g></g>
 <g class="fx"><animateTransform attributeName="transform" type="translate" values="-30,0;930,0" dur="120s" begin="9s" repeatCount="indefinite"/><g><rect x="0" y="315" width="13" height="4.5" rx="1" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="4" y="312.5" width="5.5" height="2.8" fill="#11151c" stroke="#39424e" stroke-width="0.8"/><rect x="2.5" y="319" width="2" height="1.6" fill="#39424e"/><rect x="9" y="319" width="2" height="1.6" fill="#39424e"/><rect x="12.2" y="316" width="1" height="1" fill="#ffa657"/></g></g>
 <rect class="fx" x="0" y="106" width="1.5" height="194" fill="#f0f3f6" opacity="0.03"><animateTransform attributeName="transform" type="translate" values="0,0;900,0" dur="38s" repeatCount="indefinite"/></rect>
-<text x="41.6" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">1</text>
-<text x="68.8" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">2</text>
-<text x="96.1" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">3</text>
-<text x="123.3" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">4</text>
-<text x="150.5" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">5</text>
-<text x="177.7" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">6</text>
-<text x="205.0" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">7</text>
-<text x="232.2" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">8</text>
-<text x="259.4" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">9</text>
-<text x="286.6" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">10</text>
-<text x="313.9" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">11</text>
-<text x="341.1" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">12</text>
-<text x="368.3" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">13</text>
-<text x="395.5" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">14</text>
-<text x="422.8" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">15</text>
-<text x="450.0" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">16</text>
-<text x="477.2" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">17</text>
-<text x="504.5" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">18</text>
-<text x="531.7" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">19</text>
-<text x="558.9" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">20</text>
-<text x="586.1" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">21</text>
-<text x="613.4" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">22</text>
-<text x="640.6" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">23</text>
-<text x="667.8" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">24</text>
-<text x="695.0" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">25</text>
-<text x="722.3" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">26</text>
-<text x="749.5" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">27</text>
-<text x="776.7" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">28</text>
-<text x="803.9" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">29</text>
-<text x="831.2" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">30</text>
-<text x="858.4" y="334" text-anchor="middle" font-size="7.5" fill="#ffa657" opacity="1">31</text>
+<text x="42.1" y="334" text-anchor="middle" font-size="7.5" fill="#ffa657" opacity="1">1</text>
+<text x="70.2" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">2</text>
+<text x="98.3" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">3</text>
+<text x="126.5" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">4</text>
+<text x="154.6" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">5</text>
+<text x="182.7" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">6</text>
+<text x="210.9" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">7</text>
+<text x="239.0" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">8</text>
+<text x="267.1" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">9</text>
+<text x="295.3" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">10</text>
+<text x="323.4" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">11</text>
+<text x="351.5" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">12</text>
+<text x="379.7" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">13</text>
+<text x="407.8" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">14</text>
+<text x="435.9" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">15</text>
+<text x="464.1" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">16</text>
+<text x="492.2" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">17</text>
+<text x="520.3" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">18</text>
+<text x="548.5" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">19</text>
+<text x="576.6" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">20</text>
+<text x="604.7" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">21</text>
+<text x="632.9" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">22</text>
+<text x="661.0" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">23</text>
+<text x="689.1" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">24</text>
+<text x="717.3" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">25</text>
+<text x="745.4" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">26</text>
+<text x="773.5" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">27</text>
+<text x="801.7" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">28</text>
+<text x="829.8" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">29</text>
+<text x="857.9" y="334" text-anchor="middle" font-size="7.5" fill="#8b949e" opacity="0.75">30</text>
 <rect x="0.5" y="0.5" width="899" height="363" rx="4" fill="none" stroke="#30363d"/>
 <path d="M6,16 V6 H16" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M894,16 V6 H884" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M6,348 V358 H16" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M894,348 V358 H884" fill="none" stroke="#ffa657" stroke-width="2"/>
 <text x="880" y="355" text-anchor="end" font-size="7" letter-spacing="1" fill="#8b949e">GN3 / BAY 02 · SETTLEMENT · 1 MO</text>
