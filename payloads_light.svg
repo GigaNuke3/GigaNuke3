@@ -4,7 +4,7 @@
 <text x="28" y="30" font-size="15" font-weight="bold" fill="#953800">PAYLOAD MANIFEST</text>
 <text x="872" y="30" text-anchor="end" font-size="9.5" fill="#6e7781">13 REPOSITORIES &#183; ORDERED BY CREATION</text>
 <text x="28" y="44" font-size="8" fill="#6e7781">WHAT THE ROCKET CARRIES</text>
-<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#6e7781">4 LIVE &#183; 6 WARM &#183; 3 COLD</text>
+<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#6e7781">3 LIVE &#183; 7 WARM &#183; 3 COLD</text>
 <line x1="28" y1="52" x2="872" y2="52" stroke="#d0d7de"/>
 <rect x="28" y="214" width="844" height="3" fill="#6e7781" opacity="0.6"/>
 <line x1="28.0" y1="206" x2="28.0" y2="217" stroke="#953800"/><text x="31.0" y="212" font-size="6.5" fill="#953800">2025</text>
@@ -33,17 +33,17 @@
 <text x="125.4" y="232" text-anchor="middle" font-size="8" fill="#24292f">To-do-lis…</text>
 <text x="125.4" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">PHP &#183; 113 KB</text>
 <text x="125.4" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">COLD &#183; 03-21</text>
-<rect x="170.8" y="139.5" width="38.9" height="74.5" fill="#f6f8fa" stroke="#953800"/>
+<rect x="170.8" y="139.5" width="38.9" height="74.5" fill="#f6f8fa" stroke="#6e7781"/>
 <line x1="173.8" y1="151" x2="206.8" y2="151" stroke="#d0d7de"/>
 <line x1="173.8" y1="163" x2="206.8" y2="163" stroke="#d0d7de"/>
 <line x1="173.8" y1="175" x2="206.8" y2="175" stroke="#d0d7de"/>
 <line x1="173.8" y1="187" x2="206.8" y2="187" stroke="#d0d7de"/>
 <line x1="173.8" y1="199" x2="206.8" y2="199" stroke="#d0d7de"/>
-<polygon points="174.8,139.5 205.8,139.5 199.8,132.5 180.8,132.5" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="187.3" y="125.5" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="187.3" y="125.5" width="6" height="5" fill="#953800" stroke="#953800"/></g>
-<text x="190.3" y="232" text-anchor="middle" font-size="8" fill="#953800">chatapp</text>
+<polygon points="174.8,139.5 205.8,139.5 199.8,132.5 180.8,132.5" fill="#f6f8fa" stroke="#6e7781"/>
+<rect x="187.3" y="125.5" width="6" height="5" fill="#953800" stroke="#953800"/>
+<text x="190.3" y="232" text-anchor="middle" font-size="8" fill="#24292f">chatapp</text>
 <text x="190.3" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">PHP &#183; 224 KB</text>
-<text x="190.3" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 10-19</text>
+<text x="190.3" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">WARM &#183; 10-19</text>
 <rect x="235.8" y="109.9" width="38.9" height="104.1" fill="#f6f8fa" stroke="#6e7781"/>
 <line x1="238.8" y1="121" x2="271.7" y2="121" stroke="#d0d7de"/>
 <line x1="238.8" y1="133" x2="271.7" y2="133" stroke="#d0d7de"/>
