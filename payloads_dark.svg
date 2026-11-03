@@ -4,7 +4,7 @@
 <text x="28" y="30" font-size="15" font-weight="bold" fill="#ffa657">PAYLOAD MANIFEST</text>
 <text x="872" y="30" text-anchor="end" font-size="9.5" fill="#8b949e">13 REPOSITORIES &#183; ORDERED BY CREATION</text>
 <text x="28" y="44" font-size="8" fill="#8b949e">WHAT THE ROCKET CARRIES</text>
-<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#8b949e">3 LIVE &#183; 7 WARM &#183; 3 COLD</text>
+<text x="872" y="44" text-anchor="end" font-size="7.5" fill="#8b949e">2 LIVE &#183; 8 WARM &#183; 3 COLD</text>
 <line x1="28" y1="52" x2="872" y2="52" stroke="#30363d"/>
 <rect x="28" y="214" width="844" height="3" fill="#8b949e" opacity="0.6"/>
 <line x1="28.0" y1="206" x2="28.0" y2="217" stroke="#ffa657"/><text x="31.0" y="212" font-size="6.5" fill="#ffa657">2025</text>
@@ -170,13 +170,13 @@
 <text x="774.6" y="232" text-anchor="middle" font-size="8" fill="#ffa657">n8n-ai-au…</text>
 <text x="774.6" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">— &#183; 442 KB</text>
 <text x="774.6" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">LIVE &#183; 10-24</text>
-<rect x="820.1" y="196.0" width="38.9" height="18.0" fill="#0d1117" stroke="#ffa657"/>
+<rect x="820.1" y="196.0" width="38.9" height="18.0" fill="#0d1117" stroke="#8b949e"/>
 <line x1="823.1" y1="208" x2="856.0" y2="208" stroke="#30363d"/>
-<polygon points="824.1,196.0 855.0,196.0 849.0,189.0 830.1,189.0" fill="#0d1117" stroke="#ffa657"/>
-<g class="fx"><rect x="836.5" y="182.0" width="6" height="5" fill="#ffa657" stroke="#ffa657"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="836.5" y="182.0" width="6" height="5" fill="#ffa657" stroke="#ffa657"/></g>
-<text x="839.5" y="232" text-anchor="middle" font-size="8" fill="#ffa657">Health-De…</text>
+<polygon points="824.1,196.0 855.0,196.0 849.0,189.0 830.1,189.0" fill="#0d1117" stroke="#8b949e"/>
+<rect x="836.5" y="182.0" width="6" height="5" fill="#ffa657" stroke="#ffa657"/>
+<text x="839.5" y="232" text-anchor="middle" font-size="8" fill="#f0f3f6">Health-De…</text>
 <text x="839.5" y="244" text-anchor="middle" font-size="6.5" fill="#8b949e">— &#183; 0 KB</text>
-<text x="839.5" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">LIVE &#183; 10-20</text>
+<text x="839.5" y="255" text-anchor="middle" font-size="6.5" fill="#8b949e">WARM &#183; 10-20</text>
 <g class="fx"><animateTransform attributeName="transform" type="translate" values="0.0,0;64.9,0;129.8,0;194.8,0;259.7,0;324.6,0;389.5,0;454.5,0;519.4,0;584.3,0;649.2,0;714.2,0;779.1,0" calcMode="discrete" dur="20.8s" repeatCount="indefinite"/><path d="M32,64 h-4 V260 h4 M88.92307692307692,64 h4 V260 h-4" fill="none" stroke="#ffa657" opacity="0.5"/></g>
 <rect x="0.5" y="0.5" width="899" height="281" rx="4" fill="none" stroke="#30363d"/>
 <path d="M6,16 V6 H16" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M894,16 V6 H884" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M6,266 V276 H16" fill="none" stroke="#ffa657" stroke-width="2"/><path d="M894,266 V276 H884" fill="none" stroke="#ffa657" stroke-width="2"/>
