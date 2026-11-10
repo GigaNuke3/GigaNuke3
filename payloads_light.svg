@@ -170,12 +170,16 @@
 <text x="774.6" y="232" text-anchor="middle" font-size="8" fill="#24292f">n8n-ai-au…</text>
 <text x="774.6" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">— &#183; 442 KB</text>
 <text x="774.6" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">WARM &#183; 10-24</text>
-<rect x="820.1" y="196.0" width="38.9" height="18.0" fill="#f6f8fa" stroke="#953800"/>
-<line x1="823.1" y1="208" x2="856.0" y2="208" stroke="#d0d7de"/>
-<polygon points="824.1,196.0 855.0,196.0 849.0,189.0 830.1,189.0" fill="#f6f8fa" stroke="#953800"/>
-<g class="fx"><rect x="836.5" y="182.0" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="836.5" y="182.0" width="6" height="5" fill="#953800" stroke="#953800"/></g>
+<rect x="820.1" y="144.9" width="38.9" height="69.1" fill="#f6f8fa" stroke="#953800"/>
+<line x1="823.1" y1="156" x2="856.0" y2="156" stroke="#d0d7de"/>
+<line x1="823.1" y1="168" x2="856.0" y2="168" stroke="#d0d7de"/>
+<line x1="823.1" y1="180" x2="856.0" y2="180" stroke="#d0d7de"/>
+<line x1="823.1" y1="192" x2="856.0" y2="192" stroke="#d0d7de"/>
+<line x1="823.1" y1="204" x2="856.0" y2="204" stroke="#d0d7de"/>
+<polygon points="824.1,144.9 855.0,144.9 849.0,137.9 830.1,137.9" fill="#f6f8fa" stroke="#953800"/>
+<g class="fx"><rect x="836.5" y="130.9" width="6" height="5" fill="#953800" stroke="#953800"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></rect></g><g class="still"><rect x="836.5" y="130.9" width="6" height="5" fill="#953800" stroke="#953800"/></g>
 <text x="839.5" y="232" text-anchor="middle" font-size="8" fill="#953800">Health-De…</text>
-<text x="839.5" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">— &#183; 0 KB</text>
+<text x="839.5" y="244" text-anchor="middle" font-size="6.5" fill="#6e7781">— &#183; 133 KB</text>
 <text x="839.5" y="255" text-anchor="middle" font-size="6.5" fill="#6e7781">LIVE &#183; 11-10</text>
 <g class="fx"><animateTransform attributeName="transform" type="translate" values="0.0,0;64.9,0;129.8,0;194.8,0;259.7,0;324.6,0;389.5,0;454.5,0;519.4,0;584.3,0;649.2,0;714.2,0;779.1,0" calcMode="discrete" dur="20.8s" repeatCount="indefinite"/><path d="M32,64 h-4 V260 h4 M88.92307692307692,64 h4 V260 h-4" fill="none" stroke="#953800" opacity="0.5"/></g>
 <rect x="0.5" y="0.5" width="899" height="281" rx="4" fill="none" stroke="#d0d7de"/>
